@@ -17,11 +17,18 @@ function darkModeToggle() {
     document.querySelector('.startpage-div1').classList.add('bg-dark');
     document.querySelector('.startpage-div2').classList.add('bg-dark');
     document.querySelector('.startpage-div3').classList.add('bg-dark');
+    document.querySelectorAll('.t').forEach(function(element) {
+      element.classList.remove('t-colour');
+    });  
   } else if (!darkMode) {
     document.querySelector('html').setAttribute('data-bs-theme', 'light');
     document.querySelector('.startpage-div1').classList.remove('bg-dark');
     document.querySelector('.startpage-div2').classList.remove('bg-dark');
     document.querySelector('.startpage-div3').classList.remove('bg-dark');
+    document.querySelectorAll('.t').forEach(function(element) {
+      element.classList.add('t-colour');
+  });  
+
  }
 }
 
@@ -44,3 +51,5 @@ const toggleButton = document.getElementById('div1');
 toggleButton.addEventListener('click', () => {
   document.body.classList.toggle('dark-mode');
 });
+
+
