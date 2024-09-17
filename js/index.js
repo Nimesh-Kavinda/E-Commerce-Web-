@@ -16,10 +16,12 @@ function darkModeToggle() {
     document.querySelector('html').setAttribute('data-bs-theme', 'dark');
     document.querySelector('.startpage-div1').classList.add('bg-dark');
     document.querySelector('.startpage-div2').classList.add('bg-dark');
+    document.querySelector('.startpage-div3').classList.add('bg-dark');
   } else if (!darkMode) {
     document.querySelector('html').setAttribute('data-bs-theme', 'light');
     document.querySelector('.startpage-div1').classList.remove('bg-dark');
     document.querySelector('.startpage-div2').classList.remove('bg-dark');
+    document.querySelector('.startpage-div3').classList.remove('bg-dark');
  }
 }
 
