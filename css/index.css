@@ -17,6 +17,8 @@
 
 .nav{
     background-color: #f65ba8;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.6);
+
 }
 
 .c-name{
@@ -62,6 +64,7 @@
 
 footer > div{
     background-color: #f65ba8;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.6);
     color: white;
 }
 
