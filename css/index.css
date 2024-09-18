@@ -16,7 +16,11 @@
 }
 
 .nav{
-    background-color: #d782ad;
+    background-color: #f65ba8;
+}
+
+.c-name{
+    font-style: italic;
 }
 
 .startpage-div1 {
@@ -51,15 +55,13 @@
 
 }
 
-.btnc{
-    background-color: rgb(152, 255, 152);
-}
+
 .custom-btn{
     background-color: rgb(152, 255, 152);
 }
 
 footer > div{
-    background-color: #d782ad;
+    background-color: #f65ba8;
     color: white;
 }
 

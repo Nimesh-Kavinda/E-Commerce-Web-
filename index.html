@@ -14,7 +14,9 @@
 
     <nav class="nav navbar navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand text-white fw-bold" href="#">Kandyan Cake Shop</a>
+        <span class="navbar-brand d-flex gap-2 text-white">
+        <img src="./assest/img/logo-white-trans.png" alt="" class="img-fluid" width="100px" height="20px">
+        </span>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon text-muted"></span>
         </button>
@@ -26,15 +28,8 @@
             <li class="nav-item">
               <a class="nav-link" href="#register"><button class="btn  btn-md bg-primary text-white border border-0">Sign Up</button></a>
             </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
-            </li> -->
           </ul>
-          <span class="navbar-text d-flex gap-2 text-white">
-               www.kandyancake@gmail.com
-          </span>
-
-
+          <a class="c-name text-muted navbar-brand fw-bold d-none d-lg-block" href="#">Kandyan Cake Shop</a>
           <div onclick="activeDarkMode()" class="">
             <button
               class="btn btn-outline-secondary border-0 mx-3 text-center"
@@ -49,6 +44,7 @@
     </nav>
 
   <!-- End of nav -->
+
   <section id="content" class="mt-">
 
     <div class="container-fluid text-center">
@@ -76,8 +72,8 @@
       </div>
 
 
-      <div class="col col-sm col-md-10 col-lg-4 text-center d-flex">
-        <img src="./assest/img/login-cake.png" alt="" class="img-fluid">
+      <div class="col col-sm col-md-6 col-lg-4 text-center align-items-center d-flex">
+        <img src="./assest/img/login-cake2.png" alt="" class="text-center img-fluid" width="700px" height="auto">
       </div>
 
 
@@ -89,25 +85,31 @@
 
 
   <section id="login">
+
     <div class="container-fluid bg-light justify-content-center text-center">
 
         <div class="startpage-div2 row justify-content-center ">
 
             <div class="col-10 col-sm-10 col-md-10 col-lg-5 m-2 p-2 ">
               <h3 class="text-center pb-3 mt-5 text-muted">Sign In</h3>
+
+            <!-- login form -->
+
               <form class="mt-5">
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">Email address</label>
                   <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                   <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                 </div>
-                <div class="mb-3">
+                  <div class="mb-3">
                   <label for="exampleInputPassword1" class="form-label">Password</label>
                   <input type="password" class="form-control" id="exampleInputPassword1">
                 </div>
-                <button type="submit" class="btn btn-primary btn-lg">Login</button>
+                <button type="submit" class="btn btn-primary btn-lg btn-outline-success text-white border-0">Login</button>
                 <p class="text-muted fw-light mt-3">Dosen't Have an Account,  <a href="#register" class="text-primary fw-bold text-decoration-none">Register </a>from Here</p>
               </form>
+
+              <!-- enf of login form -->
 
             </div>
 
@@ -135,6 +137,9 @@
           <h3 class="text-center pb-3 text-muted">Sign Up</h3>
 
               <div class="form-container">
+
+                <!-- registration form  -->
+
                   <form class="mx-1 mx-md-4">
 
                   <div class="d-flex flex-row align-items-center mb-4">
@@ -195,10 +200,13 @@
                   </div>
 
                   <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                    <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg">Register</button>
+                    <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg btn-outline-success text-white border-0">Register</button>
                   </div>
 
                 </form>
+
+                <!-- end of registraion form  -->
+
               </div>
         </div>
 
