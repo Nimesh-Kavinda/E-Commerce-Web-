@@ -16,7 +16,15 @@ nav .btn_section .b_signin {
   color: #FFF7FC;
   background-color: #8B93FF;
 }
+nav .btn_section .b_signin:hover {
+  background-color: #5755FE;
+}
 nav .btn_section .b_signup {
   color: #FFF7FC;
   background-color: #5755FE;
+}
+nav .btn_section .b_signup:hover {
+  background-color: #8B93FF;
 }/*# sourceMappingURL=nav.css.map */
+
+
