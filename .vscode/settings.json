@@ -1,0 +1,14 @@
+{
+    "editor.cursorBlinking": "expand",
+    "liveSassCompile.settings.formats": [
+      {
+        "format": "expanded",
+        "extensionName": ".css",
+        "savePath": "/css"
+      }
+    ],
+    "liveSassCompile.settings.excludeList": [
+    ]
+  }
+  
+  
