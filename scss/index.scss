@@ -13,13 +13,35 @@ body{
     bottom: 50px;
     right: 30px;
     z-index: 100;
-    opacity: 15%;
+    font-size: 20px;
+    // color: &dark;
   }
-  
-  .scroll-btn-top {
-    bottom: 100px;
+
+ 
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
+
+  @keyframes rotateIcon {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .animate-icon {
+    animation: fadeIn 0.5s ease-in-out, rotateIcon 0.5s ease-in-out;
+  }
+
 }
+
 .welcome_section{
     h2{
         .greeting{

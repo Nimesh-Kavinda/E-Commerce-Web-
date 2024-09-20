@@ -38,4 +38,7 @@ html[data-bs-theme=dark] footer {
 }
 html[data-bs-theme=dark] hr {
   border: 1px dashed;
+}
+html[data-bs-theme=dark] .scroll-btn {
+  color: white !important;
 }/*# sourceMappingURL=darkmode.css.map */
