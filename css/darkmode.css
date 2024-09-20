@@ -1,3 +1,41 @@
+html[data-bs-theme=dark] body {
+  background-color: #212529 !important;
+}
 html[data-bs-theme=dark] nav {
-  background-color: black;
+  background-color: #212529;
+  border-bottom: 1px solid;
+  border-left: 3px dotted;
+}
+html[data-bs-theme=dark] nav .d_mode button {
+  border: 2px solid #0d6efd;
+}
+html[data-bs-theme=dark] .show_btn button {
+  background-color: #dc3545;
+}
+html[data-bs-theme=dark] .show_btn button:hover {
+  background-color: #ff5d57;
+}
+html[data-bs-theme=dark] .topic_product {
+  color: #dc3545;
+}
+html[data-bs-theme=dark] .card {
+  border: 1px outset #5755FE;
+}
+html[data-bs-theme=dark] .topic_aboutus {
+  color: #5755FE;
+}
+html[data-bs-theme=dark] .about_content h3 {
+  color: #FFF7FC !important;
+}
+html[data-bs-theme=dark] .about_content .topic_msg {
+  border-left: 3px solid #dc3545;
+  color: #d4d4d4 !important;
+}
+html[data-bs-theme=dark] footer {
+  background-color: #212529;
+  border-top: 1px solid;
+  border-right: 3px dotted;
+}
+html[data-bs-theme=dark] hr {
+  border: 1px dashed;
 }/*# sourceMappingURL=darkmode.css.map */

@@ -9,10 +9,28 @@ nav{
                 font-weight: bold;
                 font-size: 20px;
                 color: #FFF7FC !important;
+                position: relative;
+
+                &:hover{
+                    &::after{
+                        width: 80%;
+                    }
+                } 
+
+                &::after{
+                    position: absolute;
+                    content: "";
+                    background-color: #5755FE;
+                    bottom: 0;
+                    left: 0;
+                    width: 0%;
+                    height: 5%;
+                    transition: width 0.3s ease-in;
+                }
             }
-            a:hover{
+                a:hover{
                 font-size: 22px;
-                color: #5755FE !important;
+                
             }
         }
     }
@@ -29,7 +47,12 @@ nav{
             background-color: #5755FE;
         }
         .b_signup:hover{
-            background-color: #8B93FF;
+            background-color: #3c39ff;
+        }
+    }
+    .d_mode{
+        button{
+            border: none;
         }
     }
 }

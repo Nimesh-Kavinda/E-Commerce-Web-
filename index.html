@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./css/darkmode.css">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/footer.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
 
@@ -35,7 +37,7 @@
               <a class="nav-link menu_item" href="#products">Products</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link menu_item" href="#">About US</a>
+              <a class="nav-link menu_item" href="#aboutus">About US</a>
             </li>
           </ul>
           <div class="btn_section">
@@ -48,9 +50,20 @@
               </li>
             </ul>
           </div>
-          <div onclick="activeDarkMode()" class="">
+
+          <div class="d-flex ms-3 cart_and_wishlist">
+            <button class="btn border-0 text-center wish_btn">
+              <i class="bi bi-bag-heart-fill text-white fs-4"></i><sup class="fs-5 text-white">0</sup>
+            </button>
+            <button class="btn border-0 text-center cart_btn">
+            <i class="bi bi-cart-check-fill text-white fs-4"></i><sup class="fs-5 text-white">0</sup>
+          </button>
+            
+          </div>
+
+          <div onclick="activeDarkMode()" class="d_mode">
             <button
-              class="btn btn-outline-primary border-0 mx-3 text-center"
+              class="btn btn-outline-primary mx-3 text-center"
               id="switch-mode">
               <i class="bi bi-moon-stars-fill text-white fs-4"></i>
               <i class="bi bi-sun-fill text-white d-none fs-4"></i>
@@ -62,6 +75,14 @@
     </nav>
 
   <!-- End of nav -->
+   
+   <!-- Page navigation btn top and bottem  -->
+  <button id="topBtn" class="btn scroll-btn scroll-btn-top text-white py-5 d-none d-md-block"><i class="bi bi-caret-up-square fs-1"></i></button>
+  <button id="bottomBtn" class="btn scroll-btn text-white d-none d-md-block"><i class="bi bi-caret-down-square fs-1"></i></button>
+
+
+
+   <!-- Discription section  -->
 
   <section id="content" class="">
 
@@ -70,7 +91,7 @@
       <div class="row text-center">
 
       <div class="satatements col-12 col col col-lg-7 p-5 text-center align-items-center justify-content-center">
-        <h2 class="m-2 p-2 fw-bold shopname"><span class="fs-1 greeting">Welcome</span> to <span class="title_w1"><span class="title_l1">S</span>weety</span> <span class="title_w2">Cake</span> <span class="title_w3">House</span>..!</h2>
+        <h2 class="m-2 p-2 fw-bold shopname"><span class="fs-1 greeting"><span class="title_l1">W</span>elcome</span> to <span class="title_w1"><span class="title_l1">S</span>weety</span> <span class="title_w2">Cake</span> <span class="title_w3">House</span>..!</h2>
         <p class="my-2 p-2 discription">
           At Kandyan Cake Shop, we blend the rich heritage of Kandyan traditions with contemporary baking techniques to bring you a delightful array of cakes and pastries. Nestled in the heart of our community, our shop is renowned for its commitment to quality, flavor, and artistic design.
         </p>
@@ -84,7 +105,7 @@
         </ul>
         </div>
         <div class="catogary d-flex">
-        <h2 class="p-3 fs-2">Our Catagoies -</h2>
+        <h2 class="p-3 fs-2 align-items-center">Our Catagoies <i class="bi bi-heart-arrow p-4 fs-2"></i></h2>
         <div class="catogaries">
         <ul class="m-2 p-2 fs-5 text-center">
           <li class="p-1">Classic Cakes</li>
@@ -112,7 +133,11 @@
 
   </section>
 
-  <section id="products">
+   <!-- end description section  -->
+
+    <!-- Products Section  -->
+
+  <section id="products" class="products">
     
       <div class="topic_product">
         <hr width="60%" class="top_hr">
@@ -136,39 +161,40 @@
         <!-- Product 1 -->
         <div class="col-md-4">
             <div class="card">
-                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Product 1">
+                <img src="./assest/img/vanila_cake.webp" class="card-img-top" alt="Product 1">
                 <div class="card-body text-center">
-                    <h5 class="card-title">Product 1</h5>
-                    <p class="card-text">This is a brief description of Product 1. It's a high-quality product.</p>
-                    <p class="card-text"><strong>$29.99</strong></p>
-                    <a href="#" class="btn btn-primary">Buy Now</a> <br><br>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                    <h5 class="card-title">Vanila Cake</h5>
+                    <p class="card-text">A fluffy vanilla cake topped with light cream and fresh strawberries and blueberries.</p>
+                    <p class="card-text"><strong>Rs.999.99</strong></p>
+                    <a href="#" class="btn btn_buy">Buy Now</a> <br><br>
+                    <a href="#" class="btn btn_cart">Add to Cart</a>
                 </div>
             </div>
         </div>
         <!-- Product 2 -->
         <div class="col-md-4">
             <div class="card">
-                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Product 2">
+                <img src="./assest/img/choco_cake.webp" class="card-img-top" alt="Product 2">
                 <div class="card-body text-center">
-                    <h5 class="card-title">Product 2</h5>
-                    <p class="card-text">This is a brief description of Product 2. It's a high-quality product.</p>
-                    <p class="card-text"><strong>$39.99</strong></p>
-                    <a href="#" class="btn btn-primary">Buy Now</a> <br><br>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                    <h5 class="card-title">Chocolate Cake</h5>
+                    <p class="card-text">A moist, rich chocolate cake with smooth ganache and delicate chocolate shavings.</p>
+                    <p class="card-text"><strong>Rs.1199.99</strong></p>
+                    <a href="#" class="btn btn_buy">Buy Now</a> <br><br>
+                    <a href="#" class="btn btn_cart">Add to Cart</a>
                 </div>
             </div>
         </div>
         <!-- Product 3 -->
         <div class="col-md-4">
             <div class="card">
-                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Product 3">
+                <img src="./assest/img/strawberry_cake.webp" class="card-img-top" alt="Product 3">
                 <div class="card-body text-center">
-                    <h5 class="card-title">Product 3</h5>
-                    <p class="card-text">This is a brief description of Product 3. It's a high-quality product.</p>
-                    <p class="card-text"><strong>$49.99</strong></p>
-                    <a href="#" class="btn btn-primary">Buy Now</a> <br><br>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                    <h5 class="card-title">Strawberry Shortcake</h5>
+                    <p class="card-text"> A light, fluffy cake layered with whipped cream and fresh strawberries.
+                    </p>
+                    <p class="card-text"><strong>Rs1249.99</strong></p>
+                    <a href="#" class="btn btn_buy">Buy Now</a> <br><br>
+                    <a href="#" class="btn btn_cart">Add to Cart</a>
                 </div>
             </div>
         </div>
@@ -182,39 +208,39 @@
         <!-- Product 4 -->
         <div class="col-md-4">
             <div class="card">
-                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Product 1">
+                <img src="./assest/img/matcha_green_tea_cake.webp" class="card-img-top" alt="Product 1">
                 <div class="card-body text-center">
-                    <h5 class="card-title">Product 1</h5>
-                    <p class="card-text">This is a brief description of Product 1. It's a high-quality product.</p>
-                    <p class="card-text"><strong>$29.99</strong></p>
-                    <a href="#" class="btn btn-primary">Buy Now</a> <br><br>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                    <h5 class="card-title">Matcha Green Tea Cake</h5>
+                    <p class="card-text">Light green sponge layers with matcha frosting, topped with powdered green tea and berries.</p>
+                    <p class="card-text"><strong>Rs.1499.99</strong></p>
+                    <a href="#" class="btn btn_buy">Buy Now</a> <br><br>
+                    <a href="#" class="btn btn_cart">Add to Cart</a>
                 </div>
             </div>
         </div>
         <!-- Product 5 -->
         <div class="col-md-4">
             <div class="card">
-                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Product 2">
+                <img src="./assest/img/rainbow_cake.webp" class="card-img-top" alt="Product 2">
                 <div class="card-body text-center">
-                    <h5 class="card-title">Product 2</h5>
-                    <p class="card-text">This is a brief description of Product 2. It's a high-quality product.</p>
-                    <p class="card-text"><strong>$39.99</strong></p>
-                    <a href="#" class="btn btn-primary">Buy Now</a> <br><br>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                    <h5 class="card-title">Rainbow Cake</h5>
+                    <p class="card-text">A vibrant rainbow cake with colorful layers and creamy frosting</p>
+                    <p class="card-text"><strong>Rs.1749.99</strong></p>
+                    <a href="#" class="btn btn_buy">Buy Now</a> <br><br>
+                    <a href="#" class="btn btn_cart">Add to Cart</a>
                 </div>
             </div>
         </div>
         <!-- Product 6 -->
         <div class="col-md-4">
             <div class="card">
-                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Product 3">
+                <img src="./assest/img/lemon_cake.webp" class="card-img-top" alt="Product 3">
                 <div class="card-body text-center">
-                    <h5 class="card-title">Product 3</h5>
-                    <p class="card-text">This is a brief description of Product 3. It's a high-quality product.</p>
-                    <p class="card-text"><strong>$49.99</strong></p>
-                    <a href="#" class="btn btn-primary">Buy Now</a> <br><br>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                    <h5 class="card-title">Lemon Cake</h5>
+                    <p class="card-text">A refreshing lemon cake with tangy lemon curd and zest garnish.</p>
+                    <p class="card-text"><strong>Rs.1399.99</strong></p>
+                    <a href="#" class="btn btn_buy">Buy Now</a> <br><br>
+                    <a href="#" class="btn btn_cart">Add to Cart</a>
                 </div>
             </div>
         </div>
@@ -222,8 +248,162 @@
   </div>
 </section>
 
+ <!-- End Products Section  -->
+
+ <section id="aboutus" class="about_us">
+
+  <div class="topic_aboutus">
+    <hr width="60%" class="top_hr">
+    <span class="key">A</span>
+    <span class="key">B</span>
+    <span class="key">O</span>
+    <span class="key">U</span>
+    <span class="key">T</span>
+    <span class="key">-</span>
+    <span class="key">U</span>
+    <span class="key">S</span>
+    <hr width="60%" class="down_hr">
+  </div>
+
+  <div class="container about_content py-3">
+
+    <div class="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
+      <div class="col-12 col-lg-6 col-xl-5">
+        <img class="img-fluid rounded" loading="lazy" src="./assest/img/about_cake.png" alt="About 1">
+      </div>
+      <div class="col-12 col-lg-6 col-xl-7">
+        <div class="row justify-content-xl-center">
+          <div class="col-12 col-xl-11">
+
+            <h3 class="mb-3">Welcome to Sweety Cake House</h3>
+            <p class="lead topic_msg fs-5 text-secondary mb-3 ps-2">At Sweety Cake House, we believe that every celebration deserves a sweet touch. Our passion for baking, combined with the finest ingredients, creates the most delightful cakes for your special moments.</p>
+
+            <h3 class="mb-3">Our Journey</h3>
+            <p class="lead topic_msg fs-5 text-secondary mb-3 ps-2">What began as a small, family-run bakery has grown into a beloved cake destination. We are proud to serve cakes that are not just desserts, but memories made with love and care.</p>
+
+            <h3 class="mb-3">Quality Ingredients, Exquisite Flavors</h3>
+            <p class="lead topic_msg fs-5 text-secondary mb-3 ps-2">We source only the highest quality ingredients to ensure that every bite is rich, flavorful, and irresistibly fresh. Whether it’s a birthday, wedding, or just a sweet craving, our cakes promise to delight.</p>
+
+            <h3 class="mb-3">Our Promise</h3>
+            <p class="lead topic_msg fs-5 text-secondary mb-3 ps-2">We are committed to providing cakes that are as unique and special as the moments they celebrate. With a focus on freshness, flavor, and creativity, Sweety Cake House is your go-to destination for sweet indulgence.</p>
+            <p class="mb-2 cover_msg">We are a fast-growing company, but we have never lost sight of our core values. We believe in collaboration, innovation, and customer satisfaction. We are always looking for new ways to improve our products and services.</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ </section>
+
+
+ <section class="footer">
+
+  <div class="container-luid">
+   
+    <footer class="text-center text-white">
+      
+      <div class="container-fluid">
+        
+        <section class="mt-3">
+         
+          <div class="f_list row text-center d-flex justify-content-center pt-4">
+            
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#nav" class="text-white">Home</a>
+              </h6>
+            </div>
+           
+  
+            
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#products" class="text-white">Products</a>
+              </h6>
+            </div>
+            
+  
+           
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#aboutus" class="text-white">About Us</a>
+              </h6>
+            </div>
+            
+  
+           
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">Sign-In</a>
+              </h6>
+            </div>
+            
+  
+            
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">Sign-Up</a>
+              </h6>
+            </div>
+           
+          </div>
+         
+        </section>
+        
+  
+        <hr class="mt-3"/>
+  
+        
+        <section class="img mb-1 pb-3">
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-8 text-center">
+             <img src="./assest/img/logo-w.png" alt="" width="200px">
+            </div>
+          </div>
+        </section>
+       
+  
+        
+        <section class="text-center my-2">
+          <a href="" class="text-white me-4">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-github"></i>
+          </a>
+        </section>
+        
+      </div>
+      
+  
+    
+      <div class="text-center p-3 footer_link">
+        © 2020 Copyright:
+        <a class="text-white" href="#">Web Desing Project (Second Year) </a>
+      </div>
+     
+    </footer>
+   
+  </div>
+ 
+
+ </section>
 
     <script src="./js/darkmode.js"></script>
+    <script src="./js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
