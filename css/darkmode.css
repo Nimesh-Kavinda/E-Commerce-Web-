@@ -1,6 +1,9 @@
 html[data-bs-theme=dark] body {
   background-color: #212529 !important;
 }
+html[data-bs-theme=dark] body .scroll-btn {
+  background-color: #6c757d !important;
+}
 html[data-bs-theme=dark] nav {
   background-color: #212529;
   border-bottom: 1px solid;
@@ -41,4 +44,38 @@ html[data-bs-theme=dark] hr {
 }
 html[data-bs-theme=dark] .scroll-btn {
   color: white !important;
+}
+html[data-bs-theme=dark] .login_from .container .cascading-right {
+  margin-right: -50px;
+}
+@media (max-width: 991.98px) {
+  html[data-bs-theme=dark] .login_from .container .cascading-right {
+    margin-right: 0;
+  }
+}
+html[data-bs-theme=dark] .login_from a {
+  text-decoration: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #0d6efd;
+}
+html[data-bs-theme=dark] .login_from h2 {
+  color: #5755FE;
+}
+html[data-bs-theme=dark] .login_from button {
+  background-color: #5755FE;
+  border: 0;
+}
+html[data-bs-theme=dark] .login_from button:hover {
+  background-color: #FF71CD;
+}
+html[data-bs-theme=dark] .register_form .header_img {
+  background: #000005;
+  height: 380px;
+}
+html[data-bs-theme=dark] .name_l1 {
+  color: #8B93FF !important;
+}
+html[data-bs-theme=dark] .card {
+  border: 1px solid white;
 }/*# sourceMappingURL=darkmode.css.map */

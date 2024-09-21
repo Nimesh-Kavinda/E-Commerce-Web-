@@ -7,7 +7,7 @@
     list-style-type: none;
 }
 body{
-  
+
   background-color: #fffcfc !important;
 
   .scroll-btn {
@@ -17,6 +17,7 @@ body{
     z-index: 100;
     font-size: 20px;
     background-color: #8B93FF !important;
+    border: 0;
     
   }
 
@@ -113,7 +114,7 @@ body{
         }
     }
     .show_btn{
-        text-align: end;
+        text-align: center;
         button{
             background-color: #5755FE;
         }
@@ -518,3 +519,70 @@ body{
   }
 }
 
+.login_from{
+  .container{
+    .cascading-right {
+      margin-right: -50px;
+    }
+  
+    @media (max-width: 991.98px) {
+      .cascading-right {
+        margin-right: 0;
+      }
+    }
+  }
+  a{
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: $primary;
+  }
+  h2{
+    color: #5755FE;
+  }
+  button{
+    background-color: #5755FE;
+    border: 0;
+
+    &:hover{
+      background-color: #FF71CD;
+    }
+  }
+}
+
+.register_form{
+  .header_img{
+    background: opacify($color: #5b59cc, $amount: 0);
+        height: 380px;
+  }
+  h1{
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 55px;
+    .name_l1{
+      font-size: 70px;
+      color: #ff3cbb;
+    }
+  }
+  .card{
+    margin-top: -100px;
+    backdrop-filter: blur(30px);
+  }
+  h2{
+    color: #8B93FF;
+  }
+  button{
+    background-color: #5755FE;
+    &:hover{
+      background-color: #FF71CD;
+      border: 0;
+    }
+  }
+  a{
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: $primary;
+  }
+}
