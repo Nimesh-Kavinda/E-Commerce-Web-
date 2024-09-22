@@ -1,0 +1,29 @@
+.scroll-btn {
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  z-index: 100;
+  font-size: 20px;
+  background-color: #8B93FF !important;
+  border: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes rotateIcon {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-icon {
+  animation: fadeIn 0.5s ease-in-out, rotateIcon 0.5s ease-in-out;
+}/*# sourceMappingURL=navigation.css.map */
