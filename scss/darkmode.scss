@@ -110,5 +110,23 @@ html[data-bs-theme = "dark"]{
        
           }
           // End of Start (login) page
+
+          .img_silder_section{
+            .img_text{
+
+              p{
+                .phase_pink{
+                    color: white !important;
+                    font-weight: 490;
+                }
+                .phase_blue{
+                    color: #8B93FF;
+                    font-weight: 490;
+                }
+               
+                           
+            }
+            }
+          }
 }
 

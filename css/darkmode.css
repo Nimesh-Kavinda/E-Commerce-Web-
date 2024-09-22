@@ -78,4 +78,12 @@ html[data-bs-theme=dark] .name_l1 {
 }
 html[data-bs-theme=dark] .card {
   border: 1px solid white;
+}
+html[data-bs-theme=dark] .img_silder_section .img_text p .phase_pink {
+  color: white !important;
+  font-weight: 490;
+}
+html[data-bs-theme=dark] .img_silder_section .img_text p .phase_blue {
+  color: #8B93FF;
+  font-weight: 490;
 }/*# sourceMappingURL=darkmode.css.map */

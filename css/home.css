@@ -4,7 +4,55 @@
   list-style-type: none;
 }
 
-.img_silde {
+body {
+  background-color: #fffcfc !important;
+}
+
+.img_silder_section .img_silde {
   text-align: center;
   margin: 0 auto;
+}
+.img_silder_section .img_text .greeting {
+  color: #8B93FF;
+}
+.img_silder_section .img_text .welcome_word1 {
+  color: #5755FE;
+  font-size: 65px;
+  font-style: italic;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: bold;
+}
+.img_silder_section .img_text .welcome_word2 {
+  color: #fe4bc0;
+  font-size: 40px;
+  font-style: italic;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: bolder;
+}
+.img_silder_section .img_text p {
+  text-align: left;
+  font-size: 22px;
+  text-transform: capitalize;
+  font-weight: 350;
+}
+.img_silder_section .img_text p .phase_pink {
+  color: #fe4bc0;
+  font-weight: 490;
+}
+.img_silder_section .img_text p .phase_blue {
+  color: #5755FE;
+  font-weight: 490;
+}
+.img_silder_section .img_text .second_p {
+  text-align: right;
+  font-weight: normal;
+}
+.img_silder_section .img_text a button {
+  background-color: #8B93FF;
+  color: #fffcfc;
+  pointer-events: all !important;
+  border: none;
+}
+.img_silder_section .img_text a button:hover {
+  background-color: #5755FE;
 }/*# sourceMappingURL=home.css.map */

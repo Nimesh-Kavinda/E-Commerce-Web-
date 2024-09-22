@@ -6,8 +6,65 @@
 *{
     list-style-type: none;
 }
+body{
+    background-color: #fffcfc !important;
+}
+.img_silder_section{
+    .img_silde{
+        text-align: center;
+        margin: 0 auto;
+        // min-height: 500px;
+    }
+    .img_text{
+        .greeting{
+            color: #8B93FF;
+        }
+        .welcome_word1{
+            color: #5755FE;
+            font-size: 65px;
+            font-style: italic;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: bold;
+        }
+        .welcome_word2{
+            color: #fe4bc0;
+            font-size: 40px;
+            font-style: italic;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: bolder;
+        }
+        p{
+            text-align: left;
+            font-size: 22px;
+            text-transform: capitalize;
+            font-weight: 350;
 
-.img_silde{
-    text-align: center;
-    margin: 0 auto;
+            .phase_pink{
+                color: #fe4bc0;
+                font-weight: 490;
+            }
+            .phase_blue{
+                color: #5755FE;
+                font-weight: 490;
+            }
+        }
+        .second_p{
+            text-align: right;
+            font-weight: normal;
+
+        }
+        a{
+            button{
+                background-color: #8B93FF;
+                color: #fffcfc;
+                pointer-events:all !important;
+                border: none;
+
+                &:hover{
+                    background-color: #5755FE;
+                }
+            }
+        }
+
+    }
 }
