@@ -128,5 +128,26 @@ html[data-bs-theme = "dark"]{
             }
             }
           }
+          .about_us_home{
+            .topic_aboutus_home{
+              font-size: 16px;
+              text-align: center;
+              color:#8B93FF;
+              border-radius: 10px;
+              background-color:$dark;
+            }
+            .about_content_home{
+              h3{
+                color: #FF71CD;
+                // background-color: #ffffffb9;
+                background-blend-mode:hue;
+                text-align: start;
+                border-radius: 5px;
+              }
+              .topic_msg{
+                border-left: 3px solid #8B93FF;
+              }
+            }
 }
 
+}
