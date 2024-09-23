@@ -3,16 +3,29 @@
 * {
   list-style-type: none;
 }
+* ::-webkit-scrollbar {
+  width: 14px;
+}
+* ::-webkit-scrollbar-track {
+  background: #c1b9c1;
+}
+* ::-webkit-scrollbar-thumb {
+  background-color: #8B93FF;
+  border-end-end-radius: 10px;
+}
+* ::-webkit-scrollbar-thumb:hover {
+  background-color: #727bff;
+}
 
 body {
   background-color: #fffcfc !important;
 }
 body ::-moz-selection {
-  background-color: #FF71CD;
+  background-color: #8B93FF;
   color: white;
 }
 body ::selection {
-  background-color: #FF71CD;
+  background-color: #8B93FF;
   color: white;
 }
 
@@ -74,6 +87,7 @@ body ::selection {
   text-align: center;
   color: #8B93FF;
   background-color: #fff5ff;
+  box-shadow: #fe4bc0;
   border-radius: 10px;
 }
 .about_us_home .topic_aboutus_home .top_hr {
@@ -189,4 +203,26 @@ body ::selection {
 }
 .about_us_home .about_content_home .topic_msg {
   border-left: 3px solid #FF71CD;
+}
+.about_us_home .offers {
+  align-items: center;
+  justify-content: center;
+  background-color: #fff5ff;
+  box-shadow: #fe4bc0;
+}
+.about_us_home .offers h2 {
+  font-weight: bold;
+}
+.about_us_home .offers h6 {
+  font-weight: 350;
+  font-style: italic;
+}
+.about_us_home .offers .delivery {
+  align-items: center;
+}
+.about_us_home .offers .fits {
+  align-items: center;
+}
+.about_us_home .offers .payment {
+  align-items: center;
 }/*# sourceMappingURL=home.css.map */

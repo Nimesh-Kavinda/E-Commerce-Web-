@@ -57,12 +57,15 @@
           </ul>
         </div>
 
-        <div class="d-flex ms-3 cart_and_wishlist">
+        <div class="d-flex ms-1 cart_and_wishlist">
           <button class="btn border-0 text-center wish_btn">
             <i class="bi bi-bag-heart-fill text-white fs-4"></i><sup class="fs-5 text-white">0</sup>
           </button>
           <button class="btn border-0 text-center cart_btn">
           <i class="bi bi-cart-check-fill text-white fs-4"></i><sup class="fs-5 text-white">0</sup>
+        </button>
+        <button class="btn border-0 text-center profile_btn">
+          <i class="bi bi-person-square text-white fs-4"></i>
         </button>
           
         </div>
@@ -128,7 +131,7 @@
 
     <section id="aboutus" class="about_us_home my-5">
 
-      <div class="topic_aboutus_home container">
+      <div class="topic_aboutus_home container-fluid">
         <hr width="60%" class="top_hr">
         <span class="key">A</span>
         <span class="key">B</span>
@@ -170,25 +173,25 @@
         </div>
       </div>
 
-      <div class="container-fluid mt-3 offers border border-1">
+      <div class="container-fluid mt-3 offers">
         <div class="row">
-          <div class="col-4 d-flex text-center justify-content-center p-3">
-            <i class="fa fa-truck fs-1 p-3" aria-hidden="true"></i>
-            <div class="offers_text d-block">
-              <h2>fast deliver</h2>
-              <h6>On all Location</h6>
+          <div class="col-sm-6 col-lg-4 d-flex text-center justify-content-center p-3 delivery text-white">
+            <i class="fa fa-truck fs-1 p-3 text-muted" aria-hidden="true"></i>
+            <div class="offers_text d-block text-muted">
+              <h2>Fast Delivery</h2>
+              <h6 class="text-muted">On all Location</h6>
             </div>
           </div>
-          <div class="col-4 d-flex text-center justify-content-center p-3">
-            <i class="fa fa-gift fs-1 p-3" aria-hidden="true"></i>
-            <div class="offers_text d-block">
-              <h2>Offer & Fifts</h2>
+          <div class="col col-lg-4 d-flex text-center justify-content-center p-3 fits text-white">
+            <i class="fa fa-gift fs-1 p-3 text-muted" aria-hidden="true"></i>
+            <div class="offers_text d-block text-muted">
+              <h2>Offers & Fifts</h2>
               <h6>On all Oders</h6>
             </div>
           </div>
-          <div class="col-4 d-flex text-center justify-content-center p-3">
-            <i class="fa fa-credit-card fs-1 p-3" aria-hidden="true"></i>
-            <div class="offers_text d-block">
+          <div class="col-md-12 col-lg-4 d-flex text-center justify-content-center p-3 payment text-white">
+            <i class="fa fa-credit-card fs-1 p-3 text-muted" aria-hidden="true"></i>
+            <div class="offers_text d-block text-muted">
               <h2>Secure Payments</h2>
               <h6>Protected Methods</h6>
             </div>
@@ -200,6 +203,7 @@
      </section>
 
      <!-- End about us  -->
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
     <script src="./js/navigation.js"></script>

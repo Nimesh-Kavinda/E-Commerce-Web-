@@ -5,11 +5,29 @@
 
 *{
     list-style-type: none;
+
+::-webkit-scrollbar {
+  width: 14px; 
+}
+
+::-webkit-scrollbar-track {
+  background: #c1b9c1; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #8B93FF; 
+  border-end-end-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #727bff; 
+}
+
 }
 body{
     background-color: #fffcfc !important;
     ::selection {
-        background-color: #FF71CD;
+        background-color: #8B93FF;
         color: white; 
       }
 }
@@ -86,6 +104,7 @@ body{
       text-align: center;
       color:#8B93FF;
       background-color: #fff5ff;
+      box-shadow: #fe4bc0;
       border-radius: 10px;
   
       .top_hr{
@@ -241,5 +260,29 @@ body{
         border-left: 3px solid #FF71CD;
       }
   
+    }
+    .offers{
+      align-items: center;
+      justify-content: center;
+      background-color: #fff5ff;
+      box-shadow: #fe4bc0;
+      h2{
+        font-weight: bold;
+      }
+      h6{
+        font-weight: 350;
+        font-style: italic;
+      }
+      .delivery{
+        align-items: center;
+        
+      }
+      .fits{
+        align-items: center;
+
+      }
+      .payment{
+        align-items: center;
+      }
     }
   }

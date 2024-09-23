@@ -102,4 +102,7 @@ html[data-bs-theme=dark] .about_us_home .about_content_home h3 {
 }
 html[data-bs-theme=dark] .about_us_home .about_content_home .topic_msg {
   border-left: 3px solid #8B93FF;
+}
+html[data-bs-theme=dark] .about_us_home .offers {
+  background-color: #212529;
 }/*# sourceMappingURL=darkmode.css.map */
