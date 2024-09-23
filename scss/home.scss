@@ -8,6 +8,10 @@
 }
 body{
     background-color: #fffcfc !important;
+    ::selection {
+        background-color: #FF71CD;
+        color: white; 
+      }
 }
 .img_silder_section{
     .img_silde{

@@ -7,6 +7,14 @@
 body {
   background-color: #fffcfc !important;
 }
+body ::-moz-selection {
+  background-color: #FF71CD;
+  color: white;
+}
+body ::selection {
+  background-color: #FF71CD;
+  color: white;
+}
 
 .welcome_section h2 .greeting {
   color: #dc3545;
