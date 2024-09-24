@@ -79,6 +79,9 @@ html[data-bs-theme=dark] .name_l1 {
 html[data-bs-theme=dark] .card {
   border: 1px solid white;
 }
+html[data-bs-theme=dark] .user_profile .profile {
+  background-color: #212529;
+}
 html[data-bs-theme=dark] .img_silder_section .img_text p .phase_pink {
   color: white !important;
   font-weight: 490;
@@ -88,10 +91,6 @@ html[data-bs-theme=dark] .img_silder_section .img_text p .phase_blue {
   font-weight: 490;
 }
 html[data-bs-theme=dark] .about_us_home .topic_aboutus_home {
-  font-size: 16px;
-  text-align: center;
-  color: #8B93FF;
-  border-radius: 10px;
   background-color: #212529;
 }
 html[data-bs-theme=dark] .about_us_home .about_content_home h3 {
@@ -105,4 +104,8 @@ html[data-bs-theme=dark] .about_us_home .about_content_home .topic_msg {
 }
 html[data-bs-theme=dark] .about_us_home .offers {
   background-color: #212529;
+}
+html[data-bs-theme=dark] .products_home .topic_product_home {
+  background-color: #212529;
+  color: #FF71CD;
 }/*# sourceMappingURL=darkmode.css.map */
