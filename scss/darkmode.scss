@@ -158,5 +158,11 @@ html[data-bs-theme = "dark"]{
               color: #FF71CD;
             }
           }
+          .contact{
+          .contact_form{
+            background-color: $dark !important;
+            border: 1px solid $white;
+          }
+        }
         }
 

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Dashboard</title>
+   <link rel="stylesheet" href="css/admin_style.css">
+</head>
+<body>
+   
+<!-- Admin Header -->
+<div id="admin-header">
+   <!-- Add your header content here -->
+</div>
+
+<section class="users">
+
+   <h1 class="title">Users</h1>
+
+   <div class="box-container">
+
+      <!-- Static user data -->
+      <div class="box">
+         <p> User ID : <span>1</span> </p>
+         <p> Username : <span>John Doe</span> </p>
+         <p> E-mail : <span>john.doe@example.com</span> </p>
+         <p> Type : <span style="color: orange;">admin</span> </p>
+         <a href="#" onclick="return confirm('Delete this user?');" class="delete-btn">&#10007;</a>
+      </div>
+
+      <div class="box">
+         <p> User ID : <span>2</span> </p>
+         <p> Username : <span>Jane Smith</span> </p>
+         <p> E-mail : <span>jane.smith@example.com</span> </p>
+         <p> Type : <span style="color: black;">user</span> </p>
+         <a href="#" onclick="return confirm('Delete this user?');" class="delete-btn">&#10007;</a>
+      </div>
+
+      <!-- Add more static users here as needed -->
+
+   </div>
+
+</section>
+
+<script src="js/admin_script.js"></script>
+
+</body>
+</html>

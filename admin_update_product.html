@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Update Product</title>
+   <link rel="stylesheet" href="css/admin_style.css">
+</head>
+<body>
+
+<!-- Header Content -->
+<div id="admin-header">
+   <!-- Add your header content here -->
+</div>
+
+<section class="update-product">
+
+   <!-- Static product form as PHP logic is removed -->
+   <form action="#" method="post" enctype="multipart/form-data">
+      <img src="uploaded_img/sample_image.jpg" class="image" alt="Product Image">
+      <input type="hidden" value="1" name="update_p_id">
+      <input type="hidden" value="sample_image.jpg" name="update_p_image">
+      <input type="text" class="box" value="Sample Product" required placeholder="Update product name" name="name">
+      <input type="number" min="0" class="box" value="100" required placeholder="Update product price" name="price">
+      <input type="file" accept="image/jpg, image/jpeg, image/png" class="box" name="image">
+      <input type="submit" value="Update Product" name="update_product" class="btn">
+      <a href="admin_products.html" class="option-btn">Back</a>
+   </form>
+
+   <!-- Message if no product is selected -->
+   <p class="empty">No update product selected</p>
+
+</section>
+
+<script src="js/admin_script.js"></script>
+
+</body>
+</html>
