@@ -1,3 +1,36 @@
+<?php
+
+@include './includes/db.php';
+
+if(isset($_POST['submit'])){
+
+   $filter_name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
+   $name = mysqli_real_escape_string($conn, $filter_name);
+   $filter_email = filter_var($_POST['email'], FILTER_SANITIZE_STRING);
+   $email = mysqli_real_escape_string($conn, $filter_email);
+   $filter_pass = filter_var($_POST['pass'], FILTER_SANITIZE_STRING);
+   $pass = mysqli_real_escape_string($conn, md5($filter_pass));
+   $filter_cpass = filter_var($_POST['cpass'], FILTER_SANITIZE_STRING);
+   $cpass = mysqli_real_escape_string($conn, md5($filter_cpass));
+
+   $select_users = mysqli_query($conn, "SELECT * FROM `users` WHERE email = '$email'") or die('query failed');
+
+   if(mysqli_num_rows($select_users) > 0){
+      $message[] = 'user already exist!';
+   }else{
+      if($pass != $cpass){
+         $message[] = 'confirm password not matched!';
+      }else{
+         mysqli_query($conn, "INSERT INTO `users`(name, email, password) VALUES('$name', '$email', '$pass')") or die('query failed');
+         $message2[] = 'registered successfully!';
+         
+      }
+   }
+
+}
+
+?>
+
 <!doctype html>
  <html lang="en" class="data-bs-theme">
   <head>
@@ -77,14 +110,38 @@
       </div>
     </nav>
 
+    <?php
+if(isset($message)){
+   foreach($message as $message){
+      echo '
+      <div class="container text-center text-danger bg-light fs-2 border border-danger p-1 mt-2">
+         <span>'.$message.'</span>
+        <a class = "b_register" href = "#register" onclick="this.parentElement.remove();"><i class="fas fa-times text-danger fs-3"></i> </a>
+      </div>
+      ';
+   }
+}
+?>
+
+<?php
+if(isset($message2)){
+   foreach($message2 as $message2){
+      echo '
+      <div class="container text-center text-success bg-light fs-2 border border-success p-1 mt-2">
+         <span>'.$message2.'</span>
+        <a class = "b_login" href = "#login" onclick="this.parentElement.remove();"<i class="fas fa-check text-success fs-4"></i> </a>
+      </div>
+      ';
+   }
+}
+?>
+
   <!-- End of nav -->
    
    <!-- Page navigation btn top and bottem  -->
    <button id="scrollBtn" class="btn btn-lg btn-secondary d-none d-md-block scroll-btn">
     <i id="scrollIcon" class="scrollIcon"></i> 
   </button>
-
-
 
    <!-- Discription section  -->
 
@@ -365,7 +422,7 @@
   <!-- registration form  -->
 
 <section class="register_form text-center mb-5 d-none" id="register">
-  
+ 
   <div class="header_img bg-image">
         <h1 class="text-center text-white align-items-center pt-2 mt-2"><span class="name_l1">S</span>weety <span class="name_l1">C</span>ake <span class="name_l1">H</span>ouse</h1>
         <img src="./assest/img/logo-w.png" alt="" width="200px" class="pt-3 mb-3">
@@ -378,21 +435,11 @@
       <div class="row d-flex justify-content-center">
         <div class="col-lg-8">
           <h2 class="fw-bold mb-5">Sign up now</h2>
-          <form>
-  
-            <div class="row">
-              <div class="col-md-6 mb-4">
-                <div data-mdb-input-init class="form-outline">
-                  <input type="text" id="f_name" name="f_name" class="form-control" />
-                  <label class="form-label" for="form3Example1">First name</label>
-                </div>
-              </div>
-              <div class="col-md-6 mb-4">
-                <div data-mdb-input-init class="form-outline">
-                  <input type="text" id="l_name" name="l_name" class="form-control" />
-                  <label class="form-label" for="form3Example2">Last name</label>
-                </div>
-              </div>
+          <form action="" method="post">
+
+            <div data-mdb-input-init class="form-outline mb-4">
+              <input type="text" id="name" name="name" class="form-control" />
+              <label class="form-label" for="form3Example3">Full Name</label>
             </div>
 
            
@@ -403,11 +450,15 @@
 
             
             <div data-mdb-input-init class="form-outline mb-4">
-              <input type="password" id="pwd" name="pwd" class="form-control" />
+              <input type="password" id="pass" name="pass" class="form-control" />
               <label class="form-label" for="form3Example4">Password</label>
             </div>
 
-            
+            <div data-mdb-input-init class="form-outline mb-4">
+              <input type="password" id="cpass" name="cpass" class="form-control" />
+              <label class="form-label" for="form3Example4">Confirm Password</label>
+            </div>
+      
             <div class="form-check d-flex justify-content-center mb-4">
               <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33"/>
               <label class="form-check-label" for="form2Example33">
@@ -415,8 +466,7 @@
               </label>
             </div>
 
-            
-            <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">
+            <button type="submit" name="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">
               Sign up
             </button>
 
