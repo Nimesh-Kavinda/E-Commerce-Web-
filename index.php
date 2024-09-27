@@ -1,3 +1,5 @@
+
+<!-- registraion function  -->
 <?php
 
 @include './includes/db.php';
@@ -16,13 +18,13 @@ if(isset($_POST['submit'])){
    $select_users = mysqli_query($conn, "SELECT * FROM `users` WHERE email = '$email'") or die('query failed');
 
    if(mysqli_num_rows($select_users) > 0){
-      $message[] = 'user already exist!';
+      $message[] = 'This user already exist!';
    }else{
       if($pass != $cpass){
-         $message[] = 'confirm password not matched!';
+         $message[] = 'Your confirm password not matched!';
       }else{
          mysqli_query($conn, "INSERT INTO `users`(name, email, password) VALUES('$name', '$email', '$pass')") or die('query failed');
-         $message2[] = 'registered successfully!';
+         $message2[] = 'You have registered successfully!';
          
       }
    }
@@ -30,6 +32,8 @@ if(isset($_POST['submit'])){
 }
 
 ?>
+
+
 
 <!doctype html>
  <html lang="en" class="data-bs-theme">
@@ -109,7 +113,10 @@ if(isset($_POST['submit'])){
         </div>
       </div>
     </nav>
+      <!-- End of nav -->
 
+
+  <!-- Registration erro and Succesfull msgs  -->
     <?php
 if(isset($message)){
    foreach($message as $message){
@@ -129,15 +136,27 @@ if(isset($message2)){
       echo '
       <div class="container text-center text-success bg-light fs-2 border border-success p-1 mt-2">
          <span>'.$message2.'</span>
-        <a class = "b_login" href = "#login" onclick="this.parentElement.remove();"<i class="fas fa-check text-success fs-4"></i> </a>
+        <a class = "b_login" href = "#login" onclick="this.parentElement.remove();"><i class="fas fa-check text-success fs-3"></i> </a>
       </div>
       ';
    }
 }
 ?>
 
-  <!-- End of nav -->
-   
+<?php
+if(isset($message3)){
+   foreach($message3 as $message3){
+      echo '
+      <div class="container text-center text-danger bg-light fs-2 border border-danger p-1 mt-2">
+         <span>'.$message3.'</span>
+        <a class = "b_register" href = "#register" onclick="this.parentElement.remove();"><i class="fas fa-times text-danger fs-3"></i> </a>
+      </div>
+      ';
+   }
+}
+?>
+ <!-- end of msgs  -->
+
    <!-- Page navigation btn top and bottem  -->
    <button id="scrollBtn" class="btn btn-lg btn-secondary d-none d-md-block scroll-btn">
     <i id="scrollIcon" class="scrollIcon"></i> 
@@ -373,16 +392,16 @@ if(isset($message2)){
           <div class="card-body p-5 shadow-5 text-center">
             <h2 class="fw-bold mb-5">Sign In now</h2>
            
-            <form>
+            <form action="./functions/login_fun.php" method="post">
               
               <div data-mdb-input-init class="form-outline mb-4">
-                <input type="email" id="login_email" name="login_email" class="form-control" />
+                <input type="email" id="email" name="email" class="form-control" />
                 <label class="form-label" for="form3Example3">Email address</label>
               </div>
 
             
               <div data-mdb-input-init class="form-outline mb-4">
-                <input type="password" id="login_pwd" name="login_pwd" class="form-control" />
+                <input type="password" id="pass" name="pass" class="form-control" />
                 <label class="form-label" for="form3Example4">Password</label>
               </div>
 
