@@ -24,7 +24,7 @@
     }
 }
 body{
-  background-color: #fffcfc !important;
+  background: linear-gradient(to right, #f9f9f9, #e6f0ff);
 
   ::selection {
     background-color: #8B93FF;
@@ -82,27 +82,10 @@ body{
             font-weight: bold;            
         }
     }
-    .catogaries{
-        text-align: end;
-        ul{
-            opacity: 80%;
-
-            color: #8B93FF;
-            border-radius: 20px;
-            text-align: center;
-            align-items: center;
-        }
-        li{
-            font-weight: bold;            
-        }
-        .pink{
-            color: #FF71CD !important;
-        }
-    }
     .show_btn{
         text-align: center;
         button{
-            background-color: #5755FE;
+            background-color: #FF71CD;
         }
         button:hover{
             background-color: #8B93FF;
@@ -321,7 +304,7 @@ body{
       
 }
     .card{
-      border: 1px outset #FF71CD;
+      background: linear-gradient(to right #fea8e0);
         .card-body{
               .btn_buy{
                 background-color: #5755FE;
@@ -525,14 +508,14 @@ body{
     color: $primary;
   }
   h2{
-    color: #5755FE;
+    color: #8B93FF;
   }
   button{
-    background-color: #5755FE;
+    background-color: #FF71CD;
     border: 0;
 
     &:hover{
-      background-color: #FF71CD;
+      background-color: #8B93FF;
     }
   }
 }
@@ -560,9 +543,10 @@ body{
     color: #8B93FF;
   }
   button{
-    background-color: #5755FE;
+    background-color: #FF71CD;
+    border: 0;
     &:hover{
-      background-color: #FF71CD;
+      background-color: #8B93FF;
       border: 0;
     }
   }

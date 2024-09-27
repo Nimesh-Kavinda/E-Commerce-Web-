@@ -1,5 +1,5 @@
 html[data-bs-theme=dark] body {
-  background-color: #212529 !important;
+  background: #212529 !important;
 }
 html[data-bs-theme=dark] body .scroll-btn {
   background-color: #6c757d !important;

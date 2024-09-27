@@ -3,7 +3,7 @@
 
 html[data-bs-theme = "dark"]{
     body{
-        background-color: $dark !important;
+        background: $dark !important;
 
         .scroll-btn {
             background-color: $secondary !important;

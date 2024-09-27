@@ -18,7 +18,7 @@
 }
 
 body {
-  background-color: #fffcfc !important;
+  background: linear-gradient(to right, #f9f9f9, #e6f0ff);
 }
 body ::-moz-selection {
   background-color: #8B93FF;
@@ -75,27 +75,11 @@ body ::selection {
 .welcome_section .offerings li {
   font-weight: bold;
 }
-.welcome_section .catogaries {
-  text-align: end;
-}
-.welcome_section .catogaries ul {
-  opacity: 80%;
-  color: #8B93FF;
-  border-radius: 20px;
-  text-align: center;
-  align-items: center;
-}
-.welcome_section .catogaries li {
-  font-weight: bold;
-}
-.welcome_section .catogaries .pink {
-  color: #FF71CD !important;
-}
 .welcome_section .show_btn {
   text-align: center;
 }
 .welcome_section .show_btn button {
-  background-color: #5755FE;
+  background-color: #FF71CD;
 }
 .welcome_section .show_btn button:hover {
   background-color: #8B93FF;
@@ -255,7 +239,7 @@ body ::selection {
   animation: pressDown12 3.5s infinite;
 }
 .products .card {
-  border: 1px outset #FF71CD;
+  background: linear-gradient(to right #fea8e0);
 }
 .products .card .card-body .btn_buy {
   background-color: #5755FE;
@@ -407,14 +391,14 @@ body ::selection {
   color: #0d6efd;
 }
 .login_from h2 {
-  color: #5755FE;
+  color: #8B93FF;
 }
 .login_from button {
-  background-color: #5755FE;
+  background-color: #FF71CD;
   border: 0;
 }
 .login_from button:hover {
-  background-color: #FF71CD;
+  background-color: #8B93FF;
 }
 
 .register_form .header_img {
@@ -440,10 +424,11 @@ body ::selection {
   color: #8B93FF;
 }
 .register_form button {
-  background-color: #5755FE;
+  background-color: #FF71CD;
+  border: 0;
 }
 .register_form button:hover {
-  background-color: #FF71CD;
+  background-color: #8B93FF;
   border: 0;
 }
 .register_form a {

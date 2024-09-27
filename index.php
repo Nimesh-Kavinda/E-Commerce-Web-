@@ -1,39 +1,7 @@
-
-<!-- registraion function  -->
 <?php
-
-@include './includes/db.php';
-
-if(isset($_POST['submit'])){
-
-   $filter_name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
-   $name = mysqli_real_escape_string($conn, $filter_name);
-   $filter_email = filter_var($_POST['email'], FILTER_SANITIZE_STRING);
-   $email = mysqli_real_escape_string($conn, $filter_email);
-   $filter_pass = filter_var($_POST['pass'], FILTER_SANITIZE_STRING);
-   $pass = mysqli_real_escape_string($conn, md5($filter_pass));
-   $filter_cpass = filter_var($_POST['cpass'], FILTER_SANITIZE_STRING);
-   $cpass = mysqli_real_escape_string($conn, md5($filter_cpass));
-
-   $select_users = mysqli_query($conn, "SELECT * FROM `users` WHERE email = '$email'") or die('query failed');
-
-   if(mysqli_num_rows($select_users) > 0){
-      $message[] = 'This user already exist!';
-   }else{
-      if($pass != $cpass){
-         $message[] = 'Your confirm password not matched!';
-      }else{
-         mysqli_query($conn, "INSERT INTO `users`(name, email, password) VALUES('$name', '$email', '$pass')") or die('query failed');
-         $message2[] = 'You have registered successfully!';
-         
-      }
-   }
-
-}
-
+include './includes/db.php';
 ?>
-
-
+<!-- registraion function  -->
 
 <!doctype html>
  <html lang="en" class="data-bs-theme">
@@ -184,27 +152,14 @@ if(isset($message3)){
           <li class="p-1">Gift Vouchers</li>
         </ul>
         </div>
-        <div class="catogary d-flex d-none d-md-block">
-        <h2 class="p-3 fs-2 align-items-center">Our Catagoies <i class="bi bi-heart-arrow p-4 fs-2"></i></h2>
-        <div class="catogaries">
-        <ul class="m-2 p-2 fs-5 text-center">
-          <li class="p-1">Classic Cakes</li>
-          <li class="p-1 pink">Fruit Cakes</li>
-          <li class="p-1">Special Occasion Cakes</li>
-          <li class="p-1 pink">Cupcakes</li>
-          <li class="p-1">Vegan & Gluten-Free Cakes</li>
-
-        </ul>
-      </div>
-        </div>
         
         <div class="show_btn p-3 mt-4">
           <a href="#login"><button class="btn btn-lg text-white b_login">Discover More</button></a>
         </div>
       </div>
 
-      <div class="image col col-sm col-md col-lg-5 text-center align-items-center d-flex blur_load">
-        <img src="./assest/img/login-cake2.png" alt="" class="text-center img-fluid d-none d-md-block lazyload" width="700px" height="auto">
+      <div class="image col col-sm col-md col-lg-5 text-center align-items-start d-flex blur_load">
+        <img src="./assest/img/login-cake2.png" alt="" class="text-center img-fluid d-none d-lg-block lazyload" width="700px" height="auto">
       </div>
 
 
@@ -454,7 +409,7 @@ if(isset($message3)){
       <div class="row d-flex justify-content-center">
         <div class="col-lg-8">
           <h2 class="fw-bold mb-5">Sign up now</h2>
-          <form action="" method="post">
+          <form action="./functions/registration_fun.php" method="post">
 
             <div data-mdb-input-init class="form-outline mb-4">
               <input type="text" id="name" name="name" class="form-control" />
@@ -485,7 +440,7 @@ if(isset($message3)){
               </label>
             </div>
 
-            <button type="submit" name="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">
+            <button type="submit" name="submit" data-mdb-button-init data-mdb-ripple-init class="btn text-white btn-block mb-4">
               Sign up
             </button>
 
@@ -508,57 +463,8 @@ if(isset($message3)){
    
     <footer class="text-center text-white">
       
-      <div class="container-fluid">
-        
-        <section class="mt-3">
-         
-          <div class="f_list row text-center d-flex justify-content-center p-2">
-            
-            <div class="col-md-2 p-2">
-              <h6 class="text-uppercase font-weight-bold">
-                <a href="#nav" class="text-white">Home</a>
-              </h6>
-            </div>
+      <div class="container-fluid pt-3">
            
-  
-            
-            <div class="col-md-2 p-2">
-              <h6 class="text-uppercase font-weight-bold">
-                <a href="#products" class="text-white">Products</a>
-              </h6>
-            </div>
-            
-  
-           
-            <div class="col-md-2 p-2">
-              <h6 class="text-uppercase font-weight-bold">
-                <a href="#aboutus" class="text-white">About Us</a>
-              </h6>
-            </div>
-            
-  
-           
-            <div class="col-md-2 p-2">
-              <h6 class="text-uppercase font-weight-bold">
-                <a href="#login" class="text-white b_login">Sign-In</a>
-              </h6>
-            </div>
-            
-  
-            
-            <div class="col-md-2 p-2">
-              <h6 class="text-uppercase font-weight-bold">
-                <a href="#register" class="text-white b_register">Sign-Up</a>
-              </h6>
-            </div>
-           
-          </div>
-         
-        </section>
-        
-  
-        <hr class="mt-3"/>
-  
         
         <section class="img mb-1 pb-3">
           <div class="row d-flex justify-content-center">
