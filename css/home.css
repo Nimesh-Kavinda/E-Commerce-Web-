@@ -383,6 +383,16 @@ body ::selection {
 .products_home .topic_product_home .key:nth-child(12) {
   animation: pressDown12 3.5s infinite;
 }
+.products_home .container .card {
+  background-color: #fff5ff;
+}
+.products_home .container .card-title {
+  text-transform: capitalize;
+  color: #8B93FF;
+}
+.products_home .container .card-footer {
+  border: 0;
+}
 .products_home .container .card-footer .btn_wishlist {
   background-color: #FF71CD !important;
 }

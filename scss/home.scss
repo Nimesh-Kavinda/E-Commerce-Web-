@@ -500,7 +500,15 @@ body{
 
 }
 .container{
+  .card{
+    background-color: #fff5ff;
+  }
+  .card-title{
+    text-transform: capitalize;
+    color: #8B93FF;
+  }
   .card-footer{
+    border: 0;
     .btn_wishlist{
       background-color: #FF71CD !important;
       &:hover{

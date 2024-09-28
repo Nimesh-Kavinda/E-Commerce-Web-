@@ -239,7 +239,7 @@ if (isset($_POST['add_to_cart'])) {
         <hr width="60%" class="down_hr">
       </div>
 
-      <div class="container text-center">
+      <div class="container text-center mt-3 py-3">
    <div class="row">
       <?php
       $select_products = mysqli_query($conn, "SELECT * FROM `products` LIMIT 9") or die('query failed');
@@ -247,10 +247,10 @@ if (isset($_POST['add_to_cart'])) {
          while ($fetch_products = mysqli_fetch_assoc($select_products)) {
       ?>
             <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-               <div class="card h-100 bg-light">
+               <div class="card h-100">
                   <form action="" method="POST" class="box">
                      <div class="card-body">
-                        <h5 class="card-title"><?php echo $fetch_products['name']; ?></h5>
+                        <h5 class="card-title fs-4"><?php echo $fetch_products['name']; ?></h5>
                         <p class="price text-muted">Rs.<?php echo $fetch_products['price']; ?>/-</p>
                         <div class="image mb-3">
                            <img src="uploaded_img/<?php echo $fetch_products['image']; ?>" class="img-fluid" alt="">
@@ -263,8 +263,8 @@ if (isset($_POST['add_to_cart'])) {
                         <input type="hidden" name="product_price" value="<?php echo $fetch_products['price']; ?>">
                         <input type="hidden" name="product_image" value="<?php echo $fetch_products['image']; ?>">
 
-                        <input type="submit" value="&#129293;" name="add_to_wishlist" class="btn btn_wishlist w-100 mb-2">
-                        <input type="submit" value="Add to cart" name="add_to_cart" class="btn btn_cart btn-primary w-100">
+                        <input type="submit" value="&#129293;" name="add_to_wishlist" class="btn btn_wishlist w-100 mb-3 p-2 fs-5">
+                        <input type="submit" value="Add to cart" name="add_to_cart" class="btn btn_cart btn-primary w-100 mb-3 p-2 fs-5">
                      </div>
                   </form>
                </div>
