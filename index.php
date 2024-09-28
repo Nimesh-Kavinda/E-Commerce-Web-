@@ -168,7 +168,7 @@ if(isset($_POST['login_submit'])){
 if(isset($message)){
    foreach($message as $message){
       echo '
-      <div class="container text-center text-danger bg-light fs-2 border border-danger p-1 mt-2">
+      <div class="msg_box container text-center text-danger fs-4 p-1 mt-2 mb-3">
          <span>'.$message.'</span>
         <a class = "b_register" href = "#register" onclick="this.parentElement.remove();"><i class="fas fa-times text-danger fs-3"></i> </a>
       </div>
@@ -181,7 +181,7 @@ if(isset($message)){
 if(isset($message2)){
    foreach($message2 as $message2){
       echo '
-      <div class="container text-center text-success bg-light fs-2 border border-success p-1 mt-2">
+      <div class="msg_box container text-center text-success bg-light fs-4 border border-success p-1 mt-2">
          <span>'.$message2.'</span>
         <a class = "b_login" href = "#login" onclick="this.parentElement.remove();"><i class="fas fa-check text-success fs-3"></i> </a>
       </div>
@@ -194,7 +194,7 @@ if(isset($message2)){
 if(isset($message3)){
    foreach($message3 as $message3){
       echo '
-      <div class="container text-center text-danger bg-light fs-2 border border-danger p-1 mt-2">
+      <div class="msg_box container text-center text-danger fs-4 p-1 mt-2 mb-3">
          <span>'.$message3.'</span>
         <a class = "b_login" href = "#login" onclick="this.parentElement.remove();"><i class="fas fa-times text-danger fs-3"></i> </a>
       </div>

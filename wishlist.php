@@ -62,6 +62,7 @@ if(isset($_GET['delete_all'])){
     <link rel="stylesheet" href="./css/navigation.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/user_profile.css">
+    <link rel="stylesheet" href="./css/wishlist.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -76,9 +77,9 @@ if(isset($_GET['delete_all'])){
     
     ?>
 
-<section class="container mt-5">
+<section class="container mt-5 hedling">
     <div class="text-center mb-4">
-        <h3>&#10084; Wishlist</h3>
+        <h3><i class="bi bi-balloon-heart text-muted fs-2"></i> WishList</h3>
     </div>
 </section>
 
@@ -93,16 +94,18 @@ if(isset($_GET['delete_all'])){
             while($fetch_wishlist = mysqli_fetch_assoc($select_wishlist)){
     ?>
     <form action="" method="POST" class="col-lg-4 col-md-6 mb-4">
-        <div class="card h-100">
+        <div class="card h-100 text-center p-3">
             <img src="uploaded_img/<?php echo $fetch_wishlist['image']; ?>" alt="" class="card-img-top">
             <div class="card-body">
-                <h5 class="card-title"><?php echo $fetch_wishlist['name']; ?></h5>
+                <h5 class="card-title title"><?php echo $fetch_wishlist['name']; ?></h5>
                 <p class="card-text">Price: Rs.<?php echo $fetch_wishlist['price']; ?>.00</p>
                 <input type="hidden" name="product_id" value="<?php echo $fetch_wishlist['pid']; ?>">
                 <input type="hidden" name="product_name" value="<?php echo $fetch_wishlist['name']; ?>">
                 <input type="hidden" name="product_price" value="<?php echo $fetch_wishlist['price']; ?>">
                 <input type="hidden" name="product_image" value="<?php echo $fetch_wishlist['image']; ?>">
-                <button type="submit" name="add_to_cart" class="btn btn-primary w-100">Add to Cart</button>
+                <button type="submit" name="add_to_cart" class="btn_add_cart btn">Add to Cart</button>
+               
+
             </div>
         </div>
     </form>
@@ -115,10 +118,10 @@ if(isset($_GET['delete_all'])){
     ?>
     </div> 
 
-    <div class="text-center mt-4">
+    <div class="text-center mt-4 mb-3 wishlist_btn_section">
         <p class="fw-bold">Total: Rs.<?php echo $grand_total; ?>.00</p>
-        <a href="shop.php" class="btn btn-outline-secondary">Continue Shopping</a>
-        <a href="wishlist.php?delete_all" class="btn btn-danger <?php echo ($grand_total > 1)?'':'disabled' ?>" onclick="return confirm('Delete all from wishlist?');">Delete All</a>
+        <a href="home.php" class="btn_shoping btn btn-outline-secondary mx-2">Continue Shopping</a>
+        <a href="wishlist.php?delete_all" class="btn_delete btn <?php echo ($grand_total > 1)?'':'disabled' ?>" onclick="return confirm('Delete all from wishlist?');">Delete All</a>
     </div>
 
 </section>

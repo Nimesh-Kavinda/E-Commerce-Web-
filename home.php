@@ -22,12 +22,12 @@ if (isset($_POST['add_to_wishlist'])) {
    $check_cart_numbers = mysqli_query($conn, "SELECT * FROM `cart` WHERE name = '$product_name' AND user_id = '$user_id'") or die('query failed');
 
    if (mysqli_num_rows($check_wishlist_numbers) > 0) {
-      $message[] = 'already added to wishlist';
+      $message[] = 'Already added to wishlist';
    } elseif (mysqli_num_rows($check_cart_numbers) > 0) {
-      $message[] = 'already added to cart';
+      $message[] = 'Already added to cart';
    } else {
       mysqli_query($conn, "INSERT INTO `wishlist`(user_id, pid, name, price, image) VALUES('$user_id', '$product_id', '$product_name', '$product_price', '$product_image')") or die('query failed');
-      $message[] = 'product added to wishlist';
+      $message[] = 'Product added to the wishlist';
    }
 }
 
@@ -42,7 +42,7 @@ if (isset($_POST['add_to_cart'])) {
    $check_cart_numbers = mysqli_query($conn, "SELECT * FROM `cart` WHERE name = '$product_name' AND user_id = '$user_id'") or die('query failed');
 
    if (mysqli_num_rows($check_cart_numbers) > 0) {
-      $message[] = 'already added to cart';
+      $message[] = 'Already added to cart';
    } else {
 
       $check_wishlist_numbers = mysqli_query($conn, "SELECT * FROM `wishlist` WHERE name = '$product_name' AND user_id = '$user_id'") or die('query failed');
@@ -52,7 +52,7 @@ if (isset($_POST['add_to_cart'])) {
       }
 
       mysqli_query($conn, "INSERT INTO `cart`(user_id, pid, name, price, quantity, image) VALUES('$user_id', '$product_id', '$product_name', '$product_price', '$product_quantity', '$product_image')") or die('query failed');
-      $message[] = 'product added to cart';
+      $message[] = 'Product added to the cart';
    }
 }
 
@@ -94,6 +94,20 @@ if (isset($_POST['add_to_cart'])) {
     include './includes/user_profile.php'
     
     ?>
+
+   <!-- Cart and Wishlist msg section  -->
+ <?php
+if(isset($message)){
+   foreach($message as $message){
+      echo '
+      <div class="msg_box container text-center fs-4 p-1 mt-2 mb-3">
+         <span>'.$message.'</span>
+        <a class = "b_login" href = "#login" onclick="this.parentElement.remove();"><i class="fas fa-check fs-3"></i> </a>
+      </div>
+      ';
+   }
+}
+?>
   
 
 
@@ -256,7 +270,7 @@ if (isset($_POST['add_to_cart'])) {
                            <img src="uploaded_img/<?php echo $fetch_products['image']; ?>" class="img-fluid" alt="">
                         </div>
                      </div>
-                     <div class="card-footer bg-white">
+                     <div class="card-footer">
                         <input type="hidden" name="product_quantity" value="1" min="0" class="qty">
                         <input type="hidden" name="product_id" value="<?php echo $fetch_products['id']; ?>">
                         <input type="hidden" name="product_name" value="<?php echo $fetch_products['name']; ?>">
@@ -264,7 +278,7 @@ if (isset($_POST['add_to_cart'])) {
                         <input type="hidden" name="product_image" value="<?php echo $fetch_products['image']; ?>">
 
                         <input type="submit" value="&#129293;" name="add_to_wishlist" class="btn btn_wishlist w-100 mb-3 p-2 fs-5">
-                        <input type="submit" value="Add to cart" name="add_to_cart" class="btn btn_cart btn-primary w-100 mb-3 p-2 fs-5">
+                        <input type="submit" value="Add to cart" name="add_to_cart" class="btn btn_cart w-100 mb-3 p-2 fs-5">
                      </div>
                   </form>
                </div>

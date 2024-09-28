@@ -21,12 +21,16 @@ body {
   background: linear-gradient(to right, #f9f9f9, #e6f0ff);
 }
 body ::-moz-selection {
-  background-color: #FF71CD;
+  background-color: #ffb1e4;
   color: white;
 }
 body ::selection {
-  background-color: #FF71CD;
+  background-color: #ffb1e4;
   color: white;
+}
+
+.msg_box {
+  background-color: #ffd7ff;
 }
 
 .welcome_section h2 .greeting {

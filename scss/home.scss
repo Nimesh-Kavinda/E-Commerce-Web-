@@ -32,6 +32,19 @@ body{
       }
 }
 
+.msg_box{
+  background-color: #fdcffd;
+      box-shadow: #fe4bc0;
+      border-radius: 10px;
+      border: 0;
+    span{
+      color: #727bff;
+    }
+    a{
+      color: #fe4bc0;
+    }
+}
+
 .img_silder_section{
     .img_silde{
         text-align: center;
@@ -516,7 +529,8 @@ body{
       }
     }
     .btn_cart{
-      background-color: #727bff !important;
+      background-color: #8B93FF !important;
+      color: white;
       &:hover{
         background-color: #5755FE !important;
       }

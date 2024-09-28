@@ -29,6 +29,19 @@ body ::selection {
   color: white;
 }
 
+.msg_box {
+  background-color: #fdcffd;
+  box-shadow: #fe4bc0;
+  border-radius: 10px;
+  border: 0;
+}
+.msg_box span {
+  color: #727bff;
+}
+.msg_box a {
+  color: #fe4bc0;
+}
+
 .img_silder_section .img_silde {
   text-align: center;
   margin: 0 auto;
@@ -400,7 +413,8 @@ body ::selection {
   background-color: #fe4bc0 !important;
 }
 .products_home .container .card-footer .btn_cart {
-  background-color: #727bff !important;
+  background-color: #8B93FF !important;
+  color: white;
 }
 .products_home .container .card-footer .btn_cart:hover {
   background-color: #5755FE !important;
