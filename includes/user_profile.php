@@ -2,13 +2,13 @@
    
     <div class="offcanvas offcanvas-end profile" tabindex="-1" id="offcanvasProfile" aria-labelledby="offcanvasProfileLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasProfileLabel">User Profile</h5>
+        <h5 class="offcanvas-title" id="offcanvasProfileLabel">Profile</h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
         <div class="text-center mb-4">
         
-          <img src="https://via.placeholder.com/150" alt="User Profile Picture" class="rounded-circle img-thumbnail">
+          <img src="./assest/img/user_icon2.png" alt="User Profile Picture" class="rounded-circle img-thumbnail">
         </div>
        
         <h4 class="text-center"><?php echo $_SESSION['user_name']; ?></h4>

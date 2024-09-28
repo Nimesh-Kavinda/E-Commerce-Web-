@@ -26,6 +26,20 @@ body{
     color: white; 
   }
 }
+
+.msg_box{
+    background-color: #fdcffd;
+        box-shadow: #fe4bc0;
+        border-radius: 10px;
+        border: 0;
+      span{
+        color: #727bff;
+      }
+      a{
+        color: #fe4bc0;
+      }
+  }
+
 .hedling{
     h3{
         color: #ff4bc0;

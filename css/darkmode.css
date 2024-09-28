@@ -127,6 +127,12 @@ html[data-bs-theme=dark] .contact .contact_form {
   background-color: #212529 !important;
   border: 1px solid #fff;
 }
+html[data-bs-theme=dark] .contact .contact_form .btn_send {
+  background-color: #8B93FF;
+}
+html[data-bs-theme=dark] .contact .contact_form .btn_send:hover {
+  background-color: #5755FE;
+}
 html[data-bs-theme=dark] .msg_box {
   background-color: #212529 !important;
 }/*# sourceMappingURL=darkmode.css.map */

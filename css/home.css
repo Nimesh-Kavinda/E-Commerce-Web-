@@ -42,6 +42,15 @@ body ::selection {
   color: #fe4bc0;
 }
 
+.noproducts_msg {
+  background-color: #ffd6ff;
+  box-shadow: #ff30b7;
+  border-radius: 10px;
+}
+.noproducts_msg p {
+  color: #5755FE;
+}
+
 .img_silder_section .img_silde {
   text-align: center;
   margin: 0 auto;
@@ -418,12 +427,4 @@ body ::selection {
 }
 .products_home .container .card-footer .btn_cart:hover {
   background-color: #5755FE !important;
-}
-.products_home .noproducts_msg {
-  background-color: #ffd6ff;
-  box-shadow: #ff30b7;
-  border-radius: 10px;
-}
-.products_home p {
-  color: #5755FE;
 }/*# sourceMappingURL=home.css.map */

@@ -22,7 +22,7 @@
             <a class="nav-link menu_item" href="#aboutus">Products</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link menu_item" href="./contact.html">Contact Us</a>
+            <a class="nav-link menu_item" href="./contact.php">Contact Us</a>
           </li>
           <li class="nav-item"></li>
             <a class="nav-link menu_item" href="./oders.html">Oders</a>

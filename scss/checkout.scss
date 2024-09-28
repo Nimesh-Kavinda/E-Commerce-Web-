@@ -31,26 +31,15 @@ body{
     color: white; 
   }
 }
-.contact{
-  h2{
-    color: #8B93FF;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-    text-transform: capitalize;
-  }
-  h4{
-    color: #8B93FF;
-  }
-  .contact_form{
-    background-color: #fff9ff;
-    box-shadow: #FF71CD;
-    .btn_send{
-      background-color: #fe85d4;
-      color: white;
-      border: 0;
-      &:hover{
-        background-color: #FF71CD;
+.msg_box{
+    background-color: #fdcffd;
+        box-shadow: #fe4bc0;
+        border-radius: 10px;
+        border: 0;
+      span{
+        color: #727bff;
       }
-    }
-   }
-}
+      a{
+        color: #fe4bc0;
+      }
+  }

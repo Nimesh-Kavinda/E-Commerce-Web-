@@ -25,7 +25,7 @@ if(isset($_POST['update_quantity'])){
     $cart_id = $_POST['cart_id'];
     $cart_quantity = $_POST['cart_quantity'];
     mysqli_query($conn, "UPDATE `cart` SET quantity = '$cart_quantity' WHERE id = '$cart_id'") or die('query failed');
-    $message[] = 'cart quantity updated!';
+    $message[] = 'Cart quantity updated!';
 }
 
 ?>
@@ -52,10 +52,29 @@ if(isset($_POST['update_quantity'])){
 
 <?php @include './includes/nav.php'; ?>
 
+
+<?php
+if(isset($message)){
+   foreach($message as $message){
+      echo '
+      <div class="msg_box container text-center fs-4 p-1 mt-2 mb-3">
+         <span>'.$message.'</span>
+        <a class = "b_login" href = "#login" onclick="this.parentElement.remove();"><i class="fas fa-check fs-3"></i> </a>
+      </div>
+      ';
+   }
+}
+?>
+
 <?php
     include './includes/user_profile.php'
     
     ?>
+
+       <!-- Page navigation btn top and bottem  -->
+   <button id="scrollBtn" class="btn btn-lg btn-secondary d-none d-md-block scroll-btn">
+    <i id="scrollIcon" class="scrollIcon"></i> 
+  </button>
 
 <section class="container mt-5 hedling">
     <div class="text-center mb-4">
@@ -76,7 +95,7 @@ if(isset($_POST['update_quantity'])){
             while($fetch_cart = mysqli_fetch_assoc($select_cart)){
     ?>
     <div class="col-lg-4 col-md-6 mb-4">
-        <div class="card h-100 text-center">
+        <div class="card h-100 text-center p-3">
             <img src="uploaded_img/<?php echo $fetch_cart['image']; ?>" alt="" class="card-img-top">
             <div class="card-body">
                 <h5 class="card-title"><?php echo $fetch_cart['name']; ?></h5>
@@ -107,8 +126,8 @@ if(isset($_POST['update_quantity'])){
 
     <div class="cart-total text-center mt-4">
         <p>Total: <span class="fw-bold">Rs.<?php echo $grand_total; ?>.00</span></p>
-        <a href="home.php" class="btn_shoping btn btn-outline-secondary">Continue Shopping</a>
-        <a href="checkout.php" class="btn btn_checkout <?php echo ($grand_total > 1)?'':'disabled' ?>">Checkout</a>
+        <a href="./home.php" class="btn_shoping btn btn-outline-secondary mx-2">Continue Shopping</a>
+        <a href="./checkout.php" class="btn btn_checkout <?php echo ($grand_total > 1)?'':'disabled' ?>">Checkout</a>
     </div>
 
 </section>

@@ -3,7 +3,6 @@
 
 nav{
     background-color: #A594F9;
-    box-shadow: #3c39ff; 
     .list{
         ul{
             .menu_item{
@@ -21,7 +20,7 @@ nav{
                 &::after{
                     position: absolute;
                     content: "";
-                    background-color: #ffbbe6;
+                    background-color: #ff93d8;
                     bottom: 0;
                     left: 0;
                     width: 0%;

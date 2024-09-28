@@ -1,3 +1,29 @@
+<?php
+
+@include './includes/db.php';
+
+session_start();
+
+$user_id = $_SESSION['user_id'];
+
+if(!isset($user_id)){
+   header('location:index.php');
+};
+
+if(isset($_POST['send'])){
+
+    $name = mysqli_real_escape_string($conn, $_POST['name']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $number = mysqli_real_escape_string($conn, $_POST['number']);
+    $msg = mysqli_real_escape_string($conn, $_POST['message']);
+
+        mysqli_query($conn, "INSERT INTO `message`(user_id, name, email, number, message) VALUES('$user_id', '$name', '$email', '$number', '$msg')") or die('query failed');       
+}
+
+?>
+
+
+
 <!doctype html>
 <html lang="en" class="data-bs-theme">
   <head>
@@ -9,6 +35,8 @@
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/navigation.css">
     <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/user_profile.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -21,125 +49,20 @@
   </button>
 
   <!-- Naigation -->
-
-  <nav class="navbar navbar-expand-lg" id="nav">
-
-    <div class="main-con container-fluid">
-
-      <span class="navbar-brand d-flex gap-2 text-white">
-      <img src="./assest/img/logo-w.png" alt="" class="img-fluid" width="100px" height="20px">
-      </span>
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon text-muted"></span>
-      </button>
-
-      <div class="list collapse navbar-collapse justify-content-between" id="navbarText">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link menu_item" href="#nav">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link menu_item" href="#products">About US</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link menu_item" href="#aboutus">Products</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link menu_item" href="./contact.html">Contact Us</a>
-          </li>
-          <li class="nav-item"></li>
-            <a class="nav-link menu_item" href="./oders.html">Oders</a>
-          </li>
-        </ul>
-        <div class="btn_section">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active b_login_a" aria-current="page" href="#login"><button class="btn b_signin b_login btn-md border border-0">Sign In</button></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#register"><button class="btn b_signup b_register btn-md border border-0">Sign Up</button></a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="d-flex ms-1 cart_and_wishlist">
-          <button class="btn border-0 text-center wish_btn">
-            <i class="bi bi-bag-heart-fill text-white fs-4"></i><sup class="fs-5 text-white">0</sup>
-          </button>
-          <button class="btn border-0 text-center cart_btn">
-          <i class="bi bi-cart-check-fill text-white fs-4"></i><sup class="fs-5 text-white">0</sup>
-        </button>
-        <button class="btn border-0 text-center profile_btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasProfile" aria-controls="offcanvasProfile">
-          <i class="bi bi-person-square text-white fs-4"></i>
-        </button>
-          
-        </div>
-
-        <div onclick="activeDarkMode()" class="d_mode">
-          <button
-            class="btn btn-outline-primary mx-3 text-center"
-            id="switch-mode">
-            <i class="bi bi-moon-stars-fill text-white fs-4"></i>
-            <i class="bi bi-sun-fill text-white d-none fs-4"></i>
-          </button>
-        </div>
-
-      </div>
-    </div>
-  </nav>
-
-   <!-- User Profile  -->
-   <section class="user_profile">
-   
-    <div class="offcanvas offcanvas-end profile" tabindex="-1" id="offcanvasProfile" aria-labelledby="offcanvasProfileLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasProfileLabel">User Profile</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <div class="text-center mb-4">
-        
-          <img src="https://via.placeholder.com/150" alt="User Profile Picture" class="rounded-circle img-thumbnail">
-        </div>
-       
-        <h4 class="text-center">Nimesh Kavinda</h4>
-       
-        
-       
-        <ul class="list-group mb-4 mt-3">
-          <li class="list-group-item"><strong>Email:</strong> johndoe@example.com</li>
-          <li class="list-group-item"><strong>Phone:</strong> +123 456 7890</li>
-          <li class="list-group-item"><strong>Adress:</strong> New York, USA</li>
-
-          <form action="" class="list-group">
-          <input type="password" class="list-group-item" placeholder="Change Your Password">
-          <input type="submit" class="btn btn-outline-primary mt-3" value="Change Password">
-        </form>
-
-        </ul>
-  
-        
-        <div class="d-grid gap-2">
-          <button class="btn btn-danger">Logout</button>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-
+  <?php @include './includes/nav.php'; ?>
     <!-- End Of User Profile  -->
+    <?php @include './includes/user_profile.php'; ?>
 
 
-<!-- Contact 3 - Bootstrap Brain Component -->
-<section class=" py-3 py-md-5 contact">
+
+<section class="py-3 py-md-5 contact">
   <div class="container">
     <div class="row gy-3 gy-md-4 gy-lg-0 align-items-md-center">
       <div class="col-12 col-lg-6">
         <div class="row justify-content-xl-center">
           <div class="col-12 col-xl-11">
-            <h2 class="h1 mb-3">Get in touch With Us</h2>
-            <p class="lead fs-4 text-secondary mb-5">We're always on the lookout to work with new clients. If you're interested in working with us, please get in touch in one of the following ways.</p>
+            <h2 class="h1 mb-3">Get in touch With Us...</h2>
+            <p class="fs-4 fw-1 text-muted mb-5">Have questions or need assistance? Contact Sweety Cake House today—we're here to help make your moments sweeter!</p>
             <div class="d-flex mb-5">
               <div class="me-4 text-primary">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-geo" viewBox="0 0 16 16">
@@ -148,7 +71,7 @@
               </div>
               <div>
                 <h4 class="mb-3">Address</h4>
-                <address class="mb-0 text-secondary">8014 Edith Blvd NE, Albuquerque, New York, United States</address>
+                <address class="mb-0 text-secondary">No-134/4, Colombo-Kandy Rode, Molagoda, Kegalle.</address>
               </div>
             </div>
             <div class="row mb-5">
@@ -162,7 +85,7 @@
                   <div>
                     <h4 class="mb-3">Phone</h4>
                     <p class="mb-0">
-                      <a class="link-secondary text-decoration-none" href="tel:+15057922430">(505) 792-2430</a>
+                      <a class="link-secondary text-decoration-none" href="tel:+15057922430">077 8525 115</a>
                     </p>
                   </div>
                 </div>
@@ -178,7 +101,7 @@
                   <div>
                     <h4 class="mb-3">E-Mail</h4>
                     <p class="mb-0">
-                      <a class="link-secondary text-decoration-none" href="mailto:demo@yourdomain.com">demo@yourdomain.com</a>
+                      <a class="link-secondary text-decoration-none" href="mailto:demo@yourdomain.com">sweetycakehouse@gmail.com</a>
                     </p>
                   </div>
                 </div>
@@ -209,11 +132,11 @@
       <div class="col-12 col-lg-6">
         <div class="rounded shadow-sm overflow-hidden contact_form">
 
-          <form action="#!">
+          <form action="" method="post">
             <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
               <div class="col-12">
                 <label for="fullname" class="form-label">Full Name <span class="text-danger">*</span></label>
-                <input type="text" class="form-control" id="fullname" name="fullname" value="" required>
+                <input type="text" class="form-control" id="name" name="name" value="" required>
               </div>
               <div class="col-12 col-md-6">
                 <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
@@ -234,12 +157,8 @@
                       <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
                     </svg>
                   </span>
-                  <input type="tel" class="form-control" id="phone" name="phone" value="">
+                  <input type="tel" class="form-control" id="number" name="number" value="">
                 </div>
-              </div>
-              <div class="col-12">
-                <label for="subject" class="form-label">Subject <span class="text-danger">*</span></label>
-                <input type="text" class="form-control" id="subject" name="subject" value="" required>
               </div>
               <div class="col-12">
                 <label for="message" class="form-label">Message <span class="text-danger">*</span></label>
@@ -247,7 +166,7 @@
               </div>
               <div class="col-12">
                 <div class="d-grid">
-                  <button class="btn btn-primary btn-lg" type="submit">Send Message</button>
+                  <button class="btn btn_send btn-lg" type="submit" name="send">Send Message</button>
                 </div>
               </div>
             </div>
@@ -258,6 +177,9 @@
     </div>
   </div>
 </section>
+
+<?php @include './includes/footer.php'; ?>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
     <script src="./js/navigation.js"></script>

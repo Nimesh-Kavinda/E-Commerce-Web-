@@ -18,7 +18,7 @@
 }
 
 body {
-  background-color: #fffcfc !important;
+  background: linear-gradient(to right, #f9f9f9, #e6f0ff);
 }
 body ::-moz-selection {
   background-color: #FF71CD;
@@ -29,7 +29,24 @@ body ::selection {
   color: white;
 }
 
-.contact_form {
-  background-color: #fff;
-  border: 1px solid #8B93FF;
+.contact h2 {
+  color: #8B93FF;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.contact h4 {
+  color: #8B93FF;
+}
+.contact .contact_form {
+  background-color: #fff9ff;
+  box-shadow: #FF71CD;
+}
+.contact .contact_form .btn_send {
+  background-color: #fe85d4;
+  color: white;
+  border: 0;
+}
+.contact .contact_form .btn_send:hover {
+  background-color: #FF71CD;
 }/*# sourceMappingURL=contact.css.map */

@@ -45,6 +45,16 @@ body{
     }
 }
 
+.noproducts_msg{
+  background-color: #ffd6ff;
+  box-shadow: #ff30b7;
+  border-radius: 10px;
+  p{
+    color: #5755FE;
+  }
+  
+}
+
 .img_silder_section{
     .img_silde{
         text-align: center;
@@ -537,12 +547,5 @@ body{
     }
   }
 }
-.noproducts_msg{
-  background-color: #ffd6ff;
-  box-shadow: #ff30b7;
-  border-radius: 10px;
-}
-p{
-  color: #5755FE;
-}
+
 }

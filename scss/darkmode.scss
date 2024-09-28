@@ -178,12 +178,18 @@ html[data-bs-theme = "dark"]{
           .contact_form{
             background-color: $dark !important;
             border: 1px solid $white;
+            .btn_send{
+              background-color: #8B93FF;
+              &:hover{
+                background-color: #5755FE;
+              }
+            }
           }
         }
            .msg_box{
           background-color: $dark !important;
-          
-    }
+        }
 
+        
         }
 
