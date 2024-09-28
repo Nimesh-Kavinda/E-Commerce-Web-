@@ -536,61 +536,12 @@ if(isset($message3)){
 
   <!-- fotter  -->
 
- <section class="footer">
-
-  <div class="container-luid">
-   
-    <footer class="text-center text-white">
-      
-      <div class="container-fluid pt-3">
-           
-        
-        <section class="img mb-1 pb-3">
-          <div class="row d-flex justify-content-center">
-            <div class="col-lg-8 text-center">
-             <img src="./assest/img/logo-w.png" alt="" width="200px">
-            </div>
-          </div>
-        </section>
-       
-  
-        
-        <section class="text-center my-2">
-          <a href="" class="text-white me-4">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-google"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-github"></i>
-          </a>
-        </section>
-        
-      </div>
-      
-  
-    
-      <div class="text-center p-3 footer_link">
-        © 2024 Copyright:
-        <a class="text-white" href="#">Web Desing Project (Second Year) </a>
-      </div>
-     
-    </footer>
-   
-  </div>
+ <?php
+ include './includes/footer.php';
  
+ ?>
 
- </section>
+ 
  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
     <script src="./js/navigation.js"></script>
     <script src="./js/darkmode.js"></script>

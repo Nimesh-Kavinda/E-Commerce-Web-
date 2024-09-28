@@ -109,6 +109,20 @@ html[data-bs-theme=dark] .products_home .topic_product_home {
   background-color: #212529;
   color: #FF71CD;
 }
+html[data-bs-theme=dark] .products_home .container .card {
+  background-color: #212529 !important;
+}
+html[data-bs-theme=dark] .products_home .container .card-footer {
+  background-color: #212529 !important;
+  border: 0;
+}
+html[data-bs-theme=dark] .products_home .noproducts_msg {
+  background-color: #212529;
+  border-radius: 10px;
+}
+html[data-bs-theme=dark] .products_home p {
+  color: #8B93FF;
+}
 html[data-bs-theme=dark] .contact .contact_form {
   background-color: #212529 !important;
   border: 1px solid #fff;

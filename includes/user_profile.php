@@ -11,14 +11,12 @@
           <img src="https://via.placeholder.com/150" alt="User Profile Picture" class="rounded-circle img-thumbnail">
         </div>
        
-        <h4 class="text-center">Nimesh Kavinda</h4>
+        <h4 class="text-center"><?php echo $_SESSION['user_name']; ?></h4>
        
         
        
         <ul class="list-group mb-4 mt-3">
-          <li class="list-group-item"><strong>Email:</strong> johndoe@example.com</li>
-          <li class="list-group-item"><strong>Phone:</strong> +123 456 7890</li>
-          <li class="list-group-item"><strong>Adress:</strong> New York, USA</li>
+          <li class="list-group-item"><strong>Email:</strong> <?php echo $_SESSION['user_email']; ?></li>
 
           <form action="" class="list-group">
           <input type="password" class="list-group-item" placeholder="Change Your Password">

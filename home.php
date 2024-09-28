@@ -1,6 +1,60 @@
 <?php
 
+include './includes/db.php';
+
 session_start();
+
+$user_id = $_SESSION['user_id'];
+
+if (!isset($user_id)) {
+   header('location:index.php');
+}
+
+if (isset($_POST['add_to_wishlist'])) {
+
+   $product_id = $_POST['product_id'];
+   $product_name = $_POST['product_name'];
+   $product_price = $_POST['product_price'];
+   $product_image = $_POST['product_image'];
+
+   $check_wishlist_numbers = mysqli_query($conn, "SELECT * FROM `wishlist` WHERE name = '$product_name' AND user_id = '$user_id'") or die('query failed');
+
+   $check_cart_numbers = mysqli_query($conn, "SELECT * FROM `cart` WHERE name = '$product_name' AND user_id = '$user_id'") or die('query failed');
+
+   if (mysqli_num_rows($check_wishlist_numbers) > 0) {
+      $message[] = 'already added to wishlist';
+   } elseif (mysqli_num_rows($check_cart_numbers) > 0) {
+      $message[] = 'already added to cart';
+   } else {
+      mysqli_query($conn, "INSERT INTO `wishlist`(user_id, pid, name, price, image) VALUES('$user_id', '$product_id', '$product_name', '$product_price', '$product_image')") or die('query failed');
+      $message[] = 'product added to wishlist';
+   }
+}
+
+if (isset($_POST['add_to_cart'])) {
+
+   $product_id = $_POST['product_id'];
+   $product_name = $_POST['product_name'];
+   $product_price = $_POST['product_price'];
+   $product_image = $_POST['product_image'];
+   $product_quantity = $_POST['product_quantity'];
+
+   $check_cart_numbers = mysqli_query($conn, "SELECT * FROM `cart` WHERE name = '$product_name' AND user_id = '$user_id'") or die('query failed');
+
+   if (mysqli_num_rows($check_cart_numbers) > 0) {
+      $message[] = 'already added to cart';
+   } else {
+
+      $check_wishlist_numbers = mysqli_query($conn, "SELECT * FROM `wishlist` WHERE name = '$product_name' AND user_id = '$user_id'") or die('query failed');
+
+      if (mysqli_num_rows($check_wishlist_numbers) > 0) {
+         mysqli_query($conn, "DELETE FROM `wishlist` WHERE name = '$product_name' AND user_id = '$user_id'") or die('query failed');
+      }
+
+      mysqli_query($conn, "INSERT INTO `cart`(user_id, pid, name, price, quantity, image) VALUES('$user_id', '$product_id', '$product_name', '$product_price', '$product_quantity', '$product_image')") or die('query failed');
+      $message[] = 'product added to cart';
+   }
+}
 
 ?>
 
@@ -20,6 +74,7 @@ session_start();
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
 
@@ -41,11 +96,8 @@ session_start();
     ?>
   
 
-    <!-- End Of User Profile  -->
 
-<!-- End of nav -->
-
-  <!-- slider  -->
+    <!-- slider  -->
     <section class="img_silder_section">
 
       <div class="container-fluid col-xs-6 col-sm-12 col-md-12 col-lg-12 img_silde">
@@ -90,6 +142,7 @@ session_start();
     <!-- About us  -->
 
     <section id="aboutus" class="about_us_home my-5">
+
 
       <div class="topic_aboutus_home container-fluid">
         <hr width="60%" class="top_hr">
@@ -160,11 +213,13 @@ session_start();
         </div>
       </div>
     
-     </section>
+</section>
+    
 
      <!-- End about us  -->
 
      <!-- Products  -->
+   
      <section id="products" class="products_home">
     
       <div class="topic_product_home">
@@ -184,6 +239,46 @@ session_start();
         <hr width="60%" class="down_hr">
       </div>
 
+      <div class="container text-center">
+   <div class="row">
+      <?php
+      $select_products = mysqli_query($conn, "SELECT * FROM `products` LIMIT 9") or die('query failed');
+      if (mysqli_num_rows($select_products) > 0) {
+         while ($fetch_products = mysqli_fetch_assoc($select_products)) {
+      ?>
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+               <div class="card h-100 bg-light">
+                  <form action="" method="POST" class="box">
+                     <div class="card-body">
+                        <h5 class="card-title"><?php echo $fetch_products['name']; ?></h5>
+                        <p class="price text-muted">Rs.<?php echo $fetch_products['price']; ?>/-</p>
+                        <div class="image mb-3">
+                           <img src="uploaded_img/<?php echo $fetch_products['image']; ?>" class="img-fluid" alt="">
+                        </div>
+                     </div>
+                     <div class="card-footer bg-white">
+                        <input type="hidden" name="product_quantity" value="1" min="0" class="qty">
+                        <input type="hidden" name="product_id" value="<?php echo $fetch_products['id']; ?>">
+                        <input type="hidden" name="product_name" value="<?php echo $fetch_products['name']; ?>">
+                        <input type="hidden" name="product_price" value="<?php echo $fetch_products['price']; ?>">
+                        <input type="hidden" name="product_image" value="<?php echo $fetch_products['image']; ?>">
+
+                        <input type="submit" value="&#129293;" name="add_to_wishlist" class="btn btn_wishlist w-100 mb-2">
+                        <input type="submit" value="Add to cart" name="add_to_cart" class="btn btn_cart btn-primary w-100">
+                     </div>
+                  </form>
+               </div>
+            </div>
+      <?php
+         }
+      } else {
+         echo '<div class = "container noproducts_msg py-2 my-2">
+         <p class="empty text-center m-3 fs-5">No products added yet!</p>
+         </div>';
+      }
+      ?>
+   </div>
+
       </section>
 
       
@@ -193,110 +288,12 @@ session_start();
       
 
       <!-- Footer  -->
-      <section class="footer">
-
-        <div class="container-luid">
-         
-          <footer class="text-center text-white">
-            
-            <div class="container-fluid">
-              
-              <section class="mt-3">
-               
-                <div class="f_list row text-center d-flex justify-content-center p-2">
-                  
-                  <div class="col-md-2 p-2">
-                    <h6 class="text-uppercase font-weight-bold">
-                      <a href="#nav" class="text-white">Home</a>
-                    </h6>
-                  </div>
-                 
-        
-                  
-                  <div class="col-md-2 p-2">
-                    <h6 class="text-uppercase font-weight-bold">
-                      <a href="#products" class="text-white">Products</a>
-                    </h6>
-                  </div>
-                  
-        
-                 
-                  <div class="col-md-2 p-2">
-                    <h6 class="text-uppercase font-weight-bold">
-                      <a href="#aboutus" class="text-white">About Us</a>
-                    </h6>
-                  </div>
-                  
-        
-                 
-                  <div class="col-md-2 p-2">
-                    <h6 class="text-uppercase font-weight-bold">
-                      <a href="#login" class="text-white b_login">Sign-In</a>
-                    </h6>
-                  </div>
-                  
-        
-                  
-                  <div class="col-md-2 p-2">
-                    <h6 class="text-uppercase font-weight-bold">
-                      <a href="#register" class="text-white b_register">Sign-Up</a>
-                    </h6>
-                  </div>
-                 
-                </div>
-               
-              </section>
-              
-        
-              <hr class="mt-3"/>
-        
-              
-              <section class="img mb-1 pb-3">
-                <div class="row d-flex justify-content-center">
-                  <div class="col-lg-8 text-center">
-                   <img src="./assest/img/logo-w.png" alt="" width="200px">
-                  </div>
-                </div>
-              </section>
-             
-        
-              
-              <section class="text-center my-2">
-                <a href="" class="text-white me-4">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="" class="text-white me-4">
-                  <i class="fab fa-twitter"></i>
-                </a>
-                <a href="" class="text-white me-4">
-                  <i class="fab fa-google"></i>
-                </a>
-                <a href="" class="text-white me-4">
-                  <i class="fab fa-instagram"></i>
-                </a>
-                <a href="" class="text-white me-4">
-                  <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="" class="text-white me-4">
-                  <i class="fab fa-github"></i>
-                </a>
-              </section>
-              
-            </div>
-            
-        
-          
-            <div class="text-center p-3 footer_link">
-              © 2024 Copyright:
-              <a class="text-white" href="#">Web Desing Project (Second Year) </a>
-            </div>
-           
-          </footer>
-         
-        </div>
-       
       
-       </section>
+      <?php
+     include './includes/footer.php';
+ 
+      ?>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
     <script src="./js/navigation.js"></script>
     <script src="./js/darkmode.js"></script>

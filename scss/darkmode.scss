@@ -157,6 +157,22 @@ html[data-bs-theme = "dark"]{
               background-color: $dark;
               color: #FF71CD;
             }
+            .container{
+              .card{
+                background-color: $dark !important;
+              }
+              .card-footer{
+                background-color: $dark !important;
+                border: 0;
+              }
+            }
+            .noproducts_msg{
+              background-color: $dark;
+              border-radius: 10px;
+            }
+            p{
+              color: #8B93FF;
+            }
           }
           .contact{
           .contact_form{

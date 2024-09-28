@@ -10,7 +10,7 @@
   background: #c1b9c1;
 }
 * ::-webkit-scrollbar-thumb {
-  background-color: #8B93FF;
+  background-color: #FF71CD;
   border-end-end-radius: 10px;
 }
 * ::-webkit-scrollbar-thumb:hover {
@@ -21,11 +21,11 @@ body {
   background: linear-gradient(to right, #f9f9f9, #e6f0ff);
 }
 body ::-moz-selection {
-  background-color: #8B93FF;
+  background-color: #FF71CD;
   color: white;
 }
 body ::selection {
-  background-color: #8B93FF;
+  background-color: #FF71CD;
   color: white;
 }
 

@@ -15,7 +15,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #8B93FF; 
+  background-color: #FF71CD; 
   border-end-end-radius: 10px;
 }
 
@@ -27,7 +27,7 @@
 body{
   background: linear-gradient(to right, #f9f9f9, #e6f0ff);
     ::selection {
-        background-color: #8B93FF;
+        background-color: #FF71CD;
         color: white; 
       }
 }
@@ -498,5 +498,29 @@ body{
       animation: pressDown12 3.5s infinite;
     }        
 
+}
+.container{
+  .card-footer{
+    .btn_wishlist{
+      background-color: #FF71CD !important;
+      &:hover{
+        background-color: #fe4bc0 !important;
+      }
+    }
+    .btn_cart{
+      background-color: #727bff !important;
+      &:hover{
+        background-color: #5755FE !important;
+      }
+    }
+  }
+}
+.noproducts_msg{
+  background-color: #ffd6ff;
+  box-shadow: #ff30b7;
+  border-radius: 10px;
+}
+p{
+  color: #5755FE;
 }
 }

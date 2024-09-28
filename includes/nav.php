@@ -28,16 +28,6 @@
             <a class="nav-link menu_item" href="./oders.html">Oders</a>
           </li>
         </ul>
-        <!-- <div class="btn_section">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active b_login_a" aria-current="page" href="#login"><button class="btn b_signin b_login btn-md border border-0">Sign In</button></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#register"><button class="btn b_signup b_register btn-md border border-0">Sign Up</button></a>
-            </li>
-          </ul>
-        </div> -->
 
         <div class="btn_logout">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -48,12 +38,27 @@
         </div>
 
         <div class="d-flex ms-1 cart_and_wishlist">
+
+                <?php
+                $select_wishlist_count = mysqli_query($conn, "SELECT * FROM `wishlist` WHERE user_id = '$user_id'") or die('query failed');
+                $wishlist_num_rows = mysqli_num_rows($select_wishlist_count);
+                 ?>
+
           <button class="btn border-0 text-center wish_btn">
-            <i class="bi bi-bag-heart-fill text-white fs-4"></i><sup class="fs-5 text-white">0</sup>
+            <a href="./wishlist.php" class="text-decoration-none"><i class="bi bi-bag-heart-fill text-white fs-4"></i><sup class="fs-5 text-white"><?php echo $wishlist_num_rows; ?></sup></a>
           </button>
+
+          <?php
+                $select_cart_count = mysqli_query($conn, "SELECT * FROM `cart` WHERE user_id = '$user_id'") or die('query failed');
+                $cart_num_rows = mysqli_num_rows($select_cart_count);
+            ?>
+
           <button class="btn border-0 text-center cart_btn">
-          <i class="bi bi-cart-check-fill text-white fs-4"></i><sup class="fs-5 text-white">0</sup>
+          <a href="./cart.php" class="text-decoration-none"><i class="bi bi-cart-check-fill text-white fs-4"></i><sup class="fs-5 text-white"><?php echo $cart_num_rows; ?></sup></a>
         </button>
+
+    
+
         <button class="btn border-0 text-center profile_btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasProfile" aria-controls="offcanvasProfile">
           <i class="bi bi-person-square text-white fs-4"></i>
         </button>
