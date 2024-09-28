@@ -1,0 +1,18 @@
+.user_profile{
+    .profile{
+      background-color: #f2f2ff;
+    }
+    .btn_logout{
+      a{
+        color: white;
+      }
+      .b_lout{
+        color: #ffffff !important;
+        background-color: #FF71CD;
+        &:hover{
+          background-color: #fe4bc0;
+        }
+      }
+    }
+    
+}

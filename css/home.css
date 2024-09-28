@@ -18,7 +18,7 @@
 }
 
 body {
-  background-color: #fffcfc !important;
+  background: linear-gradient(to right, #f9f9f9, #e6f0ff);
 }
 body ::-moz-selection {
   background-color: #8B93FF;
@@ -27,10 +27,6 @@ body ::-moz-selection {
 body ::selection {
   background-color: #8B93FF;
   color: white;
-}
-
-.user_profile .profile {
-  background-color: #f2f2ff;
 }
 
 .img_silder_section .img_silde {

@@ -40,6 +40,10 @@ nav .btn_section .b_signup {
 nav .btn_section .b_signup:hover {
   background-color: #3c39ff;
 }
+nav .btn_logout .b_lout {
+  color: #FFF7FC;
+  background-color: #ff53c3;
+}
 nav .d_mode button {
   border: none;
 }/*# sourceMappingURL=nav.css.map */

@@ -3,6 +3,85 @@ include './includes/db.php';
 ?>
 <!-- registraion function  -->
 
+<?php
+
+@include '../includes/db.php';
+
+if(isset($_POST['submit'])){
+
+   $filter_name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
+   $name = mysqli_real_escape_string($conn, $filter_name);
+   $filter_email = filter_var($_POST['email'], FILTER_SANITIZE_STRING);
+   $email = mysqli_real_escape_string($conn, $filter_email);
+   $filter_pass = filter_var($_POST['pass'], FILTER_SANITIZE_STRING);
+   $pass = mysqli_real_escape_string($conn, md5($filter_pass));
+   $filter_cpass = filter_var($_POST['cpass'], FILTER_SANITIZE_STRING);
+   $cpass = mysqli_real_escape_string($conn, md5($filter_cpass));
+
+   $select_users = mysqli_query($conn, "SELECT * FROM `users` WHERE email = '$email'") or die('query failed');
+
+   if(mysqli_num_rows($select_users) > 0){
+      $message[] = 'user already exist!';
+   }else{
+      if($pass != $cpass){
+         $message[] = 'confirm password not matched!';
+      }else{
+         mysqli_query($conn, "INSERT INTO `users`(name, email, password) VALUES('$name', '$email', '$pass')") or die('query failed');
+         $message2[] = 'registered successfully!';
+      }
+   }
+
+}
+
+?>
+
+<!-- login fun  -->
+
+<?php
+
+
+session_start();
+
+if(isset($_POST['login_submit'])){
+
+   $filter_email = filter_var($_POST['email'], FILTER_SANITIZE_STRING);
+   $email = mysqli_real_escape_string($conn, $filter_email);
+   $filter_pass = filter_var($_POST['pass'], FILTER_SANITIZE_STRING);
+   $pass = mysqli_real_escape_string($conn, md5($filter_pass));
+
+   $select_users = mysqli_query($conn, "SELECT * FROM `users` WHERE email = '$email' AND password = '$pass'") or die('query failed');
+
+
+   if(mysqli_num_rows($select_users) > 0){
+      
+      $row = mysqli_fetch_assoc($select_users);
+
+      if($row['user_type'] == 'admin'){
+
+         $_SESSION['admin_name'] = $row['name'];
+         $_SESSION['admin_email'] = $row['email'];
+         $_SESSION['admin_id'] = $row['id'];
+         header('location:./admin_page.php');
+
+      }elseif($row['user_type'] == 'user'){
+
+         $_SESSION['user_name'] = $row['name'];
+         $_SESSION['user_email'] = $row['email'];
+         $_SESSION['user_id'] = $row['id']; 
+         header('location:./home.php');
+
+      }else{
+         $message3[] = 'no user found!';
+      }
+
+   }else{
+      $message3[] = 'incorrect email or password!';
+   }
+
+}
+ 
+?>
+
 <!doctype html>
  <html lang="en" class="data-bs-theme">
   <head>
@@ -117,7 +196,7 @@ if(isset($message3)){
       echo '
       <div class="container text-center text-danger bg-light fs-2 border border-danger p-1 mt-2">
          <span>'.$message3.'</span>
-        <a class = "b_register" href = "#register" onclick="this.parentElement.remove();"><i class="fas fa-times text-danger fs-3"></i> </a>
+        <a class = "b_login" href = "#login" onclick="this.parentElement.remove();"><i class="fas fa-times text-danger fs-3"></i> </a>
       </div>
       ';
    }
@@ -347,7 +426,7 @@ if(isset($message3)){
           <div class="card-body p-5 shadow-5 text-center">
             <h2 class="fw-bold mb-5">Sign In now</h2>
            
-            <form action="./functions/login_fun.php" method="post">
+            <form action="" method="post">
               
               <div data-mdb-input-init class="form-outline mb-4">
                 <input type="email" id="email" name="email" class="form-control" />
@@ -369,7 +448,7 @@ if(isset($message3)){
               </div>
 
              
-              <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn text-white btn-block mb-4 text-uppercase">
+              <button type="submit" name="login_submit" data-mdb-button-init data-mdb-ripple-init class="btn text-white btn-block mb-4 text-uppercase">
                 Sign In
               </button>
 
@@ -409,7 +488,7 @@ if(isset($message3)){
       <div class="row d-flex justify-content-center">
         <div class="col-lg-8">
           <h2 class="fw-bold mb-5">Sign up now</h2>
-          <form action="./functions/registration_fun.php" method="post">
+          <form action="" method="post">
 
             <div data-mdb-input-init class="form-outline mb-4">
               <input type="text" id="name" name="name" class="form-control" />
