@@ -1,0 +1,46 @@
+* {
+  list-style-type: none;
+}
+* ::-webkit-scrollbar {
+  width: 14px;
+}
+* ::-webkit-scrollbar-track {
+  background: #c1b9c1;
+}
+* ::-webkit-scrollbar-thumb {
+  background-color: #FF71CD;
+  border-end-end-radius: 10px;
+}
+* ::-webkit-scrollbar-thumb:hover {
+  background-color: #727bff;
+}
+
+body {
+  background: linear-gradient(to right, #f9f9f9, #e6f0ff);
+}
+body ::-moz-selection {
+  background-color: #FF71CD;
+  color: white;
+}
+body ::selection {
+  background-color: #FF71CD;
+  color: white;
+}
+
+.heading h3 {
+  color: #FF71CD;
+}
+
+.oder_form .form_box .card {
+  background-color: #fff5ff;
+}
+.oder_form .form_box p strong {
+  color: #727bff;
+  font-size: 17px;
+}
+.oder_form .form_box p span {
+  text-transform: capitalize;
+}
+.oder_form .form_box p .email {
+  text-transform: none;
+}/*# sourceMappingURL=oders.css.map */

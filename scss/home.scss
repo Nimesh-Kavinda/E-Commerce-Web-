@@ -546,6 +546,14 @@ body{
       }
     }
   }
+  .btn_view{
+    background-color: #8B93FF;
+    color: white;
+    border: 0;
+    &:hover{
+      background-color: #FF71CD;
+    }
+  }
 }
 
 }

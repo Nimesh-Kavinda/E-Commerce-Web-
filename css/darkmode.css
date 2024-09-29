@@ -135,4 +135,11 @@ html[data-bs-theme=dark] .contact .contact_form .btn_send:hover {
 }
 html[data-bs-theme=dark] .msg_box {
   background-color: #212529 !important;
+}
+html[data-bs-theme=dark] .oder_form .form_box .card {
+  background-color: #212529;
+}
+html[data-bs-theme=dark] .oder_form .form_box p strong {
+  color: #939aff;
+  font-size: 18px;
 }/*# sourceMappingURL=darkmode.css.map */

@@ -190,6 +190,19 @@ html[data-bs-theme = "dark"]{
           background-color: $dark !important;
         }
 
-        
-        }
+        .oder_form{
+          .form_box{
+              .card{
+                  background-color: $dark;
+              } 
+              p{
+                strong{
+                  color: #939aff;
+                  font-size: 18px;
+              }
+              }   
+          }
+      }
 
+        }
+       

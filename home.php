@@ -283,6 +283,8 @@ if(isset($message)){
                   </form>
                </div>
             </div>
+            <a href="./products.php"><button class="btn btn_view">View More</button></a>
+
       <?php
          }
       } else {

@@ -427,4 +427,12 @@ body ::selection {
 }
 .products_home .container .card-footer .btn_cart:hover {
   background-color: #5755FE !important;
+}
+.products_home .container .btn_view {
+  background-color: #8B93FF;
+  color: white;
+  border: 0;
+}
+.products_home .container .btn_view:hover {
+  background-color: #FF71CD;
 }/*# sourceMappingURL=home.css.map */
