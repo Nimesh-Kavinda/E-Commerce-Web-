@@ -13,13 +13,13 @@
       <div class="list collapse navbar-collapse justify-content-between" id="navbarText">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link menu_item" href="#nav">Home</a>
+            <a class="nav-link menu_item" href="./home.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link menu_item" href="#products">About US</a>
+            <a class="nav-link menu_item" href="#">About US</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link menu_item" href="#aboutus">Products</a>
+            <a class="nav-link menu_item" href="./products.php">Products</a>
           </li>
           <li class="nav-item">
             <a class="nav-link menu_item" href="./contact.php">Contact Us</a>

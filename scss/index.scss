@@ -310,20 +310,20 @@ body{
     .card{
       background: linear-gradient(to right #fea8e0);
         .card-body{
-              .btn_buy{
-                background-color: #5755FE;
-                color: white;
-
-                &:hover{
-                  background-color:#2d2afd;
-                }
-                      } 
-              .btn_cart{
+              .btn_wish{
                 background-color: #FF71CD;
                 color: white;
 
                 &:hover{
-                  background-color: #ff3cbb;
+                  background-color:#ff3cbb;
+                }
+                      } 
+              .btn_cart{
+                background-color: #8B93FF;
+                color: white;
+
+                &:hover{
+                  background-color: #727bff;
                 }
               }
       }
@@ -480,11 +480,13 @@ body{
 }
   .about_content{
     h3{
-      color: #5755FE;
+      color: #727bff;
       font-style: italic;
     }
     .cover_msg{
-      color:#8B93FF;
+      color:#FF71CD;
+      font-weight: 500;
+      font-variant: small-caps;
     }
     .topic_msg{
       border-left: 3px solid #FF71CD;

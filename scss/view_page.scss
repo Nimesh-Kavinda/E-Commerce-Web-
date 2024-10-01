@@ -32,6 +32,19 @@ body{
   }
 }
 
+.msg_box{
+  background-color: #fdcffd;
+      box-shadow: #fe4bc0;
+      border-radius: 10px;
+      border: 0;
+    span{
+      color: #727bff;
+    }
+    a{
+      color: #fe4bc0;
+    }
+}
+
 .Product_details{
     h3{
         color: #FF71CD;

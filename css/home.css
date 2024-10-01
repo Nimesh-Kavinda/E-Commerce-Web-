@@ -217,11 +217,13 @@ body ::selection {
   animation: pressDown8 2.2s infinite;
 }
 .about_us_home .about_content_home h3 {
-  color: #5755FE;
+  color: #727bff;
   font-style: italic;
 }
 .about_us_home .about_content_home .cover_msg {
-  color: #8B93FF;
+  color: #FF71CD;
+  font-weight: 500;
+  font-variant: small-caps;
 }
 .about_us_home .about_content_home .topic_msg {
   border-left: 3px solid #FF71CD;

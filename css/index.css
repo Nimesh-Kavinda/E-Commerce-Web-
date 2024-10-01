@@ -245,19 +245,19 @@ body ::selection {
 .products .card {
   background: linear-gradient(to right #fea8e0);
 }
-.products .card .card-body .btn_buy {
-  background-color: #5755FE;
-  color: white;
-}
-.products .card .card-body .btn_buy:hover {
-  background-color: #2d2afd;
-}
-.products .card .card-body .btn_cart {
+.products .card .card-body .btn_wish {
   background-color: #FF71CD;
   color: white;
 }
-.products .card .card-body .btn_cart:hover {
+.products .card .card-body .btn_wish:hover {
   background-color: #ff3cbb;
+}
+.products .card .card-body .btn_cart {
+  background-color: #8B93FF;
+  color: white;
+}
+.products .card .card-body .btn_cart:hover {
+  background-color: #727bff;
 }
 
 .about_us .topic_aboutus {
@@ -370,11 +370,13 @@ body ::selection {
   animation: pressDown8 2.2s infinite;
 }
 .about_us .about_content h3 {
-  color: #5755FE;
+  color: #727bff;
   font-style: italic;
 }
 .about_us .about_content .cover_msg {
-  color: #8B93FF;
+  color: #FF71CD;
+  font-weight: 500;
+  font-variant: small-caps;
 }
 .about_us .about_content .topic_msg {
   border-left: 3px solid #FF71CD;

@@ -201,7 +201,7 @@ if(isset($message)){
       </div>
 
       <div class="container-fluid mt-3 offers">
-        <div class="row">
+          <div class="row">
           <div class="col-sm-6 col-lg-4 d-flex text-center justify-content-center p-3 delivery text-white">
             <i class="fa fa-truck fs-1 p-3 text-muted" aria-hidden="true"></i>
             <div class="offers_text d-block text-muted">
@@ -264,9 +264,7 @@ if(isset($message)){
                <div class="card h-100">
                   <form action="" method="POST" class="box">
                      <div class="card-body">
-                        <h5 class="card-title fs-4"><?php echo $fetch_products['name']; ?></h5>
-                        <p class="price text-muted">Rs.<?php echo $fetch_products['price']; ?>/-</p>
-                        <div class="image mb-3">
+                        <div class="image mb-1">
                         <a href="view_page.php?pid=<?php echo $fetch_products['id']; ?>">
                         <img src="uploaded_img/<?php echo $fetch_products['image']; ?>" class="card-img-top" alt="Product Image">
                         </a>
@@ -279,8 +277,10 @@ if(isset($message)){
                         <input type="hidden" name="product_price" value="<?php echo $fetch_products['price']; ?>">
                         <input type="hidden" name="product_image" value="<?php echo $fetch_products['image']; ?>">
 
-                        <input type="submit" value="&#129293;" name="add_to_wishlist" class="btn btn_wishlist w-100 mb-3 p-2 fs-5">
-                        <input type="submit" value="Add to cart" name="add_to_cart" class="btn btn_cart w-100 mb-3 p-2 fs-5">
+                        <h5 class="card-title fs-4"><?php echo $fetch_products['name']; ?></h5>
+                        <p class="price text-muted">Rs.<?php echo $fetch_products['price']; ?>/-</p>
+                        <input type="submit" value="&#129293;" name="add_to_wishlist" class="btn btn_wishlist w-50 mb-3 fs-5">
+                        <input type="submit" value="Add to cart" name="add_to_cart" class="btn btn_cart w-75 mb-3 fs-5">
                      </div>
                   </form>
                </div>

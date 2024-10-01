@@ -280,7 +280,7 @@ if(isset($message3)){
                     <h5 class="card-title">Vanila Cake</h5>
                     <p class="card-text">A fluffy vanilla cake topped with light cream and fresh strawberries and blueberries.</p>
                     <p class="card-text"><strong>Rs.999.99</strong></p>
-                    <a href="#login" class="btn btn_buy b_loginfirts">Buy Now</a> <br><br>
+                    <a href="#login" class="btn btn_wish b_loginfirts w-25">&#129293;</a> <br><br>
                     <a href="#login" class="btn btn_cart b_loginfirts">Add to Cart</a>
                 </div>
             </div>
@@ -293,7 +293,7 @@ if(isset($message3)){
                     <h5 class="card-title">Chocolate Cake</h5>
                     <p class="card-text">A moist, rich chocolate cake with smooth ganache and delicate chocolate shavings.</p>
                     <p class="card-text"><strong>Rs.1199.99</strong></p>
-                    <a href="#login" class="btn btn_buy b_loginfirts">Buy Now</a> <br><br>
+                    <a href="#login" class="btn btn_wish b_loginfirts w-25">&#129293;</a> <br><br>
                     <a href="#login" class="btn btn_cart b_loginfirts">Add to Cart</a>
                 </div>
             </div>
@@ -307,7 +307,7 @@ if(isset($message3)){
                     <p class="card-text"> A light, fluffy cake layered with whipped cream and fresh strawberries.
                     </p>
                     <p class="card-text"><strong>Rs1249.99</strong></p>
-                    <a href="#login" class="btn btn_buy b_loginfirts">Buy Now</a> <br><br>
+                    <a href="#login" class="btn btn_wish b_loginfirts w-25">&#129293;</a> <br><br>
                     <a href="#login" class="btn btn_cart b_loginfirts">Add to Cart</a>
                 </div>
             </div>
@@ -327,7 +327,7 @@ if(isset($message3)){
                     <h5 class="card-title">Matcha Green Tea Cake</h5>
                     <p class="card-text">Light green sponge layers with matcha frosting, topped with powdered green tea and berries.</p>
                     <p class="card-text"><strong>Rs.1499.99</strong></p>
-                    <a href="#login" class="btn btn_buy b_loginfirts">Buy Now</a> <br><br>
+                    <a href="#login" class="btn btn_wish b_loginfirts w-25">&#129293;</a> <br><br>
                     <a href="#login" class="btn btn_cart b_loginfirts">Add to Cart</a>
                 </div>
             </div>
@@ -340,7 +340,7 @@ if(isset($message3)){
                     <h5 class="card-title">Rainbow Cake</h5>
                     <p class="card-text">A vibrant rainbow cake with colorful layers and creamy frosting</p>
                     <p class="card-text"><strong>Rs.1749.99</strong></p>
-                    <a href="#login" class="btn btn_buy b_loginfirts">Buy Now</a> <br><br>
+                    <a href="#login" class="btn btn_wish b_loginfirts w-25">&#129293;</a> <br><br>
                     <a href="#login" class="btn btn_cart b_loginfirts">Add to Cart</a>
                 </div>
             </div>
@@ -353,7 +353,7 @@ if(isset($message3)){
                     <h5 class="card-title">Lemon Cake</h5>
                     <p class="card-text">A refreshing lemon cake with tangy lemon curd and zest garnish.</p>
                     <p class="card-text"><strong>Rs.1399.99</strong></p>
-                    <a href="#login" class="btn btn_buy b_loginfirts">Buy Now</a> <br><br>
+                    <a href="#login" class="btn btn_wish b_loginfirts w-25">&#129293;</a> <br><br>
                     <a href="#login" class="btn btn_cart b_loginfirts">Add to Cart</a>
                 </div>
             </div>
@@ -429,13 +429,13 @@ if(isset($message3)){
             <form action="" method="post">
               
               <div data-mdb-input-init class="form-outline mb-4">
-                <input type="email" id="email" name="email" class="form-control" />
+                <input type="email" id="email" name="email" class="form-control" required autocomplete="off" />
                 <label class="form-label" for="form3Example3">Email address</label>
               </div>
 
             
               <div data-mdb-input-init class="form-outline mb-4">
-                <input type="password" id="pass" name="pass" class="form-control" />
+                <input type="password" id="pass" name="pass" class="form-control" required autocomplete="off" />
                 <label class="form-label" for="form3Example4">Password</label>
               </div>
 
@@ -443,7 +443,7 @@ if(isset($message3)){
               <div class="form-check d-flex justify-content-center mb-4">
                 <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33"/>
                 <label class="form-check-label" for="form2Example33">
-                  Subscribe to our newsletter
+                  Subscribe to our Email Service
                 </label>
               </div>
 
@@ -491,31 +491,31 @@ if(isset($message3)){
           <form action="" method="post">
 
             <div data-mdb-input-init class="form-outline mb-4">
-              <input type="text" id="name" name="name" class="form-control" />
+              <input type="text" id="name" name="name" class="form-control" required autocomplete="off"/>
               <label class="form-label" for="form3Example3">Full Name</label>
             </div>
 
            
             <div data-mdb-input-init class="form-outline mb-4">
-              <input type="email" id="email" name="email" class="form-control" />
+              <input type="email" id="email" name="email" class="form-control" required autocomplete="off"/>
               <label class="form-label" for="form3Example3">Email address</label>
             </div>
 
             
             <div data-mdb-input-init class="form-outline mb-4">
-              <input type="password" id="pass" name="pass" class="form-control" />
+              <input type="password" id="pass" name="pass" class="form-control" required autocomplete="off"/>
               <label class="form-label" for="form3Example4">Password</label>
             </div>
 
             <div data-mdb-input-init class="form-outline mb-4">
-              <input type="password" id="cpass" name="cpass" class="form-control" />
+              <input type="password" id="cpass" name="cpass" class="form-control" required autocomplete="off"/>
               <label class="form-label" for="form3Example4">Confirm Password</label>
             </div>
       
             <div class="form-check d-flex justify-content-center mb-4">
               <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33"/>
               <label class="form-check-label" for="form2Example33">
-                Subscribe to our newsletter
+              I hereby confirm that all the information provided by me is accurate and complete to the best of my knowledge.
               </label>
             </div>
 

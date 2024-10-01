@@ -87,6 +87,20 @@ if (isset($_POST['add_to_cart'])) {
     <i id="scrollIcon" class="scrollIcon"></i> 
   </button>
 
+  <?php
+if(isset($message)){
+   foreach($message as $message){
+      echo '
+      <div class="msg_box container text-center fs-4 p-1 mt-2 mb-3">
+         <span>'.$message.'</span>
+        <a class = "b_login" href = "#login" onclick="this.parentElement.remove();"><i class="fas fa-check fs-3"></i> </a>
+      </div>
+      ';
+   }
+}
+?>
+
+
 <section class="container my-5 Product_details">
     <h3 class="text-center mb-4"><i class="bi bi-ticket-detailed-fill text-muted"></i> Product Details</h3>
 

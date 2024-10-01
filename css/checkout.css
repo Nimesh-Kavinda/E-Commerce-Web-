@@ -40,4 +40,42 @@ body ::selection {
 }
 .msg_box a {
   color: #fe4bc0;
+}
+
+.heading h3 {
+  color: #FF71CD;
+}
+
+.display_order p {
+  color: #727bff;
+  font-size: 20px;
+  font-weight: bold;
+}
+.display_order p span {
+  color: #dc3545;
+  font-size: 16px;
+}
+.display_order .grand_total {
+  color: #727bff;
+  font-weight: bold;
+  font-size: 20px;
+}
+.display_order .grand_total span {
+  color: #dc3545;
+  font-size: 16px;
+}
+
+.checkout h3 {
+  color: #fe4bc0;
+}
+.checkout .form_checkout {
+  background-color: #fff9ff;
+  border-radius: 15px;
+}
+.checkout .form_checkout input[type=submit] {
+  background-color: #727bff;
+}
+.checkout .form_checkout input[type=submit]:hover {
+  background-color: #FF71CD;
+  border: none;
 }/*# sourceMappingURL=checkout.css.map */

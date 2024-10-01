@@ -7,7 +7,7 @@ session_start();
 $user_id = $_SESSION['user_id'];
 
 if(!isset($user_id)){
-   header('location:login.php');
+   header('location:index.php');
 }; 
 
 if(isset($_POST['order'])){
@@ -92,10 +92,10 @@ if(isset($message)){
   <?php @include './includes/user_profile.php'; ?>
 
 <section class="heading text-center py-4">
-    <h3>Checkout</h3>
+    <h3><i class="bi bi-bag-check-fill text-muted"></i> Checkout</h3>
 </section>
 
-<section class="display-order container my-4">
+<section class="display_order container my-4">
     <?php
         $grand_total = 0;
         $select_cart = mysqli_query($conn, "SELECT * FROM `cart` WHERE user_id = '$user_id'") or die('query failed');
@@ -111,31 +111,31 @@ if(isset($message)){
             echo '<p class="empty text-center">your cart is empty</p>';
         }
     ?>
-    <div class="grand-total text-end">Total : <span>Rs.<?php echo $grand_total; ?>.00</span></div>
+    <div class="grand_total text-end">Total : <span>Rs.<?php echo $grand_total; ?>.00</span></div>
 </section>
 
 <section class="checkout container my-4">
 
-    <form action="" method="POST">
+    <h3 class="pb-3">Place an Order</h3>
 
-        <h3>Place Order</h3>
+    <form action="" method="POST" class="form_checkout px-3 py-2">
 
         <div class="row g-3">
             <div class="col-md-6">
                 <label for="name" class="form-label">Name :</label>
-                <input type="text" name="name" id="name" class="form-control" placeholder="">
+                <input type="text" name="name" id="name" class="form-control" placeholder="" required autocomplete="off">
             </div>
             <div class="col-md-6">
                 <label for="number" class="form-label">Mobile Number :</label>
-                <input type="number" name="number" id="number" min="0" class="form-control" placeholder="">
+                <input type="number" name="number" id="number" min="0" class="form-control" placeholder="" required autocomplete="off">
             </div>
             <div class="col-md-6">
                 <label for="email" class="form-label">E-mail :</label>
-                <input type="email" name="email" id="email" class="form-control" placeholder="">
+                <input type="email" name="email" id="email" class="form-control" placeholder="" required autocomplete="off">
             </div>
             <div class="col-md-6">
                 <label for="method" class="form-label">Payment Method:</label>
-                <select name="method" id="method" class="form-select">
+                <select name="method" id="method" class="form-select" required>
                     <option value="cash on delivery">Cash on Delivery</option>
                     <option value="credit card">Credit Card</option>
                     <option value="paypal">Paypal</option>
@@ -143,27 +143,27 @@ if(isset($message)){
             </div>
             <div class="col-md-6">
                 <label for="flat" class="form-label">Address Line 01 :</label>
-                <input type="text" name="flat" id="flat" class="form-control" placeholder="">
+                <input type="text" name="flat" id="flat" class="form-control" placeholder="" required autocomplete="off">
             </div>
             <div class="col-md-6">
                 <label for="street" class="form-label">Address Line 02 :</label>
-                <input type="text" name="street" id="street" class="form-control" placeholder="">
+                <input type="text" name="street" id="street" class="form-control" placeholder="" required autocomplete="off">
             </div>
             <div class="col-md-6">
                 <label for="city" class="form-label">City :</label>
-                <input type="text" name="city" id="city" class="form-control" placeholder="">
+                <input type="text" name="city" id="city" class="form-control" placeholder="" required autocomplete="off">
             </div>
             <div class="col-md-6">
                 <label for="state" class="form-label">State :</label>
-                <input type="text" name="state" id="state" class="form-control" placeholder="">
+                <input type="text" name="state" id="state" class="form-control" placeholder="" required autocomplete="off">
             </div>
             <div class="col-md-6">
                 <label for="country" class="form-label">Country :</label>
-                <input type="text" name="country" id="country" class="form-control" placeholder="">
+                <input type="text" name="country" id="country" class="form-control" placeholder="" required autocomplete="off">
             </div>
             <div class="col-md-6">
                 <label for="pin_code" class="form-label">Postal Code:</label>
-                <input type="number" min="0" name="pin_code" id="pin_code" class="form-control" placeholder="">
+                <input type="number" min="0" name="pin_code" id="pin_code" class="form-control" placeholder="" required autocomplete="off">
             </div>
         </div>
 

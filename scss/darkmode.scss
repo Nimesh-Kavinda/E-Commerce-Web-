@@ -138,14 +138,16 @@ html[data-bs-theme = "dark"]{
             }
             .about_content_home{
               h3{
-                color: #FF71CD;
-                // background-color: #ffffffb9;
-                background-blend-mode:hue;
+                color: #ffb1e4;
                 text-align: start;
-                border-radius: 5px;
               }
               .topic_msg{
                 border-left: 3px solid #8B93FF;
+              }
+              .cover_msg{
+                color:#939aff;
+                font-weight: 300;
+                font-variant: small-caps;
               }
             }
             .offers{
@@ -221,5 +223,12 @@ html[data-bs-theme = "dark"]{
         }
       
     }
-        }
+    .checkout{
+      .form_checkout{
+        background-color: $dark;
+        border: 1px solid white;
+        border-radius: 10px;
+      }
+    }
+}
        

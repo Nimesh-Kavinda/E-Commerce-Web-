@@ -43,3 +43,46 @@ body{
         color: #fe4bc0;
       }
   }
+  .heading{
+    h3{
+      color: #FF71CD;
+    }
+  }
+  .display_order{
+    p{
+      color: #727bff;
+      font-size: 20px;
+      font-weight: bold;
+
+      span{
+        color: $danger;
+        font-size: 16px;
+      }
+    }
+    .grand_total{
+      color: #727bff;
+      font-weight: bold;
+      font-size: 20px;
+      span{
+        color: $danger;
+        font-size: 16px;
+      }
+    }
+  }
+  .checkout{
+    h3{
+      color: #fe4bc0;
+    }
+    .form_checkout{
+      background-color: #fff9ff;
+      border-radius: 15px;
+
+      input[type = "submit"]{
+        background-color: #727bff;
+        &:hover{
+          background-color: #FF71CD;
+          border: none;
+        }
+      }
+    }
+  }

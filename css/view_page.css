@@ -29,6 +29,19 @@ body ::selection {
   color: white;
 }
 
+.msg_box {
+  background-color: #fdcffd;
+  box-shadow: #fe4bc0;
+  border-radius: 10px;
+  border: 0;
+}
+.msg_box span {
+  color: #727bff;
+}
+.msg_box a {
+  color: #fe4bc0;
+}
+
 .Product_details h3 {
   color: #FF71CD;
 }

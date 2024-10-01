@@ -94,13 +94,16 @@ html[data-bs-theme=dark] .about_us_home .topic_aboutus_home {
   background-color: #212529;
 }
 html[data-bs-theme=dark] .about_us_home .about_content_home h3 {
-  color: #FF71CD;
-  background-blend-mode: hue;
+  color: #ffb1e4;
   text-align: start;
-  border-radius: 5px;
 }
 html[data-bs-theme=dark] .about_us_home .about_content_home .topic_msg {
   border-left: 3px solid #8B93FF;
+}
+html[data-bs-theme=dark] .about_us_home .about_content_home .cover_msg {
+  color: #939aff;
+  font-weight: 300;
+  font-variant: small-caps;
 }
 html[data-bs-theme=dark] .about_us_home .offers {
   background-color: #212529;
@@ -156,4 +159,9 @@ html[data-bs-theme=dark] .Product_details .card-body .btn_wlist {
 }
 html[data-bs-theme=dark] .Product_details .card-body .btn_wlist:hover {
   background-color: #ffb1e4;
+}
+html[data-bs-theme=dark] .checkout .form_checkout {
+  background-color: #212529;
+  border: 1px solid white;
+  border-radius: 10px;
 }/*# sourceMappingURL=darkmode.css.map */
