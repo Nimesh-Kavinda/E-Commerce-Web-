@@ -142,4 +142,18 @@ html[data-bs-theme=dark] .oder_form .form_box .card {
 html[data-bs-theme=dark] .oder_form .form_box p strong {
   color: #939aff;
   font-size: 18px;
+}
+html[data-bs-theme=dark] .Product_details .card {
+  background-color: #212529;
+  border: none;
+}
+html[data-bs-theme=dark] .Product_details .card-body {
+  border: 1px solid rgba(255, 255, 255, 0.7254901961);
+  border-top: none;
+}
+html[data-bs-theme=dark] .Product_details .card-body .btn_wlist {
+  background-color: #FF71CD;
+}
+html[data-bs-theme=dark] .Product_details .card-body .btn_wlist:hover {
+  background-color: #ffb1e4;
 }/*# sourceMappingURL=darkmode.css.map */

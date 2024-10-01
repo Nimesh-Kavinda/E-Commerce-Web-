@@ -29,33 +29,29 @@ body ::selection {
   color: white;
 }
 
-.hedling h3 {
+.Product_details h3 {
   color: #FF71CD;
 }
-
-.card .title {
-  text-transform: capitalize;
+.Product_details .card {
+  background-color: #fff5ff;
+}
+.Product_details .card .card-body .card-title {
   color: #727bff;
 }
-.card .btn_add_cart {
+.Product_details .card .card-body .btn_wlist {
+  background-color: #ffb1e4;
+}
+.Product_details .card .card-body .btn_wlist:hover {
+  background-color: #FF71CD;
+}
+.Product_details .card .card-body .btn_cart {
   background-color: #727bff;
-  border: 0;
-  color: white;
+  color: #FFFFFF;
 }
-.card .btn_add_cart:hover {
-  background-color: #ff4bc0;
-  color: white;
+.Product_details .card .card-body .btn_cart:hover {
+  background-color: #5c66ff;
 }
-
-.wishlist_btn_section .btn_shoping:hover {
+.Product_details .btn_goback:hover {
   background-color: #727bff;
-  border: 0;
-}
-.wishlist_btn_section .btn_delete {
-  background-color: #ff4bc0 !important;
-  color: white !important;
-  border: 0;
-}
-.wishlist_btn_section .btn_delete:hover {
-  background-color: #ff22b2 !important;
-}/*# sourceMappingURL=wishlist.css.map */
+  border: none;
+}/*# sourceMappingURL=view_page.css.map */

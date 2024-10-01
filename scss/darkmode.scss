@@ -203,6 +203,23 @@ html[data-bs-theme = "dark"]{
               }   
           }
       }
-
+      .Product_details{       
+        .card{
+            background-color: $dark;
+            border: none;
+        }
+        .card-body{
+          border: 1px solid #ffffffb9;
+          border-top: none;
+          
+          .btn_wlist{
+            background-color: #FF71CD;
+            &:hover{
+                background-color: #ffb1e4;
+            }               
+        }
+        }
+      
+    }
         }
        

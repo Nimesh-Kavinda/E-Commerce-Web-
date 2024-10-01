@@ -267,7 +267,9 @@ if(isset($message)){
                         <h5 class="card-title fs-4"><?php echo $fetch_products['name']; ?></h5>
                         <p class="price text-muted">Rs.<?php echo $fetch_products['price']; ?>/-</p>
                         <div class="image mb-3">
-                           <img src="uploaded_img/<?php echo $fetch_products['image']; ?>" class="img-fluid" alt="">
+                        <a href="view_page.php?pid=<?php echo $fetch_products['id']; ?>">
+                        <img src="uploaded_img/<?php echo $fetch_products['image']; ?>" class="card-img-top" alt="Product Image">
+                        </a>
                         </div>
                      </div>
                      <div class="card-footer">

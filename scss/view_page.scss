@@ -31,39 +31,37 @@ body{
     color: white; 
   }
 }
-.hedling{
+
+.Product_details{
     h3{
         color: #FF71CD;
     }
-}
-.card{
-    .title{
-        text-transform: capitalize;
-        color: #727bff;
-    }
-    .btn_add_cart{
-        background-color: #727bff;
-        border: 0;
-        color: white;
-        &:hover{
-            background-color: #ff4bc0;
-            color: white;
+    .card{
+        background-color: #fff5ff;  
+        .card-body{
+            .card-title{
+                color: #727bff;
+            }
+            .btn_wlist{
+                background-color: #ffb1e4;
+                &:hover{
+                    background-color: #FF71CD;
+                }               
+            }
+            .btn_cart{
+                background-color: #727bff;
+                color: #FFFFFF;
+                &:hover{
+                    background-color: #5c66ff;
+                    
+                }
+            }
         }
     }
-}
-.wishlist_btn_section{
-    .btn_shoping{
+    .btn_goback{
         &:hover{
             background-color: #727bff;
-            border: 0;
-        }
-    }
-    .btn_delete{
-        background-color: #ff4bc0 !important;
-        color: white !important;
-        border: 0;
-        &:hover{
-            background-color: #ff22b2 !important;
+            border: none;
         }
     }
 }
