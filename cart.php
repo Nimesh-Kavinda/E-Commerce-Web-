@@ -48,7 +48,7 @@ if(isset($_POST['update_quantity'])){
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
 
 <?php @include './includes/nav.php'; ?>
 
@@ -103,6 +103,7 @@ if(isset($message)){
                 <form action="" method="post">
                     <input type="hidden" value="<?php echo $fetch_cart['id']; ?>" name="cart_id">
                     <div class="input-group mb-3">
+                        <h6 class="text-center py-2 me-2 text-primary">Select Suantity</h6>
                         <input type="number" min="1" value="<?php echo $fetch_cart['quantity']; ?>" name="cart_quantity" class="form-control">
                         <button type="submit" class="btn btn_update" name="update_quantity">Update</button>
                     </div>

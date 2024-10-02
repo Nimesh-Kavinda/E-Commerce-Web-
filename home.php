@@ -264,7 +264,7 @@ if(isset($message)){
                <div class="card h-100">
                   <form action="" method="POST" class="box">
                      <div class="card-body">
-                        <div class="image mb-1">
+                        <div class="image mb-1 p-0">
                         <a href="view_page.php?pid=<?php echo $fetch_products['id']; ?>">
                         <img src="uploaded_img/<?php echo $fetch_products['image']; ?>" class="card-img-top" alt="Product Image">
                         </a>
@@ -285,7 +285,6 @@ if(isset($message)){
                   </form>
                </div>
             </div>
-            <a href="./products.php"><button class="btn btn_view">View More</button></a>
 
       <?php
          }

@@ -34,13 +34,13 @@ if(isset($message)){
                   <a href="./admin_page.php" class="nav-link">Dashboard</a>
                </li>
                <li class="nav-item">
-                  <a href="admin_products.php" class="nav-link">ADD</a>
+                  <a href="./admin_products.php" class="nav-link">ADD</a>
                </li>
                <li class="nav-item">
                   <a href="./admin_orders.php" class="nav-link">Orders</a>
                </li>
                <li class="nav-item">
-                  <a href="admin_users.php" class="nav-link">Users</a>
+                  <a href="./admin_users.php" class="nav-link">Users</a>
                </li>
                <li class="nav-item">
                   <a href="admin_contacts.php" class="nav-link">Feedbacks</a>
@@ -50,7 +50,7 @@ if(isset($message)){
  
             <ul class="navbar-nav ms-auto text-center m-2">
                <li class="nav-item">
-                  <p class="mb-0 text-muted fw-bold">Username: <span class="fw-bold text-danger"><?php echo $_SESSION['admin_name']; ?></span></p>             
+                  <p class="mb-0 text-muted fw-bold">Username: <span class="fw-bold text-danger" style="text-transform: capitalize;"><?php echo $_SESSION['admin_name']; ?></span></p>             
                </li>
                <li class="nav-item mx-3">
                   <p class="text-muted fw-bold">Email: <span class="fw-bold text-danger"><?php echo $_SESSION['admin_email']; ?></span></p>

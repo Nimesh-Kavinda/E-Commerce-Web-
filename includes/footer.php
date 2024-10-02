@@ -1,4 +1,4 @@
-<section class="footer">
+<section class="footer mt-auto">
 
   <div class="container-luid">
    

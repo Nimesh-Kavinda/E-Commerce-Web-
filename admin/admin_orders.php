@@ -30,7 +30,7 @@ if(!isset($admin_id)){
 
 <!-- Main content section with flex-grow to push the footer down -->
 <section class="placed-orders container my-5 flex-grow-1"> 
-   <h1 class="title text-center mb-4">Placed Orders</h1>
+   <h1 class="title text-center mb-4 text-muted"><i class="bi bi-luggage text-danger"></i> Placed Orders</h1>
 
    <div class="row g-4">
       <?php
@@ -44,13 +44,13 @@ if(!isset($admin_id)){
             <div class="card-body">
                <p class="card-text">User ID: <span class="fw-bold"><?php echo $fetch_orders['user_id']; ?></span></p>
                <p class="card-text">Placed On: <span class="fw-bold"><?php echo $fetch_orders['placed_on']; ?></span></p>
-               <p class="card-text">Name: <span class="fw-bold"><?php echo $fetch_orders['name']; ?></span></p>
-               <p class="card-text">Number: <span class="fw-bold"><?php echo $fetch_orders['number']; ?></span></p>
+               <p class="card-text">Name: <span class="fw-bold" style="text-transform: capitalize;"><?php echo $fetch_orders['name']; ?></span></p>
+               <p class="card-text">Phone Number: <span class="fw-bold"><?php echo $fetch_orders['number']; ?></span></p>
                <p class="card-text">Email: <span class="fw-bold"><?php echo $fetch_orders['email']; ?></span></p>
-               <p class="card-text">Address: <span class="fw-bold"><?php echo $fetch_orders['address']; ?></span></p>
-               <p class="card-text">Total Products: <span class="fw-bold"><?php echo $fetch_orders['total_products']; ?></span></p>
+               <p class="card-text">Address: <span class="fw-bold" style="text-transform: capitalize;"><?php echo $fetch_orders['address']; ?></span></p>
+               <p class="card-text">Total Products: <span class="fw-bold" style="text-transform: capitalize;"><?php echo $fetch_orders['total_products']; ?></span></p>
                <p class="card-text">Total Price: <span class="fw-bold">Rs.<?php echo $fetch_orders['total_price']; ?>.00</span></p>
-               <p class="card-text">Payment Method: <span class="fw-bold"><?php echo $fetch_orders['method']; ?></span></p>
+               <p class="card-text">Payment Method: <span class="fw-bold" style="text-transform: capitalize;"><?php echo $fetch_orders['method']; ?></span></p>
             </div>
          </div>
       </div>
