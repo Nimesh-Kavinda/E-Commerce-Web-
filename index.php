@@ -61,7 +61,7 @@ if(isset($_POST['login_submit'])){
          $_SESSION['admin_name'] = $row['name'];
          $_SESSION['admin_email'] = $row['email'];
          $_SESSION['admin_id'] = $row['id'];
-         header('location:./admin_page.php');
+         header('location:./admin/admin_page.php');
 
       }elseif($row['user_type'] == 'user'){
 
