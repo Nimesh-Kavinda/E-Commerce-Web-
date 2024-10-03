@@ -72,10 +72,20 @@ if(isset($_GET['delete_all'])){
 
 <?php @include './includes/nav.php'; ?>
 
+<?php include './includes/user_profile.php'?>
+
 <?php
-    include './includes/user_profile.php'
-    
-    ?>
+if(isset($message)){
+   foreach($message as $message){
+      echo '
+      <div class="msg_box container text-center fs-4 p-1 mt-2 mb-3">
+         <span>'.$message.'</span>
+        <a class = "b_login" href = "#login" onclick="this.parentElement.remove();"><i class="fas fa-check fs-3"></i> </a>
+      </div>
+      ';
+   }
+}
+?>
 
 <section class="container mt-5 hedling">
     <div class="text-center mb-4">

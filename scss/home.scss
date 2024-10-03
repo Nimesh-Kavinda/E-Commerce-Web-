@@ -525,36 +525,36 @@ body{
 
 }
 .container{
-  .card{
-    background-color: #fff5ff;
-  }
-  .card-title{
-    text-transform: capitalize;
-    color: #8B93FF;
-  }
-  .card-footer{
-    border: 0;
-    .btn_wishlist{
-      background-color: #FF71CD !important;
-      &:hover{
-        background-color: #fe4bc0 !important;
+  form{
+    .card{
+      background-color: #fff3ff;
+      img{
+        height: 450px;
+       }
+       .card-title{
+        text-transform: capitalize;
+        color: #727bff;
+       }
+        .card-body{
+              .btn_wishlist{
+                background-color: #FF71CD;
+                color: white;
+
+                &:hover{
+                  background-color:#ff3cbb;
+                }
+                      } 
+              .btn_cart{
+                background-color: #8B93FF;
+                color: white;
+
+                &:hover{
+                  background-color: #727bff;
+                }
+              }
       }
-    }
-    .btn_cart{
-      background-color: #8B93FF !important;
-      color: white;
-      &:hover{
-        background-color: #5755FE !important;
+  
       }
-    }
-  }
-  .btn_view{
-    background-color: #8B93FF;
-    color: white;
-    border: 0;
-    &:hover{
-      background-color: #FF71CD;
-    }
   }
 }
 

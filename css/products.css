@@ -42,37 +42,37 @@ body ::selection {
   color: #fe4bc0;
 }
 
-.hedling h3 {
-  color: #ff4bc0;
+.heading h2 {
+  color: #FF71CD;
 }
 
-.shopping-cart h1 {
+.products h2 {
   color: #727bff;
 }
-.shopping-cart .card img {
+.products h3 {
+  color: #FF71CD;
+}
+.products form .card {
+  background-color: #fff3ff;
+}
+.products form .card img {
   height: 450px;
 }
-.shopping-cart .btn_update {
-  background-color: #727bff;
-  color: white;
+.products form .card .card-title {
+  text-transform: capitalize;
+  color: #727bff;
 }
-.shopping-cart .btn_update:hover {
+.products form .card .card-body .btn_wishlist {
   background-color: #FF71CD;
   color: white;
 }
-.shopping-cart .delete .btn_delete {
-  background-color: #ff4bc0 !important;
-  color: white !important;
-  border: 0;
+.products form .card .card-body .btn_wishlist:hover {
+  background-color: #ff3cbb;
 }
-.shopping-cart .cart-total .btn_shoping:hover {
-  background-color: #727bff;
-  border: 0;
-}
-.shopping-cart .cart-total .btn_checkout {
-  background-color: #727bff;
+.products form .card .card-body .btn_cart {
+  background-color: #8B93FF;
   color: white;
 }
-.shopping-cart .cart-total .btn_checkout:hover {
-  background-color: #ff4bc0;
-}/*# sourceMappingURL=cart.css.map */
+.products form .card .card-body .btn_cart:hover {
+  background-color: #727bff;
+}/*# sourceMappingURL=products.css.map */
