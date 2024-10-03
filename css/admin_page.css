@@ -27,4 +27,8 @@ body ::-moz-selection {
 body ::selection {
   background-color: #ffb1e4;
   color: white;
+}
+
+img {
+  height: 350px;
 }/*# sourceMappingURL=admin_page.css.map */
