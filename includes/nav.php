@@ -16,7 +16,7 @@
             <a class="nav-link menu_item" href="./home.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link menu_item" href="#">About US</a>
+            <a class="nav-link menu_item" href="./about_us.php">About US</a>
           </li>
           <li class="nav-item">
             <a class="nav-link menu_item" href="./products.php">Products</a>

@@ -230,5 +230,25 @@ html[data-bs-theme = "dark"]{
         border-radius: 10px;
       }
     }
+
+    .about_details{
+      .content{
+        hr{
+          background: linear-gradient(to right, #ffffff, rgba(0, 0, 0, 0));
+         }
+         .right_to_left{
+          background: linear-gradient(to left, #fffdfd, rgba(0, 0, 0, 0));
+         }
+      }
+    }
+    
+    .offers{
+      background-color: $dark !important;
+      border-bottom: 1px solid white;
+      i{
+        color: white !important;
+      }
+    
 }
        
+}

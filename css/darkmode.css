@@ -164,4 +164,17 @@ html[data-bs-theme=dark] .checkout .form_checkout {
   background-color: #212529;
   border: 1px solid white;
   border-radius: 10px;
+}
+html[data-bs-theme=dark] .about_details .content hr {
+  background: linear-gradient(to right, #ffffff, rgba(0, 0, 0, 0));
+}
+html[data-bs-theme=dark] .about_details .content .right_to_left {
+  background: linear-gradient(to left, #fffdfd, rgba(0, 0, 0, 0));
+}
+html[data-bs-theme=dark] .offers {
+  background-color: #212529 !important;
+  border-bottom: 1px solid white;
+}
+html[data-bs-theme=dark] .offers i {
+  color: white !important;
 }/*# sourceMappingURL=darkmode.css.map */
