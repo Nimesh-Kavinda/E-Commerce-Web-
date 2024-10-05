@@ -109,53 +109,81 @@ if(isset($message)){
 }
 ?>
   
+    <!-- Slider  -->
 
+     <section class="home_header shadow-lg">
 
-    <!-- slider  -->
-    <section class="img_silder_section">
-
-      <div class="container-fluid col-xs-6 col-sm-12 col-md-12 col-lg-12 img_silde">
-      <div class="row">
-
-        <div class="col-6 pt-3 img_text col-12 col col col-lg-12 col-xxl-7">
-          <h1 class="text-start greeting"><span class="welcome_word1">Welcome</span> to the <span class="welcome_word2">World of Sweetness!</span></h1>
-
-          <p>We’re so glad you’ve chosen us to be part of your sweet journey. <span class="phase_blue">At Sweety Cake House</span>, we believe that every occasion, big or small,<span class="phase_pink"> deserves a special cake.</span> 
-            Our team is passionate about creating cakes that capture the essence of joy and celebration. Thank you for visiting – <span class="phase_pink">let’s create something delicious together!</span></p>
-
-            <p class="second_p">We don’t just bake cakes; we create memories. <span class="phase_blue">At Sweety Cake House</span>, every cake is an expression of <span class="phase_pink">love and care,</span> designed to <span class="phase_pink">bring happiness</span> with every bite. 
-              Choose from our custom designs or let us craft a one-of-a-kind cake for your next celebration</p>
-                  
-              <a href=""><button class="btn btn-lg disabled p-2 mt-5">Discover More</button></a>
-        </div>
-
-
-
-
-      <div id="carouselExampleSlidesOnly" class="slide col col-sm col-md-5 col-lg pe-0 d-none d-xxl-block" data-bs-ride="carousel">
+    <div id="cakeCarousel" class="carousel slide cake-carousel" data-bs-ride="carousel">
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="./assest/img/slider_img_02.jpg" class="d-block w-100 img-fluid" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="./assest/img/slider_img_01.jpg" class="d-block w-100 img-fluid" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="./assest/img/logo-bg-black.png" class="d-block w-100 img-fluid" alt="...">
-          </div>
+            <div class="carousel-item active">
+                <img src="./assest/img/slider_welcom.jpg" class="d-block w-100" alt="Delicious Cakes">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1 class="text-light">Welcome to Our Cake Shop</h1>
+                    <p>Delicious Cakes for Every Occasion</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./assest/img/slider_birthday.jpg" class="d-block w-100" alt="Custom Cakes">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1 class="text-light">Custom Cakes</h1>
+                    <p>Made to Order for Your Special Events</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./assest/img/slider_wedding.jpg" class="d-block w-100" alt="Wedding Cakes">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1 class="text-light">Wedding Cakes</h1>
+                    <p>Beautiful Designs for Your Big Day</p>
+                </div>
+            </div>
         </div>
-      </div>
-
-
+        <button class="carousel-control-prev" type="button" data-bs-target="#cakeCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#cakeCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-    </div>
+
     </section>
 
     <!-- end of slider  -->
 
+  <!-- Video section  -->
+
+    <div class="container my-5">
+  <div class="row">
+    <!-- Content Section -->
+    <div class="col-md-6 d-flex align-items-center">
+      <div>
+      <h3>Welcome to Sweety Cake House!</h3>
+     <p>Indulge in our delightful selection of handcrafted cakes, pastries, and desserts made with love and the finest ingredients.</p>
+    <p>Experience the magic of sweetness at every bite!</p>
+
+        <button class="btn btn-primary">Call to Action</button>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="ratio ratio-16x9">
+      <video autoplay muted loop class="shadow-lg">
+          <source src="./assest/video/video.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+ <!-- End of video section  -->
+
+
+
     <!-- About us  -->
 
-    <section id="aboutus" class="about_us_home my-5">
+    <section id="aboutus" class="about_us_home my-5 ">
 
 
       <div class="topic_aboutus_home container-fluid">
@@ -175,7 +203,7 @@ if(isset($message)){
     
         <div class="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
           <div class="col-12 col-lg-6 col-xl-5">
-            <img class="img-fluid rounded" loading="lazy" src="./assest/img/about_cake.png" alt="About 1">
+            <img class="img-fluid rounded shadow-lg" loading="lazy" src="./assest/img/about_cake.png" alt="About 1">
           </div>
           <div class="col-12 col-lg-6 col-xl-7">
             <div class="row justify-content-xl-center">
@@ -261,7 +289,7 @@ if(isset($message)){
          while ($fetch_products = mysqli_fetch_assoc($select_products)) {
       ?>
             <form action="" method="POST" class="col-md-4 col-sm-6 mb-4">
-                  <div class="card h-100" id="card">
+                  <div class="card h-100 shadow-lg" id="card">
                   <a href="view_page.php?pid=<?php echo $fetch_products['id']; ?>">
                         <img src="uploaded_img/<?php echo $fetch_products['image']; ?>" class="card-img-top" alt="Product Image">
                         </a>
