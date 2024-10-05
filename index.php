@@ -436,7 +436,7 @@ if (mysqli_num_rows($select_products) > 0) {
     <div class="card-body py-5 px-md-5">
 
       <div class="row d-flex justify-content-center">
-        <div class="col-lg-8">
+        <div class="col-lg-6">
           <h2 class="fw-bold mb-5">Sign up now</h2>
           <form action="" method="post">
 
@@ -478,6 +478,9 @@ if (mysqli_num_rows($select_products) > 0) {
               <p>Do you have Already Registerd, Please <a class="login_link b_login" href="#login">Sign In</a> here.</p>
             </div>
           </form>
+        </div>
+        <div class="col-lg-6 d-none d-xl-block">
+          <img src="./assest/img/register_cover.jpg" alt="" class="img-fluid">
         </div>
       </div>
     </div>

@@ -534,7 +534,7 @@ body{
 
 .register_form{
   .header_img{
-    background: opacify($color: #5b59cc, $amount: 0);
+        background: opacify($color: #5b59cc, $amount: 0);
         height: 380px;
   }
   h1{
