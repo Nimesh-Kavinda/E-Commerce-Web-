@@ -270,95 +270,45 @@ if(isset($message3)){
         <hr width="60%" class="down_hr">
       </div>
     
-    <div class="container my-5">
+ <div class="container my-5">
     <div class="row">
-        <!-- Product 1 -->
-        <div class="col-md-4">
-            <div class="card">
-                <img src="./assest/img/vanila_cake.webp" class="card-img-top" alt="Product 1">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Vanila Cake</h5>
-                    <p class="card-text">A fluffy vanilla cake topped with light cream and fresh strawberries and blueberries.</p>
-                    <p class="card-text"><strong>Rs.999.99</strong></p>
-                    <a href="#login" class="btn btn_wish b_loginfirts w-25">&#129293;</a> <br><br>
-                    <a href="#login" class="btn btn_cart b_loginfirts">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-        <!-- Product 2 -->
-        <div class="col-md-4">
-            <div class="card">
-                <img src="./assest/img/choco_cake.webp" class="card-img-top" alt="Product 2">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Chocolate Cake</h5>
-                    <p class="card-text">A moist, rich chocolate cake with smooth ganache and delicate chocolate shavings.</p>
-                    <p class="card-text"><strong>Rs.1199.99</strong></p>
-                    <a href="#login" class="btn btn_wish b_loginfirts w-25">&#129293;</a> <br><br>
-                    <a href="#login" class="btn btn_cart b_loginfirts">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-        <!-- Product 3 -->
-        <div class="col-md-4">
-            <div class="card">
-                <img src="./assest/img/strawberry_cake.webp" class="card-img-top" alt="Product 3">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Strawberry Shortcake</h5>
-                    <p class="card-text"> A light, fluffy cake layered with whipped cream and fresh strawberries.
-                    </p>
-                    <p class="card-text"><strong>Rs1249.99</strong></p>
-                    <a href="#login" class="btn btn_wish b_loginfirts w-25">&#129293;</a> <br><br>
-                    <a href="#login" class="btn btn_cart b_loginfirts">Add to Cart</a>
-                </div>
-            </div>
+
+        <?php
+$select_products = mysqli_query($conn, "SELECT * FROM `products` LIMIT 9") or die('query failed');
+if (mysqli_num_rows($select_products) > 0) {
+    while ($fetch_products = mysqli_fetch_assoc($select_products)) {
+?>
+
+<div class="col-md-4">
+    <div class="card">
+           <a href="view_page.php?pid=<?php echo $fetch_products['id']; ?>">
+            <img src="uploaded_img/<?php echo $fetch_products['image']; ?>" class="card-img-top" alt="Product Image">
+        </a>
+            <div class="card-body text-center">
+            <h5 class="card-title"><?php echo $fetch_products['name']; ?></h5>
+            <p class="card-text text-muted"><strong>Rs.<?php echo $fetch_products['price']; ?>.00</strong></p>
+
+            <input type="hidden" name="product_quantity" value="1">
+            <input type="hidden" name="product_id" value="<?php echo $fetch_products['id']; ?>">
+            <input type="hidden" name="product_name" value="<?php echo $fetch_products['name']; ?>">
+            <input type="hidden" name="product_price" value="<?php echo $fetch_products['price']; ?>">
+            <input type="hidden" name="product_image" value="<?php echo $fetch_products['image']; ?>">
+
+            <a href="#login" class="btn btn_wish b_loginfirts w-50">&#129293;</a> <br><br>
+            <a href="#login" class="btn btn_cart b_loginfirts w-75">Add to Cart</a>
         </div>
     </div>
-  </div>
+</div>
 
-
-
-   <div class="container my-5">
-    <div class="row">
-        <!-- Product 4 -->
-        <div class="col-md-4">
-            <div class="card">
-                <img src="./assest/img/matcha_green_tea_cake.webp" class="card-img-top" alt="Product 1">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Matcha Green Tea Cake</h5>
-                    <p class="card-text">Light green sponge layers with matcha frosting, topped with powdered green tea and berries.</p>
-                    <p class="card-text"><strong>Rs.1499.99</strong></p>
-                    <a href="#login" class="btn btn_wish b_loginfirts w-25">&#129293;</a> <br><br>
-                    <a href="#login" class="btn btn_cart b_loginfirts">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-        <!-- Product 5 -->
-        <div class="col-md-4">
-            <div class="card">
-                <img src="./assest/img/rainbow_cake.webp" class="card-img-top" alt="Product 2">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Rainbow Cake</h5>
-                    <p class="card-text">A vibrant rainbow cake with colorful layers and creamy frosting</p>
-                    <p class="card-text"><strong>Rs.1749.99</strong></p>
-                    <a href="#login" class="btn btn_wish b_loginfirts w-25">&#129293;</a> <br><br>
-                    <a href="#login" class="btn btn_cart b_loginfirts">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-        <!-- Product 6 -->
-        <div class="col-md-4">
-            <div class="card">
-                <img src="./assest/img/lemon_cake.webp" class="card-img-top" alt="Product 3">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Lemon Cake</h5>
-                    <p class="card-text">A refreshing lemon cake with tangy lemon curd and zest garnish.</p>
-                    <p class="card-text"><strong>Rs.1399.99</strong></p>
-                    <a href="#login" class="btn btn_wish b_loginfirts w-25">&#129293;</a> <br><br>
-                    <a href="#login" class="btn btn_cart b_loginfirts">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-    </div>
+<?php
+    }
+} else {
+    echo '<div class="container noproducts_msg py-2 my-2">
+    <p class="text-center text-muted m-3 fs-5">No products added yet!</p>
+    </div>';
+}
+?>
+      </div>
   </div>
 </section>
 

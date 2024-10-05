@@ -245,6 +245,12 @@ body ::selection {
 .products .card {
   background: linear-gradient(to right #fea8e0);
 }
+.products .card img {
+  height: 430px;
+}
+.products .card .card-body h5 {
+  color: #8B93FF;
+}
 .products .card .card-body .btn_wish {
   background-color: #FF71CD;
   color: white;

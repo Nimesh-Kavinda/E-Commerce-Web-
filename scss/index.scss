@@ -304,12 +304,18 @@ body{
       
       .key:nth-child(12) {
         animation: pressDown12 3.5s infinite;
-      }        
+      }    
       
 }
     .card{
       background: linear-gradient(to right #fea8e0);
+      img{
+        height: 430px;
+      }
         .card-body{
+              h5{
+                color: #8B93FF;
+              }
               .btn_wish{
                 background-color: #FF71CD;
                 color: white;
