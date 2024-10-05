@@ -54,7 +54,6 @@ if(isset($_POST['send'])){
     <?php @include './includes/user_profile.php'; ?>
 
 
-
 <section class="py-3 py-md-5 contact">
   <div class="container">
     <div class="row gy-3 gy-md-4 gy-lg-0 align-items-md-center">
