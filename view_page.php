@@ -143,7 +143,7 @@ if(isset($message)){
     ?>
 
     <div class="text-center mt-4">
-        <a href="home.php" class="btn btn-outline-secondary btn_goback">Go to Home Page</a>
+        <a id="backButton" class="btn btn-outline-secondary btn_goback">Go Back</a>
     </div>
 </section>
 
@@ -152,6 +152,7 @@ if(isset($message)){
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
     <script src="./js/navigation.js"></script>
     <script src="./js/darkmode.js"></script>
+    <script src="./js/back_button.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </body>
