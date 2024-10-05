@@ -84,4 +84,14 @@ body ::selection {
 .aboutus .offers h6 {
   font-weight: 350;
   font-style: italic;
+}
+.aboutus .team h3 {
+  color: #A594F9;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 40px;
+}
+.aboutus .map h3 {
+  color: #FF71CD;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 40px;
 }/*# sourceMappingURL=about_us.css.map */

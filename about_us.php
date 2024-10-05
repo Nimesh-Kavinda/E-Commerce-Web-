@@ -32,7 +32,7 @@ if(!isset($user_id)){
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
 
  <!-- Page navigation btn top and bottem  -->
  <button id="scrollBtn" class="btn btn-lg btn-secondary d-none d-md-block scroll-btn">
@@ -52,7 +52,7 @@ if(!isset($user_id)){
     ?>
 
 <section id="aboutus" class="aboutus mb-5">
-  <div class="container-fluid about_cover">
+  <div class="container-fluid about_cover d-none d-lg-block">
     <div class="text-center title">
       <h2 class="display-4 fw-bold">Sweety Cake House</h2>
     </div>
@@ -120,45 +120,45 @@ if(!isset($user_id)){
     </div>
   </div>
 
-  <div class="container my-5">
+  <div class="container my-5 team">
     <div class="row text-center">
       <div class="col-12">
         <h3 class="mb-4">Meet Our Team</h3>
       </div>
       <div class="col-lg-4">
         <div class="card">
-          <img src="./assest/img/member1.jpg" class="card-img-top" alt="Member 1">
+          <img src="./assest/img/member_01.jpg" class="card-img-top" alt="Member 1">
           <div class="card-body">
-            <h5 class="card-title">Member 1</h5>
-            <p class="card-text">Baker Specialist</p>
+            <h5 class="card-title fw-bold">Lakshika Madhumali</h5>
+            <p class="card-text text-muted">Baker Specialist</p>
           </div>
         </div>
       </div>
       <div class="col-lg-4">
         <div class="card">
-          <img src="./assest/img/member2.jpg" class="card-img-top" alt="Member 2">
+          <img src="./assest/img/member_02.jpg" class="card-img-top" alt="Member 2">
           <div class="card-body">
-            <h5 class="card-title">Member 2</h5>
-            <p class="card-text">Decorator</p>
+            <h5 class="card-title">Anuradha Deshani</h5>
+            <p class="card-text text-muted">Decorator</p>
           </div>
         </div>
       </div>
       <div class="col-lg-4">
         <div class="card">
-          <img src="./assest/img/member3.jpg" class="card-img-top" alt="Member 3">
+          <img src="./assest/img/member_03.jpg" class="card-img-top" alt="Member 3">
           <div class="card-body">
-            <h5 class="card-title">Member 3</h5>
-            <p class="card-text">Customer Service</p>
+            <h5 class="card-title">Mahesha Dilhani</h5>
+            <p class="card-text text-muted">Customer Service</p>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="container-fluid my-5">
+  <div class="container mt-5 mb-1 map">
     <h3 class="text-center">Find Us Here</h3>
     <div class="ratio ratio-16x9 mt-4">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434508367!2d144.9537353155044!3d-37.81627974220379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xb2f3df0b2e42ad9!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1637201427559!5m2!1sen!2sau" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15831.555174936682!2d80.33542144050192!3d7.253495820159392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae316b5affca98d%3A0xec4aece6bdbb55b1!2sKegalle!5e0!3m2!1sen!2slk!4v1728107144239!5m2!1sen!2slk" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
   </div>
 
