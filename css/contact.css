@@ -41,6 +41,17 @@ body ::selection {
 .contact .contact_form {
   background-color: #fff9ff;
   box-shadow: #FF71CD;
+  animation: slideInUp 1s linear;
+}
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .contact .contact_form .btn_send {
   background-color: #fe85d4;

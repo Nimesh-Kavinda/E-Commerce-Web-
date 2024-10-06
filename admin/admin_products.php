@@ -13,6 +13,7 @@ if(!isset($admin_id)){
 if(isset($_POST['add_product'])){
    $name = mysqli_real_escape_string($conn, $_POST['name']);
    $price = mysqli_real_escape_string($conn, $_POST['price']);
+   $details = mysqli_real_escape_string($conn, $_POST['details']);
    $category_id = $_POST['category_id']; // Add this line to capture the selected category ID
    $image = $_FILES['image']['name'];
    $image_size = $_FILES['image']['size'];
@@ -25,7 +26,8 @@ if(isset($_POST['add_product'])){
       echo '<script>alert("product name already exists!");</script>';
    } else {
 
-      $insert_product = mysqli_query($conn, "INSERT INTO `products`(name, price, category_id, image) VALUES('$name', '$price', '$category_id', '$image')") or die('query failed');
+   $insert_product = mysqli_query($conn, "INSERT INTO `products`(name, price, category_id, image, details) VALUES('$name', $price, $category_id, '$image', '$details')") or die(mysqli_error($conn));
+
 
       if($insert_product){
          if($image_size > 2000000){
@@ -77,10 +79,10 @@ if(isset($_GET['delete'])){
          <form action="" method="POST" enctype="multipart/form-data" class="bg-light p-4 rounded shadow-sm">
             <h3 class="text-center mb-4 text-muted">Add New Product</h3>
             <div class="mb-3">
-               <input type="text" class="form-control" required placeholder="Name" name="name">
+               <input type="text" class="form-control" required placeholder="Name" name="name" autocomplete="off">
             </div>
             <div class="mb-3">
-               <input type="number" min="0" class="form-control" required placeholder="Price (Rs.)" name="price">
+               <input type="number" min="0" class="form-control" required placeholder="Price (Rs.)" name="price" autocomplete="off">
             </div>
             <div class="mb-3">
                <select name="category_id" class="form-select" required>
@@ -95,7 +97,10 @@ if(isset($_GET['delete'])){
                </select>
             </div>
             <div class="mb-3">
-               <input type="file" accept="image/jpg, image/jpeg, image/png, image/webp" required class="form-control" name="image">
+               <input type="file" accept="image/jpg, image/jpeg, image/png, image/webp" required class="form-control" name="image" autocomplete="off">
+            </div>
+            <div class="mb-3">
+               <input type="text" class="form-control" required placeholder="Description" name="details" autocomplete="off">
             </div>
             <div class="text-center">
                <input type="submit" value="Add Product" name="add_product" class="btn btn-danger w-50">

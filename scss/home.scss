@@ -56,9 +56,75 @@ body{
 }
 
 .home_header{
-  .cake-carousel img {
-    max-height: 420px;
-    object-fit: cover;
+
+  animation: fadeInUp 1s ease-in-out;
+
+  @keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(80px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+
+  .cake-carousel{
+    img {
+      max-height: 420px;
+      object-fit: cover;
+    }
+    h1{
+      font-weight: bolder;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 50px;
+      color: #edeaed;
+      text-shadow: 2px 2px 4px rgba(255, 86, 255, 0.5);
+      font-style: italic;
+    }
+    p{
+      color: #ffffff;
+      font-family: 'Times New Roman', Times, serif;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5),
+                 0 0 10px rgba(255, 255, 255, 0.8);
+    }
+  } 
+}
+
+.video_section{
+  animation: fadeInUp 3s ease-in-out;
+
+  @keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(80px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  h3{
+    color: #8B93FF;
+    font-weight: bold;
+    font-size: 35px;
+  }
+  span{
+    color: #ff3cbb;
+  }
+  p{
+    font-size: 20px;
+    font-weight: 300;
+    font-style: italic;
+  }
+  button{
+    color: white;
+    background-color: #8B93FF;
+    &:hover{
+      background-color: #FF71CD;
+      color: white;
+    }
   }
 }
 
@@ -232,19 +298,6 @@ body{
       justify-content: center;
       background-color: #fff5ff;
       box-shadow: #fe4bc0;
-      animation: fadeInUp 1s ease-in-out;
-
-      @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(80px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
       h2{
         font-weight: bold;
       }
@@ -266,7 +319,17 @@ body{
     }
   }
 .products_home{
-  
+
+   opacity: 0; 
+   transform: translateY(20px); 
+   transition: opacity 3s ease, transform 3s ease;
+
+   &.visible {
+    opacity: 1; 
+    transform: translateY(0); 
+}
+
+
   .topic_product_home{
     font-size: 16px;
     text-align: center;

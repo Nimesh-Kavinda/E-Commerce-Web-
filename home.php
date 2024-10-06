@@ -118,7 +118,7 @@ if(isset($message)){
             <div class="carousel-item active">
                 <img src="./assest/img/slider_welcom.jpg" class="d-block w-100" alt="Delicious Cakes">
                 <div class="carousel-caption d-none d-md-block">
-                    <h1 class="text-white text-end">Welcome to Our Cake Shop</h1>
+                    <h1 class="text-end welcome">Welcome to Sweety Cake House</h1>
                     <p class="text-end">Delicious Cakes for Every Occasion</p>
                 </div>
             </div>
@@ -153,16 +153,16 @@ if(isset($message)){
 
   <!-- Video section  -->
 
-    <div class="container my-5">
+    <div class="container my-5 video_section">
   <div class="row">
     <!-- Content Section -->
     <div class="col-md-6 d-flex align-items-center">
       <div>
-      <h3>Welcome to Sweety Cake House!</h3>
+      <h3>Baked Fresh, <span>Just for You!</span></h3>
      <p>Indulge in our delightful selection of handcrafted cakes, pastries, and desserts made with love and the finest ingredients.</p>
     <p>Experience the magic of sweetness at every bite!</p>
 
-        <button class="btn btn-primary">Call to Action</button>
+        <a href="./contact.php"><button class="btn">Custom Your Cake</button></a>
       </div>
     </div>
 
@@ -338,6 +338,7 @@ if(isset($message)){
     <script src="./js/navigation.js"></script>
     <script src="./js/darkmode.js"></script>
     <script src="./js/card.js"></script>
+    <script src="./js/scroll_ani.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>

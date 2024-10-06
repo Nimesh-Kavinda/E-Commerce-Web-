@@ -17,8 +17,9 @@ if(isset($_POST['update_product'])){
    $price = mysqli_real_escape_string($conn, $_POST['price']);
 
    mysqli_query($conn, "UPDATE `products` SET name = '$name', price = '$price' WHERE id = '$update_p_id'") or die('query failed');
-   mysqli_query($conn, "UPDATE `cart` SET name = '$name', price = '$price' WHERE id = '$update_p_id'") or die('query failed');
-
+   mysqli_query($conn, "UPDATE `cart` SET name = '$name', price = '$price' WHERE pid = '$update_p_id'") or die('query failed');
+   mysqli_query($conn, "UPDATE `wishlist` SET name = '$name', price = '$price' WHERE pid = '$update_p_id'") or die('query failed');
+   
    $image = $_FILES['image']['name'];
    $image_size = $_FILES['image']['size'];
    $image_tmp_name = $_FILES['image']['tmp_name'];
@@ -28,7 +29,8 @@ if(isset($_POST['update_product'])){
    if(!empty($image)){
       if($image_size <= 2000000){
          mysqli_query($conn, "UPDATE `products` SET image = '$image' WHERE id = '$update_p_id'") or die('query failed');
-         mysqli_query($conn, "UPDATE `cart` SET image = '$image' WHERE id = '$update_p_id'") or die('query failed');
+         mysqli_query($conn, "UPDATE `cart` SET image = '$image' WHERE pid = '$update_p_id'") or die('query failed');
+         mysqli_query($conn, "UPDATE `wishlist` SET image = '$image' WHERE pid = '$update_p_id'") or die('query failed');
          move_uploaded_file($image_tmp_name, $image_folter);
          unlink('../uploaded_img/'.$old_image);
       }
@@ -36,6 +38,7 @@ if(isset($_POST['update_product'])){
 }
 
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">

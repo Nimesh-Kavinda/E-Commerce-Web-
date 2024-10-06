@@ -280,10 +280,10 @@ if (mysqli_num_rows($select_products) > 0) {
 ?>
 
 <div class="col-md-4">
-    <div class="card">
-           <a href="view_page.php?pid=<?php echo $fetch_products['id']; ?>">
+    <div class="card my-3">
+          
             <img src="uploaded_img/<?php echo $fetch_products['image']; ?>" class="card-img-top" alt="Product Image">
-        </a>
+     
             <div class="card-body text-center">
             <h5 class="card-title"><?php echo $fetch_products['name']; ?></h5>
             <p class="card-text text-muted"><strong>Rs.<?php echo $fetch_products['price']; ?>.00</strong></p>

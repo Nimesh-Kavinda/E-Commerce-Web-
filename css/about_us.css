@@ -34,6 +34,17 @@ body ::selection {
   background-repeat: no-repeat;
   background-size: cover;
   height: 300px;
+  animation: fadeInUp 1s ease-in-out;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .aboutus .about_cover .title {
   margin: 0 auto;
@@ -43,6 +54,19 @@ body ::selection {
 .aboutus .about_cover .title h2 {
   color: #ffffff;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.aboutus .about_details {
+  animation: fadeInUp 3s ease-in-out;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .aboutus .about_details .content h3 {
   color: #A594F9;

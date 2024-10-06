@@ -37,6 +37,21 @@ body{
         background-repeat: no-repeat;
        background-size: cover;
        height: 300px;
+
+       animation: fadeInUp 1s ease-in-out;
+
+       @keyframes fadeInUp {
+         from {
+             opacity: 0;
+             transform: translateY(80px);
+         }
+         to {
+             opacity: 1;
+             transform: translateY(0);
+         }
+       }
+
+
        .title{
         margin: 0 auto;
         align-items: center;
@@ -48,8 +63,20 @@ body{
        }
     }
         .about_details{
+          animation: fadeInUp 3s ease-in-out;
+
+          @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(80px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+          }
+
             .content{
-            //    border: 1px solid #727bff;
                h3{
                 color: #A594F9;
                 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
