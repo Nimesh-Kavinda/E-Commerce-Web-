@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg shadow-lg" id="nav">
+<nav class="navbar navbar-expand-lg shadow" id="nav">
 
     <div class="main-con container-fluid">
 

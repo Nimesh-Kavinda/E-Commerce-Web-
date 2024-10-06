@@ -118,12 +118,12 @@ if(isset($message)){
             <div class="carousel-item active">
                 <img src="./assest/img/slider_welcom.jpg" class="d-block w-100" alt="Delicious Cakes">
                 <div class="carousel-caption d-none d-md-block">
-                    <h1 class="text-light">Welcome to Our Cake Shop</h1>
-                    <p>Delicious Cakes for Every Occasion</p>
+                    <h1 class="text-white text-end">Welcome to Our Cake Shop</h1>
+                    <p class="text-end">Delicious Cakes for Every Occasion</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="./assest/img/slider_birthday.jpg" class="d-block w-100" alt="Custom Cakes">
+                <img src="./assest/img/slider_custom.jpg" class="d-block w-100" alt="Custom Cakes">
                 <div class="carousel-caption d-none d-md-block">
                     <h1 class="text-light">Custom Cakes</h1>
                     <p>Made to Order for Your Special Events</p>
@@ -132,8 +132,8 @@ if(isset($message)){
             <div class="carousel-item">
                 <img src="./assest/img/slider_wedding.jpg" class="d-block w-100" alt="Wedding Cakes">
                 <div class="carousel-caption d-none d-md-block">
-                    <h1 class="text-light">Wedding Cakes</h1>
-                    <p>Beautiful Designs for Your Big Day</p>
+                    <h1 class="text-light text-start">Wedding Cakes</h1>
+                    <p class="text-start">Beautiful Designs for Your Big Day</p>
                 </div>
             </div>
         </div>
