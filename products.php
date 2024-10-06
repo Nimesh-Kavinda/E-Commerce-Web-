@@ -97,6 +97,20 @@ if(isset($_POST['add_to_cart'])){
     
     ?>
 
+    <!-- Cart and Wishlist msg section  -->
+ <?php
+if(isset($message)){
+   foreach($message as $message){
+      echo '
+      <div class="msg_box container text-center fs-4 p-1 mt-2 mb-3">
+         <span>'.$message.'</span>
+        <a class = "b_login" href = "#login" onclick="this.parentElement.remove();"><i class="fas fa-check fs-3"></i> </a>
+      </div>
+      ';
+   }
+}
+?>
+
 <section class="text-center py-4 heading">
     <h2><i class="bi bi-cart4 text-muted"></i> All Products</h2>
 </section>
