@@ -52,6 +52,19 @@ body{
     }
 }
 .card{
+  animation: fadeInLeft 1.5s ease-in-out;
+
+
+  @keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateY(80px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
   img{
     height: 450px;
   }

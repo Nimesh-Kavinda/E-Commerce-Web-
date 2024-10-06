@@ -124,7 +124,7 @@ if(isset($message)){
             while($fetch_products = mysqli_fetch_assoc($select_products)){
       ?>
                <form action="" method="POST" class="col-md-4 col-sm-6 mb-4">
-                  <div class="card h-100">
+                  <div class="card h-100 shadow">
                   <a href="view_page.php?pid=<?php echo $fetch_products['id']; ?>">
                         <img src="uploaded_img/<?php echo $fetch_products['image']; ?>" class="card-img-top" alt="Product Image">
                         </a>
@@ -166,7 +166,7 @@ if(isset($message)){
             while ($fetch_products = mysqli_fetch_assoc($select_products)) {
                 ?>
                 <form action="" method="POST" class="col-md-4 col-sm-6 mb-4">
-                    <div class="card h-100">
+                    <div class="card h-100 shadow">
                        <a href="view_page.php?pid=<?php echo $fetch_products['id']; ?>">
                         <img src="uploaded_img/<?php echo $fetch_products['image']; ?>" class="card-img-top" alt="Product Image">
                         </a>

@@ -280,7 +280,7 @@ if (mysqli_num_rows($select_products) > 0) {
 ?>
 
 <div class="col-md-4">
-    <div class="card my-3">
+    <div class="card my-3 shadow-lg">
           
             <img src="uploaded_img/<?php echo $fetch_products['image']; ?>" class="card-img-top" alt="Product Image">
      
@@ -500,6 +500,7 @@ if (mysqli_num_rows($select_products) > 0) {
     <script src="./js/darkmode.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/card.js"></script>
+    <script src="./js/scroll_ani.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>

@@ -127,7 +127,7 @@ if(!isset($user_id)){
         <h3 class="mb-4">Meet Our Team</h3>
       </div>
       <div class="col-lg-4">
-        <div class="card">
+        <div class="card shadow">
           <img src="./assest/img/member_01.jpg" class="card-img-top" alt="Member 1">
           <div class="card-body">
             <h5 class="card-title fw-bold">Lakshika Madhumali</h5>
@@ -136,7 +136,7 @@ if(!isset($user_id)){
         </div>
       </div>
       <div class="col-lg-4">
-        <div class="card">
+        <div class="card shadow">
           <img src="./assest/img/member_02.jpg" class="card-img-top" alt="Member 2">
           <div class="card-body">
             <h5 class="card-title">Anuradha Deshani</h5>
@@ -145,7 +145,7 @@ if(!isset($user_id)){
         </div>
       </div>
       <div class="col-lg-4">
-        <div class="card">
+        <div class="card shadow">
           <img src="./assest/img/member_03.jpg" class="card-img-top" alt="Member 3">
           <div class="card-body">
             <h5 class="card-title">Mahesha Dilhani</h5>

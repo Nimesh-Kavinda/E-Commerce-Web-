@@ -57,7 +57,7 @@ if(!isset($user_id)){
             while($fetch_orders = mysqli_fetch_assoc($select_orders)){
     ?>
     <div class="col-12 col-md-6 col-lg-4 form_box mb-5">
-        <div class="card h-100">
+        <div class="card h-100 shadow-lg">
             <div class="card-body">
                 <p> <strong>Placed on:</strong> <span><?php echo $fetch_orders['placed_on']; ?></span> </p>
                 <p> <strong>Name:</strong> <span><?php echo $fetch_orders['name']; ?></span> </p>

@@ -33,6 +33,19 @@ body ::selection {
   color: #FF71CD;
 }
 
+.oder_form .form_box {
+  animation: bounceInUp 0.5s ease-in-out;
+}
+@keyframes bounceInUp {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .oder_form .form_box .card {
   background-color: #fff5ff;
 }
