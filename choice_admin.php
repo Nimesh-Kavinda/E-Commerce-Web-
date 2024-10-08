@@ -4,10 +4,6 @@
 
 session_start();
 
-$user_id = $_SESSION['user_id'];
-$admin_id = $_SESSION['admin_id'];
-
-
 ?>
 
 <!DOCTYPE html>
