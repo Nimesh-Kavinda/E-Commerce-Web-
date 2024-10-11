@@ -12,6 +12,19 @@ html[data-bs-theme=dark] nav {
 html[data-bs-theme=dark] nav .d_mode button {
   border: 2px solid #0d6efd;
 }
+html[data-bs-theme=dark] .description {
+  background: none;
+}
+html[data-bs-theme=dark] .description .welcome_section .image {
+  background-image: url(../assest/img/home_cake.png);
+  background-size: cover;
+  opacity: 80%;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+html[data-bs-theme=dark] .description .welcome_section .image img {
+  display: none !important;
+}
 html[data-bs-theme=dark] .show_btn button {
   background-color: #dc3545;
 }

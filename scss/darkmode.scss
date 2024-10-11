@@ -21,7 +21,22 @@ html[data-bs-theme = "dark"]{
             }
     }
 }
-    
+    .description{
+      background: none;
+
+      .welcome_section{
+        .image{
+          background-image: url(../assest/img/home_cake.png);
+          background-size: cover;
+          opacity: 80%;
+          border-top-left-radius: 15px;
+          border-bottom-left-radius: 15px;
+          img{
+            display: none !important;
+          }
+      } 
+      }
+    }   
     .show_btn{
         button{
             background-color: $danger;

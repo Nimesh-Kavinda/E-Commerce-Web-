@@ -118,6 +118,15 @@ body ::selection {
   color: white;
 }
 
+.about_us_home {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 3s ease, transform 3s ease;
+}
+.about_us_home.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 .about_us_home .topic_aboutus_home {
   font-size: 16px;
   text-align: center;

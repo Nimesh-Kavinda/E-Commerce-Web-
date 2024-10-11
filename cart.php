@@ -127,7 +127,7 @@ if(isset($message)){
 
     <div class="cart-total text-center mt-4">
         <p>Total: <span class="fw-bold">Rs.<?php echo $grand_total; ?>.00</span></p>
-        <a href="./home.php" class="btn_shoping btn btn-outline-secondary mx-2">Continue Shopping</a>
+        <a href="./products.php" class="btn_shoping btn btn-outline-secondary mx-2">Continue Shopping</a>
         <a href="./checkout.php" class="btn btn_checkout <?php echo ($grand_total > 1)?'':'disabled' ?>">Checkout</a>
     </div>
 
@@ -139,6 +139,7 @@ if(isset($message)){
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
     <script src="./js/navigation.js"></script>
     <script src="./js/darkmode.js"></script>
+    <script src="./js/card.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </body>

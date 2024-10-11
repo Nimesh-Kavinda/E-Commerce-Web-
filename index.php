@@ -211,13 +211,13 @@ if(isset($message3)){
 
    <!-- Discription section  -->
 
-  <section id="content" class="">
+  <section id="content" class="description">
 
     <div class="welcome_section container-fluid text-center">
 
       <div class="row text-center">
 
-      <div class="satatements col-12 col col col-lg-7 px-5 py-2 text-center align-items-center justify-content-center">
+      <div class="satatements col-12 col col col-lg-7 px-3 py-2 text-center align-items-center justify-content-center">
         <h2 class="m-2 p-2 fw-bold shopname"><span class="fs-1 greeting"><span class="title_l1">W</span>elcome</span> to <span class="title_w1"><span class="title_l1">S</span>weety</span> <span class="title_w2">Cake</span> <span class="title_w3">House</span>..!</h2>
         <p class="my-2 p-2 discription">
           At Kandyan Cake Shop, we blend the rich heritage of Kandyan traditions with contemporary baking techniques to bring you a delightful array of cakes and pastries. Nestled in the heart of our community, our shop is renowned for its commitment to quality, flavor, and artistic design.
@@ -237,8 +237,8 @@ if(isset($message3)){
         </div>
       </div>
 
-      <div class="image col col-sm col-md col-lg-5 text-center align-items-start d-flex blur_load">
-        <img src="./assest/img/login-cake2.png" alt="" class="text-center img-fluid d-none d-lg-block lazyload" width="700px" height="auto">
+      <div class="image col col-sm col-md col-lg-5 text-center align-items-center d-flex">
+        <img src="./assest/img/logo-c.png" alt="" class="text-center img-fluid d-none d-lg-block lazyload" width="600px" height="auto">
       </div>
 
 
@@ -501,6 +501,7 @@ if (mysqli_num_rows($select_products) > 0) {
     <script src="./js/index.js"></script>
     <script src="./js/card.js"></script>
     <script src="./js/scroll_ani.js"></script>
+    <script src="./js//scrol_ani_about.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>

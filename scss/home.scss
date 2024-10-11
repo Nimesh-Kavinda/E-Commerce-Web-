@@ -130,6 +130,14 @@ body{
 }
 
 .about_us_home{
+  opacity: 0; 
+  transform: translateY(20px); 
+  transition: opacity 3s ease, transform 3s ease;
+
+  &.visible {
+   opacity: 1; 
+   transform: translateY(0); 
+}
     .topic_aboutus_home{
       font-size: 16px;
       text-align: center;

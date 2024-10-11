@@ -33,6 +33,36 @@ body ::selection {
   background-color: #ffd7ff;
 }
 
+.description {
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../assest/img/slider_wedding.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: slideInFromLeft 1.5s ease-in-out;
+}
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.welcome_section h2 {
+  animation: scaleInFromLeft 2.5s ease-in-out;
+}
+@keyframes scaleInFromLeft {
+  0% {
+    transform: translateX(-100%) scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
 .welcome_section h2 .greeting {
   color: #dc3545;
 }
@@ -55,12 +85,35 @@ body ::selection {
 }
 .welcome_section p {
   font-size: 22px;
-  font-weight: 350;
+  font-weight: 500;
+  opacity: 75%;
+  animation: scaleInFromLeft 3s ease-in-out;
+}
+@keyframes scaleInFromLeft {
+  0% {
+    transform: translateX(-100%) scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
 }
 .welcome_section h3 {
   color: #5755FE;
-  font-weight: 300;
+  font-weight: 400;
   text-align: end;
+  animation: slideInFromLeft 3.5s ease-in-out;
+}
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 .welcome_section h2 {
   color: #5755FE;
@@ -68,7 +121,18 @@ body ::selection {
   text-align: start;
 }
 .welcome_section .offerings {
+  animation: slideInFromLeft 4s ease-in-out;
   text-align: end;
+}
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 .welcome_section .offerings ul {
   opacity: 75%;
@@ -88,7 +152,35 @@ body ::selection {
 .welcome_section .show_btn button:hover {
   background-color: #8B93FF;
 }
+.welcome_section .image img {
+  animation: bounceInFromTop 6s ease;
+}
+@keyframes bounceInFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(20%);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 
+.products {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 3s ease, transform 3s ease;
+}
+.products.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 .products .topic_product {
   font-size: 16px;
   text-align: center;
@@ -266,6 +358,15 @@ body ::selection {
   background-color: #727bff;
 }
 
+.about_us {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 3s ease, transform 3s ease;
+}
+.about_us.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 .about_us .topic_aboutus {
   font-size: 16px;
   text-align: center;

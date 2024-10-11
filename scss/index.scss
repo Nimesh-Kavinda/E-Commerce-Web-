@@ -36,8 +36,41 @@ body{
   background-color: #ffd7ff;
 }
 
-.welcome_section{
+.description {
+   background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../assest/img/slider_wedding.jpg);
+   background-size:cover;
+   background-repeat: no-repeat;
+
+   animation: slideInFromLeft 1.5s ease-in-out;
+    @keyframes slideInFromLeft {
+      0% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+   }
+
+  .welcome_section{
+    
     h2{
+
+      animation: scaleInFromLeft 2.5s ease-in-out;
+      @keyframes scaleInFromLeft {
+        0% {
+          transform: translateX(-100%) scale(0.8);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0) scale(1);
+          opacity: 1;
+        }
+       }
+
         .greeting{
             color: $danger;
         }
@@ -62,19 +95,59 @@ body{
     }
     p{
         font-size: 22px;
-        font-weight: 350;
+        font-weight: 500;
+        opacity: 75%;
+        animation: scaleInFromLeft 3s ease-in-out;
+      @keyframes scaleInFromLeft {
+       0% {
+        transform: translateX(-100%) scale(0.8);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+      }
+    }            
+
     }
     h3{
         color: #5755FE;
-        font-weight: 300;
+        font-weight: 400;
         text-align: end;
+
+        animation: slideInFromLeft 3.5s ease-in-out;
+
+    @keyframes slideInFromLeft {
+      0% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
     }
+
+    }
+
     h2{
         color: #5755FE;
         font-weight: 400;
         text-align: start;
     }
     .offerings{
+      animation: slideInFromLeft 4s ease-in-out;
+    @keyframes slideInFromLeft {
+      0% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
         text-align: end;
         ul{
             opacity: 75%;
@@ -83,9 +156,10 @@ body{
             align-items: center;
         }
         li{
-            font-weight: bold;            
+            font-weight: bold;           
         }
     }
+      
     .show_btn{
         text-align: center;
         button{
@@ -95,10 +169,38 @@ body{
             background-color: #8B93FF;
         }
     }
+    .image{
+      img{
+        animation: bounceInFromTop 6s ease;
+        @keyframes bounceInFromTop {
+          0% {
+            transform: translateY(-100%);
+            opacity: 0;
+          }
+          60% {
+            transform: translateY(20%);
+            opacity: 1;
+          }
+          80% {
+            transform: translateY(-10%);
+          }
+          100% {
+            transform: translateY(0);
+          }
+        }
+      }
     }
-
+  }
 
 .products{
+  opacity: 0; 
+  transform: translateY(20px); 
+  transition: opacity 3s ease, transform 3s ease;
+
+  &.visible {
+   opacity: 1; 
+   transform: translateY(0); 
+}
   .topic_product{
     font-size: 16px;
     text-align: center;
@@ -338,6 +440,14 @@ body{
 }
 
 .about_us{
+  opacity: 0; 
+  transform: translateY(20px); 
+  transition: opacity 3s ease, transform 3s ease;
+
+  &.visible {
+   opacity: 1; 
+   transform: translateY(0); 
+}
   .topic_aboutus{
     font-size: 16px;
     text-align: center;
