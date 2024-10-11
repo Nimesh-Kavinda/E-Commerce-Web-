@@ -88,4 +88,12 @@ body ::selection {
 }
 .products form .card .card-body .btn_cart:hover {
   background-color: #727bff;
+}
+
+.noResult {
+  background-color: #fdcffd !important;
+  border-radius: 10px;
+}
+.noResult p {
+  color: #8B93FF;
 }/*# sourceMappingURL=products.css.map */

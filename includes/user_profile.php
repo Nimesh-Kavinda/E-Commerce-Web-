@@ -18,10 +18,10 @@
         <ul class="list-group mb-4 mt-3">
           <li class="list-group-item"><strong>Email:</strong> <?php echo $_SESSION['user_email']; ?></li>
 
-          <form action="" class="list-group">
+          <!-- <form action="" class="list-group">
           <input type="password" class="list-group-item" placeholder="Change Your Password">
           <input type="submit" class="btn btn-outline-primary mt-3" value="Change Password">
-        </form>
+        </form> -->
 
         </ul>
   

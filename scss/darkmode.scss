@@ -250,5 +250,13 @@ html[data-bs-theme = "dark"]{
       }
     
 }
+
+.noResult{
+  background-color:$danger !important;
+  border-radius: 10px;
+  p{
+    color: white;
+  }
+}
        
 }

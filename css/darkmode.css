@@ -177,4 +177,11 @@ html[data-bs-theme=dark] .offers {
 }
 html[data-bs-theme=dark] .offers i {
   color: white !important;
+}
+html[data-bs-theme=dark] .noResult {
+  background-color: #dc3545 !important;
+  border-radius: 10px;
+}
+html[data-bs-theme=dark] .noResult p {
+  color: white;
 }/*# sourceMappingURL=darkmode.css.map */

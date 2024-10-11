@@ -49,5 +49,5 @@ nav .btn_logout .b_lout {
   background-color: #ff53c3;
 }
 nav .d_mode button {
-  border: none;
+  border: none !important;
 }/*# sourceMappingURL=nav.css.map */

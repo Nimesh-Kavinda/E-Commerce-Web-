@@ -78,7 +78,7 @@ if(isset($_POST['add_to_cart'])){
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
 
    <!-- Page navigation btn top and bottem  -->
    <button id="scrollBtn" class="btn btn-lg btn-secondary d-none d-md-block scroll-btn">
@@ -90,6 +90,13 @@ if(isset($_POST['add_to_cart'])){
   <?php
   include './includes/nav.php';
   ?>
+
+<div class="input-group rounded container mt-2">
+  <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" id="searchBar" onkeyup="searchFunction()" />
+  <span class="input-group-text border-0 mx-3" id="search-addon">
+    <i class="fas fa-search"></i>
+  </span>
+</div>
 
     <!-- User Profile  -->
     <?php
@@ -115,7 +122,7 @@ if(isset($message)){
     <h2><i class="bi bi-cart4 text-muted"></i> All Products</h2>
 </section>
 
-<section class="products container">
+<section class="products container card-container">
    <div class="row">
 
       <?php
@@ -153,7 +160,11 @@ if(isset($message)){
    </div>
 </section>
 
-<section class="products container">
+      <div id="noResultsMessage" class="noResult container col-sm-5 col-md-6 col-lg-5 text-center alert" style="display:none;">
+        <p class="fs-4 fw-bold">No results found. Please try a different search.</p>
+      </div>
+
+<section class="products container other-content">
     <h2 class="text-center my-5">View Products by Categories</h2>
     <?php
     $select_categories = mysqli_query($conn, "SELECT * FROM categories") or die('query failed');
@@ -202,6 +213,7 @@ if(isset($message)){
     <script src="./js/navigation.js"></script>
     <script src="./js/darkmode.js"></script>
     <script src="./js/card.js"></script>
+    <script src="./js/search.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </body>
