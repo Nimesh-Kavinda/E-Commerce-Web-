@@ -41,17 +41,18 @@ body{
    background-size:cover;
    background-repeat: no-repeat;
 
-   animation: slideInFromLeft 1.5s ease-in-out;
-    @keyframes slideInFromLeft {
-      0% {
-        transform: translateX(-100%);
-        opacity: 0;
-      }
-      100% {
-        transform: translateX(0);
-        opacity: 1;
-      }
-    }
+   animation: fadeInUp 2s ease-in-out;
+
+   @keyframes fadeInUp {
+     from {
+         opacity: 0;
+         transform: translateY(80px);
+     }
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+   }
 
    }
 
