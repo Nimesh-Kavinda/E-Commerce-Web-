@@ -2,7 +2,7 @@
    
     <div class="offcanvas offcanvas-end profile" tabindex="-1" id="offcanvasProfile" aria-labelledby="offcanvasProfileLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasProfileLabel">Profile</h5>
+        <h5 class="offcanvas-title" id="offcanvasProfileLabel"><?php echo $_SESSION['user_email']; ?>Profile</h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
@@ -27,8 +27,12 @@
   
         
         <div class="d-grid gap-2 btn_logout">
-        <a class="text-center text-white" href="./functions/logout_fun.php"><button class="btn b_lout w-100">Logout</button></a>
+        <a class="text-center text-white" href="./functions/logout_fun.php"><button class="btn b_lout w-75"  onclick="return confirmLogout();">Logout</button></a>
+        <a class="text-center text-white" href="./functions/user_acc_delete_fun.php"><button class="btn b_delete w-75"  onclick="return confirmDeleteAcc();">Delete Account</button></a>
+
         </div>
       </div>
     </div>
   </section>
+
+  <script src="./js/confirm.js"></script>

@@ -10,4 +10,11 @@
 }
 .user_profile .btn_logout .b_lout:hover {
   background-color: #fe4bc0;
+}
+.user_profile .btn_logout .b_delete {
+  color: #ffffff !important;
+  background-color: #ce3535;
+}
+.user_profile .btn_logout .b_delete:hover {
+  background-color: #fe4b5a;
 }/*# sourceMappingURL=user_profile.css.map */

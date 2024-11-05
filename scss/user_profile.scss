@@ -13,6 +13,13 @@
           background-color: #fe4bc0;
         }
       }
+      .b_delete{
+        color: #ffffff !important;
+        background-color: #ce3535;
+        &:hover{
+          background-color: #fe4b5a;
+        }
+      }
     }
     
 }

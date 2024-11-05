@@ -32,7 +32,7 @@
         <div class="btn_logout">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="./functions/logout_fun.php"><button class="btn b_lout btn-md border border-0">Log Out</button></a>
+              <a class="nav-link active" aria-current="page" href="./functions/logout_fun.php"  onclick="return confirmLogout();"><button class="btn b_lout btn-md border border-0">Log Out</button></a>
             </li>
           </ul>
         </div>
@@ -77,3 +77,5 @@
       </div>
     </div>
   </nav>
+  
+  <script src="./js/confirm.js"></script>
