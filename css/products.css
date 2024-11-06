@@ -66,7 +66,7 @@ body ::selection {
   color: #FF71CD;
 }
 .products form .card {
-  background-color: #fff3ff;
+  border: 1px solid white;
 }
 .products form .card img {
   height: 450px;
