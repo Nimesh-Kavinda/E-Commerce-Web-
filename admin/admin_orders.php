@@ -38,7 +38,7 @@ if(!isset($admin_id)){
          <label for="method" class="form-label">Payment Method</label>
          <select name="method" id="method" class="form-select">
             <option value="">All Methods</option>
-            <option value="cash on delivery" <?php echo (isset($_GET['method']) && $_GET['method'] == 'cash on delivery') ? 'selected' : ''; ?>>Cash</option>
+            <option value="cash on delivery" <?php echo (isset($_GET['method']) && $_GET['method'] == 'cash on delivery') ? 'selected' : ''; ?>>Cash on Delivery</option>
             <option value="credit card" <?php echo (isset($_GET['method']) && $_GET['method'] == 'credit card') ? 'selected' : ''; ?>>Credit Card</option>
             <option value="paypal" <?php echo (isset($_GET['method']) && $_GET['method'] == 'paypal') ? 'selected' : ''; ?>>Paypal</option>
          </select>
