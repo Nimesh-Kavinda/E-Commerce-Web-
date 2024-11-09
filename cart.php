@@ -28,6 +28,12 @@ if(isset($_POST['update_quantity'])){
     $message[] = 'Cart quantity updated!';
 }
 
+// Search functionality
+$search = "";
+if(isset($_POST['search'])){
+    $search = mysqli_real_escape_string($conn, $_POST['search']);
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -52,7 +58,6 @@ if(isset($_POST['update_quantity'])){
 
 <?php @include './includes/nav.php'; ?>
 
-
 <?php
 if(isset($message)){
    foreach($message as $message){
@@ -67,14 +72,19 @@ if(isset($message)){
 ?>
 
 <?php
-    include './includes/user_profile.php'
-    
-    ?>
+    include './includes/user_profile.php';
+?>
 
-       <!-- Page navigation btn top and bottem  -->
-   <button id="scrollBtn" class="btn btn-lg btn-secondary d-none d-md-block scroll-btn">
-    <i id="scrollIcon" class="scrollIcon"></i> 
-  </button>
+<!-- Search Form -->
+<section class="search container mt-5">
+    <form action="" method="post" class="d-flex justify-content-center mb-4">
+        <input type="text" name="search" placeholder="Search by product name" class="form-control w-50" value="<?php echo htmlspecialchars($search); ?>" autocomplete="off">
+        <button type="submit" class="btn_search btn ms-2">Search</button>
+        <?php if (!empty($search)) { ?>
+            <a href="cart.php" class="btn_clear btn ms-2">Clear Search</a>
+        <?php } ?>
+    </form>
+</section>
 
 <section class="container mt-5 hedling">
     <div class="text-center mb-4">
@@ -82,15 +92,20 @@ if(isset($message)){
     </div>
 </section>
 
+<h1 class="title text-center mb-4">Added Items</h1>
+
 <section class="shopping-cart container mb-5">
 
-    <h1 class="title text-center mb-4">Added Items</h1>
 
     <div class="row">
 
     <?php
         $grand_total = 0;
-        $select_cart = mysqli_query($conn, "SELECT * FROM `cart` WHERE user_id = '$user_id'") or die('query failed');
+        $query = "SELECT * FROM `cart` WHERE user_id = '$user_id'";
+        if (!empty($search)) {
+            $query .= " AND name LIKE '%$search%'";
+        }
+        $select_cart = mysqli_query($conn, $query) or die('query failed');
         if(mysqli_num_rows($select_cart) > 0){
             while($fetch_cart = mysqli_fetch_assoc($select_cart)){
     ?>
@@ -103,7 +118,7 @@ if(isset($message)){
                 <form action="" method="post">
                     <input type="hidden" value="<?php echo $fetch_cart['id']; ?>" name="cart_id">
                     <div class="input-group mb-3">
-                        <h6 class="text-center py-2 me-2 text-primary">Select Suantity</h6>
+                        <h6 class="text-center py-2 me-2 text-primary">Select Quantity</h6>
                         <input type="number" min="1" value="<?php echo $fetch_cart['quantity']; ?>" name="cart_quantity" class="form-control">
                         <button type="submit" class="btn btn_update" name="update_quantity">Update</button>
                     </div>
@@ -116,7 +131,7 @@ if(isset($message)){
     $grand_total += $sub_total;
         }
     }else{
-        echo '<p class="text-center text-muted">Your cart is empty.</p>';
+        echo '<p class="text-center text-muted">No products found.</p>';
     }
     ?>
     </div>

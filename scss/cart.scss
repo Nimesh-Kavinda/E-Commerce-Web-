@@ -31,6 +31,9 @@ body{
     background-color: #FF71CD;
     color: white; 
   }
+  h1{
+    color: #727bff;
+  }
 }
 
 .msg_box{
@@ -51,6 +54,29 @@ body{
         color: #ff4bc0;
     }
 }
+
+.search{
+  .btn_search{
+    background-color: #727bff;
+    color: white;
+
+    &:hover{
+    background-color: #FF71CD;
+    color: white;
+    }
+  }
+  
+  .btn_clear{
+    background-color: #ff4bc0;
+    color: white;
+
+    &:hover{
+    background-color: #FF71CD;
+    color: white;
+    }
+  }
+}
+
 .shopping-cart{
   animation: fadeInLeft 1.5s ease-in-out;
 
@@ -65,9 +91,7 @@ body{
         transform: translateY(0);
     }
   }
-    h1{
-        color: #727bff;
-    }
+    
     .card{
       img{
         height: 450px;

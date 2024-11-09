@@ -28,6 +28,9 @@ body ::selection {
   background-color: #FF71CD;
   color: white;
 }
+body h1 {
+  color: #727bff;
+}
 
 .msg_box {
   background-color: #fdcffd;
@@ -46,6 +49,23 @@ body ::selection {
   color: #ff4bc0;
 }
 
+.search .btn_search {
+  background-color: #727bff;
+  color: white;
+}
+.search .btn_search:hover {
+  background-color: #FF71CD;
+  color: white;
+}
+.search .btn_clear {
+  background-color: #ff4bc0;
+  color: white;
+}
+.search .btn_clear:hover {
+  background-color: #FF71CD;
+  color: white;
+}
+
 .shopping-cart {
   animation: fadeInLeft 1.5s ease-in-out;
 }
@@ -58,9 +78,6 @@ body ::selection {
     opacity: 1;
     transform: translateY(0);
   }
-}
-.shopping-cart h1 {
-  color: #727bff;
 }
 .shopping-cart .card img {
   height: 450px;
