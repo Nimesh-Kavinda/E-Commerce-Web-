@@ -2,7 +2,7 @@
    
     <div class="offcanvas offcanvas-end profile" tabindex="-1" id="offcanvasProfile" aria-labelledby="offcanvasProfileLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasProfileLabel"><?php echo $_SESSION['user_email']; ?>Profile</h5>
+        <h5 class="offcanvas-title" id="offcanvasProfileLabel">User Profile</h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
