@@ -8,7 +8,7 @@
       <div class="offcanvas-body">
         <div class="text-center mb-4">
         
-          <img src="./assest/img/user_icon2.png" alt="User Profile Picture" class="rounded-circle img-thumbnail">
+          <img src="./assest/img/user_icon2.png" alt="User Profile Picture" class="rounded-circle img-thumbnail" style="width: 250px">
         </div>
        
         <h4 class="text-center"><?php echo $_SESSION['user_name']; ?></h4>
