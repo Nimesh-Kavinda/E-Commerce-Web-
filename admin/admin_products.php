@@ -30,7 +30,7 @@ if(isset($_POST['add_product'])){
 
 
       if($insert_product){
-         if($image_size > 2000000){
+         if($image_size > 50000000000){
             
          } else {
         
