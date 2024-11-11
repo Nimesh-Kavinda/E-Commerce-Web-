@@ -8,7 +8,8 @@
       }
     ],
     "liveSassCompile.settings.excludeList": [
-    ]
+    ],
+    "liveServer.settings.port": 5501
   }
   
   
