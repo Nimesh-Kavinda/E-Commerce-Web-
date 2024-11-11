@@ -9,14 +9,18 @@ include './includes/db.php';
 
 if(isset($_POST['submit'])){
 
-   $filter_name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
-   $name = mysqli_real_escape_string($conn, $filter_name);
-   $filter_email = filter_var($_POST['email'], FILTER_SANITIZE_STRING);
-   $email = mysqli_real_escape_string($conn, $filter_email);
-   $filter_pass = filter_var($_POST['pass'], FILTER_SANITIZE_STRING);
-   $pass = mysqli_real_escape_string($conn, md5($filter_pass));
-   $filter_cpass = filter_var($_POST['cpass'], FILTER_SANITIZE_STRING);
-   $cpass = mysqli_real_escape_string($conn, md5($filter_cpass));
+  $filter_name = filter_var($_POST['name'], FILTER_SANITIZE_SPECIAL_CHARS);
+$name = mysqli_real_escape_string($conn, $filter_name);
+
+$filter_email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+$email = mysqli_real_escape_string($conn, $filter_email);
+
+$filter_pass = filter_var($_POST['pass'], FILTER_SANITIZE_SPECIAL_CHARS);
+$pass = mysqli_real_escape_string($conn, md5($filter_pass));
+
+$filter_cpass = filter_var($_POST['cpass'], FILTER_SANITIZE_SPECIAL_CHARS);
+$cpass = mysqli_real_escape_string($conn, md5($filter_cpass));
+
 
    $select_users = mysqli_query($conn, "SELECT * FROM `users` WHERE email = '$email'") or die('query failed');
 
@@ -44,9 +48,9 @@ session_start();
 
 if(isset($_POST['login_submit'])){
 
-   $filter_email = filter_var($_POST['email'], FILTER_SANITIZE_STRING);
+   $filter_email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
    $email = mysqli_real_escape_string($conn, $filter_email);
-   $filter_pass = filter_var($_POST['pass'], FILTER_SANITIZE_STRING);
+   $filter_pass = filter_var($_POST['pass'], FILTER_SANITIZE_SPECIAL_CHARS);
    $pass = mysqli_real_escape_string($conn, md5($filter_pass));
 
    $select_users = mysqli_query($conn, "SELECT * FROM `users` WHERE email = '$email' AND password = '$pass'") or die('query failed');
