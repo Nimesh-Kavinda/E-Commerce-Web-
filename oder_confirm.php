@@ -1,3 +1,9 @@
+<?php
+    session_start();
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,8 +21,8 @@
     <div class="order-container">
         <h1>Order Confirmed!</h1>
         <p>Thank you for your purchase. Your order is being processed and we will be contact shortly.</p>
-        <div class="order-id">Order ID:</div>
-        <button class="cta-button mt-3" onclick="window.location.href='index.php'">Return to Home</button>
+        <div class="order-id">Celebrate Your Events</div>
+        <button class="cta-button mt-3" onclick="window.location.href='./home.php'">Return to Home</button>
     </div>
 </body>
 
