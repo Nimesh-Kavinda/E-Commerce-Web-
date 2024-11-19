@@ -74,7 +74,6 @@ if (isset($_GET['user_type_filter'])) {
          ?>
                <div class="col-md-4 mb-4">
                   <div class="card p-3 shadow-sm">
-                     <p><strong>User ID:</strong> <span><?php echo $fetch_users['id']; ?></span></p>
                      <p><strong>Username:</strong> <span style="text-transform: capitalize;"><?php echo $fetch_users['name']; ?></span></p>
                      <p><strong>Email:</strong> <span><?php echo $fetch_users['email']; ?></span></p>
                      <p><strong>Type:</strong> <span style="text-transform: capitalize;" class="<?php if ($fetch_users['user_type'] == 'admin') {
